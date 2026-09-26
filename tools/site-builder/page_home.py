@@ -123,26 +123,6 @@ def build():
         <p>Mixed exactly on our<br>computerised colour machines</p>
       </div>
     </div>
-
-    <aside class="visit-card" id="visit-card" aria-label="Book a site visit">
-      <h2 class="visit-card__title">Book a site visit</h2>
-      <div class="visit-card__person">
-        <img src="images/team/manjit-rana.webp" alt="Manjit Rana">
-        <div><strong>Manjit Rana</strong><small>Contractor &middot; Site visits &amp; estimates</small></div>
-      </div>
-      <div class="visit-card__phones">
-        <a class="phone-pill" href="{tel('99884 12088')}">{i('phone')} 99884 12088</a>
-        <a class="phone-pill" href="{tel('94178 88704')}">{i('phone')} 94178 88704</a>
-      </div>
-      <nav class="visit-card__grid" aria-label="Quick links">
-        <a href="#services">{i('house', '1.3')}Painting<br>services</a>
-        <a href="#site-visit">{i('estimate', '1.3')}Get an<br>estimate</a>
-        <a href="asian-paints.html#waterproofing">{i('umbrella', '1.3')}Water-<br>proofing</a>
-        <a href="#machines">{i('palette', '1.3')}Colour<br>mixing</a>
-        <a href="acc-cement.html">{i('bricks', '1.3')}Cement<br>&amp; steel</a>
-        <a href="shades.html">{i('swatch', '1.3')}Shade<br>cards</a>
-      </nav>
-    </aside>
   </div>
   <div class="hero__dots">
     <button class="hero__arrow hero__arrow--prev" type="button" aria-label="Previous slide">{i('left', '2.2')}</button>
