@@ -461,7 +461,7 @@ def acc():
     </div>
     <div class="cc">
       <div class="cc__card">{card(CEMENT_COLOUR, 'misc')}</div>
-      <ul class="cc__swatches" aria-label="Available cement colours">{''.join(f'<li><span style="background:{hx}"></span>{n}</li>' for n, hx in CEMENT_COLOURS)}</ul>
+      <ul class="cc__swatches" aria-label="Available cement colours">{''.join(f'<li><button type="button" data-pick="Colour" data-value="{n}"><span style="background:{hx}"></span>{n}</button></li>' for n, hx in CEMENT_COLOURS)}</ul>
     </div>
   </div>
 </section>

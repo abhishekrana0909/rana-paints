@@ -60,6 +60,16 @@
     var add = e.target.closest("[data-add]");
     if (add) { addFromCard(add.closest("[data-pid]")); return; }
     if (e.target.closest("[data-cart-open]")) { openDrawer(); return; }
+    var pick = e.target.closest("[data-pick]");
+    if (pick) {
+      var box = pick.closest("section") || document;
+      var sel = $('select[data-opt="' + pick.dataset.pick + '"]', box);
+      if (sel) {
+        sel.value = pick.dataset.value;
+        sel.dispatchEvent(new Event("change", { bubbles: true }));
+        $$("[data-pick]", box).forEach(function (b) { b.classList.toggle("is-picked", b === pick); });
+      }
+    }
   });
   // photo badlo jab option ki apni photo ho (jaise brush size, Wall n Roof 12)
   document.addEventListener("change", function (e) {
