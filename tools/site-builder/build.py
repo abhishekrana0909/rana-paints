@@ -1,6 +1,6 @@
 """Generate the static Rana Paints website into the project folder."""
 from pathlib import Path
-import page_home, page_brands, page_shades
+import page_home, page_brands, page_shades, page_tools
 from icons import FAVICON
 
 OUT = Path(__file__).resolve().parents[2]  # the project folder
@@ -13,6 +13,7 @@ pages = {
     "forever-paints.html": page_brands.forever(),
     "acc-cement.html": page_brands.acc(),
     "shades.html": page_shades.build(),
+    "tools.html": page_tools.build(),
 }
 for name, html in pages.items():
     (OUT / name).write_text(html, encoding="utf-8")

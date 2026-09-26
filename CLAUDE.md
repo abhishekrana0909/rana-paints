@@ -5,6 +5,8 @@ Static website for "Rana Paint & Cement Store", Passi Kandi, Dasuya (Punjab). Ow
 - Live: https://abhishekrana0909.github.io/rana-paints/ (GitHub Pages, `main` branch, root). Repo: https://github.com/abhishekrana0909/rana-paints (public).
 - The `.html` files are GENERATED. Edit `tools/site-builder/*.py` (products in `products.py`, header/footer/phone numbers in `layout.py`), then run `python tools/site-builder/build.py`. Hand edits to `.html` get overwritten.
 - `css/style.css`, `js/main.js`, `js/shades.js` are edited directly. After changing CSS/JS, bump the `?v=` number in `layout.py` (or `page_shades.py` for shades.js) so browsers load the new file.
+- Cart: every product card has size dropdown(s) + qty + Add (`js/cart.js`, saved in localStorage). The cart sends a readable list to the owner's WhatsApp (94171 23935). Sizes/options are defined per product in `products.py` (`sizes`, `opts`, `fixed`, `imgs`).
+- `tools.html` (Tools & More) = rollers, brushes, scrapers, CUBE spray, Kayson turpentine, curtain fittings, wall stencils. Illustrations for items without photos come from `tools/site-builder/make_svgs.py`.
 - Preview: `python -m http.server 5500`, then open http://localhost:5500.
 - Deploy: commit and `git push` to `origin main`. Pages updates in 1-2 minutes.
 - Product photos come from the brand websites (dealer use); room/painter photos from Unsplash. Berger/Birla shade data (`js/data/`) was scraped from their colour catalogues.

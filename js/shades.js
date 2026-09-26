@@ -131,7 +131,12 @@
         '<div class="shade-detail__body"><h3>' + esc(d.name) + "</h3>" +
         '<div class="shade-detail__meta"><span>Code: ' + esc(d.code) + "</span><span>" + esc(d.family) + "</span><span>" + d.hex + "</span></div>" +
         '<a class="btn btn--wa" target="_blank" rel="noopener" href="' + window.RanaWA(msg) + '">Ask for this shade</a>' +
+        (window.RanaCart ? '<button class="btn btn--outline shade-detail__note" type="button" data-shade-note>Add shade to cart note</button>' : "") +
         "<small>We mix this shade on our computerised colour machine. Screen colours can look slightly different from the real paint, so please check the shade card at the shop.</small></div>";
+      var noteBtn = detail.querySelector("[data-shade-note]");
+      if (noteBtn) noteBtn.addEventListener("click", function () {
+        window.RanaCart.addNote(BRAND_NAMES[brand] + " shade: " + d.name + " (" + d.code + ")");
+      });
     }
 
     search.querySelector("input").addEventListener("input", function (e) { state.q = e.target.value; filter(); });

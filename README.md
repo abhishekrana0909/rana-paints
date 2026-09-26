@@ -9,13 +9,16 @@ It's a plain HTML/CSS/JS site. There's no framework and no build step is needed 
 
 | File | What it shows |
 |---|---|
-| `index.html` | Home: hero slider, site-visit card, brands, services, colour machines, team, site-visit form, map |
-| `asian-paints.html` | Interior/exterior (luxury + economy), waterproofing, putty, primers, enamels, shade cards |
+| `index.html` | Home: hero slider, brands, services, colour machines, team, site-visit form, map |
+| `asian-paints.html` | Interior/exterior (luxury + economy), waterproofing, putty, primers, enamels + wood/metal primers, shade cards |
 | `berger-paints.html` | Walmasta Lite, Walmasta, WeatherCoat Glow, putty, primers |
-| `birla-opus.html` | Style Power Bright, Style Power Fit, Calista Neo Star Shine, putty, primers |
+| `birla-opus.html` | Exteriors, interiors, Alldry waterproofing, Birla Opus + Birla White putty, primers |
 | `forever-paints.html` | Emulsions, primer, rustic putty |
-| `acc-cement.html` | ACC Gold Water Shield, Concrete Plus, Suraksha Power, home delivery, steel |
+| `acc-cement.html` | ACC cements, Dr. Fixit waterproofing, cement colours, home delivery, steel |
 | `shades.html` | Asian Paints shade cards (PDF viewer) + Berger and Birla Opus shade finder |
+| `tools.html` | Rollers, brushes, putty scrapers, CUBE spray paints, turpentine, curtain fittings, wall stencils |
+
+Every product has an **Add to cart** button with size options. The cart (top right) sends the full list to the shop's WhatsApp.
 
 ## Open it on your computer
 
@@ -36,6 +39,8 @@ The header, footer and product cards are the same on every page, so the pages ar
 - `tools/site-builder/page_home.py`: home page content
 - `tools/site-builder/page_brands.py`: brand pages
 - `tools/site-builder/page_shades.py`: shades page
+- `tools/site-builder/page_tools.py`: Tools & More page
+- `tools/site-builder/make_svgs.py`: draws the spray-can, stencil, curtain and bag pictures (run it if you change them)
 
 After editing, run:
 

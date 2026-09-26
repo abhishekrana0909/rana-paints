@@ -186,6 +186,11 @@ def build():
     <div class="brands-grid">
 {bc}
     </div>
+    <a class="more-strip reveal" href="tools.html">
+      <span class="more-strip__text"><strong>Tools &amp; More</strong><span>Rollers, brushes, putty scrapers, CUBE spray paints, turpentine oil, curtain fittings and wall stencils</span></span>
+      <span class="more-strip__icons">{i('roller', '1.5')}{i('brush', '1.5')}{i('drop', '1.5')}{i('door', '1.5')}{i('palette', '1.5')}</span>
+      <span class="link-arrow">Explore {i('right', '2')}</span>
+    </a>
   </div>
 </section>
 

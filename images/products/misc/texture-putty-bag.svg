@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 380" role="img" aria-label="Texture putty 25 kg bag">
+  <ellipse cx="180" cy="362" rx="130" ry="10" fill="#000" opacity=".12"/>
+  <path d="M58 40q122-22 244 0l12 300q-134 26-268 0z" fill="#fbfaf7" stroke="#d9d4c8" stroke-width="3"/>
+  <path d="M58 40q122-22 244 0l2 34q-124-20-248 0z" fill="#5b3fa0"/>
+  <path d="M46 340q134 26 268 0l-2-30q-132 22-264 0z" fill="#5b3fa0"/>
+  <g fill="#e6dfd2"><circle cx="110" cy="240" r="6"/><circle cx="140" cy="262" r="4"/><circle cx="175" cy="236" r="7"/><circle cx="210" cy="258" r="5"/><circle cx="246" cy="238" r="6"/><circle cx="128" cy="286" r="5"/><circle cx="196" cy="290" r="6"/><circle cx="232" cy="284" r="4"/></g>
+  <text x="180" y="116" text-anchor="middle" font-family="Arial Narrow, Arial, sans-serif" font-weight="700" font-size="30" fill="#16161b">TEXTURE PUTTY</text>
+  <text x="180" y="142" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#676773">For textured wall finishes</text>
+  <rect x="120" y="158" width="120" height="36" rx="18" fill="#16161b"/>
+  <text x="180" y="183" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="18" fill="#fff">25 kg</text>
+</svg>

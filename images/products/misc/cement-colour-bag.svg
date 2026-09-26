@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 380" role="img" aria-label="Cement colour 20 kg bag">
+  <ellipse cx="180" cy="362" rx="130" ry="10" fill="#000" opacity=".12"/>
+  <path d="M58 40q122-22 244 0l12 300q-134 26-268 0z" fill="#fbfaf7" stroke="#d9d4c8" stroke-width="3"/>
+  <path d="M58 40q122-22 244 0l2 34q-124-20-248 0z" fill="#d2161e"/>
+  <path d="M46 340q134 26 268 0l-2-30q-132 22-264 0z" fill="#d2161e"/>
+  <text x="180" y="112" text-anchor="middle" font-family="Arial Narrow, Arial, sans-serif" font-weight="700" font-size="30" fill="#16161b">CEMENT COLOUR</text>
+  <text x="180" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#676773">Powder colour for cement &amp; floors</text>
+  <rect x="120" y="156" width="120" height="36" rx="18" fill="#16161b"/>
+  <text x="180" y="181" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="18" fill="#fff">20 kg</text>
+  <circle cx="92" cy="232" r="13" fill="#f5f5f2" stroke="#00000022" stroke-width="2"/><circle cx="126" cy="232" r="13" fill="#efe0bb" stroke="#00000022" stroke-width="2"/><circle cx="160" cy="232" r="13" fill="#9ccc65" stroke="#00000022" stroke-width="2"/><circle cx="194" cy="232" r="13" fill="#efe7d4" stroke="#00000022" stroke-width="2"/><circle cx="228" cy="232" r="13" fill="#a7a8aa" stroke="#00000022" stroke-width="2"/><circle cx="92" cy="266" r="13" fill="#5b5d60" stroke="#00000022" stroke-width="2"/><circle cx="126" cy="266" r="13" fill="#ec407a" stroke="#00000022" stroke-width="2"/><circle cx="160" cy="266" r="13" fill="#7ec8e3" stroke="#00000022" stroke-width="2"/><circle cx="194" cy="266" r="13" fill="#b5e3a1" stroke="#00000022" stroke-width="2"/><circle cx="228" cy="266" r="13" fill="#c2185b" stroke="#00000022" stroke-width="2"/>
+</svg>

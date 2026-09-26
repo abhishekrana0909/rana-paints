@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 360" role="img" aria-label="Silver spray paint can">
+  <defs>
+    <linearGradient id="b" x1="0" x2="1">
+      <stop offset="0" stop-color="#7d848f"/><stop offset=".22" stop-color="#c9ced6"/>
+      <stop offset=".38" stop-color="#ffffff" stop-opacity="0.55"/><stop offset=".52" stop-color="#c9ced6"/>
+      <stop offset="1" stop-color="#7d848f"/>
+    </linearGradient>
+    <linearGradient id="m" x1="0" x2="1">
+      <stop offset="0" stop-color="#8d939c"/><stop offset=".35" stop-color="#eef0f3"/><stop offset="1" stop-color="#7a808a"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="120" cy="344" rx="70" ry="9" fill="#000" opacity=".12"/>
+  <rect x="96" y="22" width="48" height="30" rx="8" fill="url(#b)"/>
+  <rect x="110" y="10" width="20" height="16" rx="4" fill="#3a3a3c"/>
+  <path d="M72 64c0-10 20-16 48-16s48 6 48 16v8H72z" fill="url(#m)"/>
+  <rect x="68" y="70" width="104" height="262" rx="14" fill="url(#b)"/>
+  <rect x="68" y="150" width="104" height="112" fill="#ffffff" opacity=".93"/>
+  <rect x="68" y="150" width="104" height="10" fill="#c9ced6"/>
+  <circle cx="120" cy="196" r="20" fill="#c9ced6" stroke="#7d848f" stroke-width="3"/>
+  <text x="120" y="236" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="13" fill="#1d1d1f">SPRAY PAINT</text>
+  <text x="120" y="253" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">400 ml</text>
+  <text x="120" y="296" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#1d1d1f">SILVER</text>
+  <rect x="68" y="318" width="104" height="14" rx="4" fill="url(#m)"/>
+</svg>

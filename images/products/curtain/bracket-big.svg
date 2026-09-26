@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 320" role="img" aria-label="Big steel curtain bracket">
+  <defs><linearGradient id="s" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4f6f8"/><stop offset=".45" stop-color="#b9c0c8"/><stop offset=".55" stop-color="#8e969f"/><stop offset="1" stop-color="#dfe3e8"/></linearGradient></defs>
+  <path d="M60 300 h100 a14 14 0 0 0 14-14 V110 a50 50 0 1 1 100 0 v14 h-18 v-14 a32 32 0 1 0-64 0 V286 a32 32 0 0 1-32 32 H60z"
+        fill="#c3c9d0" stroke="#7d858e" stroke-width="3" stroke-linejoin="round" transform="translate(-20.0 -10)"/>
+  <circle cx="155.0" cy="102" r="7" fill="#5f6770"/>
+  <circle cx="60.0" cy="280" r="4" fill="#5f6770"/><circle cx="120.0" cy="280" r="4" fill="#5f6770"/>
+  <text x="130" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="18" fill="#33333d">Big</text>
+</svg>

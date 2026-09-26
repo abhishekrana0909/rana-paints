@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&amp;family=Barlow:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=4">
+<link rel="stylesheet" href="css/style.css?v=5">
 </head>
 <body class="page-asian">
 <a class="skip-link" href="#main">Skip to content</a>
@@ -49,8 +49,8 @@
           <a href="acc-cement.html"><span class="dropdown__logo"><img src="images/brands/acc.svg" alt=""></span><span><strong>ACC Cement</strong><small>Gold Water Shield, Concrete Plus, Suraksha Power</small></span></a>
           </div>
         </li>
+        <li><a class="nav__link" href="tools.html">Tools &amp; More</a></li>
         <li><a class="nav__link" href="shades.html">Shades</a></li>
-        <li><a class="nav__link" href="index.html#services">Services</a></li>
         <li><a class="nav__link" href="index.html#team">About Us</a></li>
         <li><a class="nav__link" href="index.html#contact">Contact</a></li>
       </ul>
@@ -67,6 +67,7 @@
         <span><small>Call now</small><strong>94171 23935</strong></span>
       </a>
     </div>
+    <button class="cart-btn" type="button" data-cart-open aria-label="Open cart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.6 12.2a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.5L22 7H6"/></svg><span class="cart-btn__label">Cart</span><span class="cart-count" data-cart-count hidden>0</span></button>
     <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-nav"><span></span></button>
   </div>
 </header>
@@ -115,7 +116,7 @@
     <div class="pgroup">
       <div class="pgroup__head"><span class="tier tier--luxury">Luxury</span><h3>Premium finish, long life</h3></div>
       <div class="products">
-<article class="product">
+<article class="product" data-pid="asian-tractor-emulsion" data-name="Tractor Emulsion" data-brand="Asian Paints" data-img="images/products/asian/tractor-emulsion.webp" data-fixed="{}">
   <span class="tier tier--luxury">Luxury</span>
   <div class="product__img"><img src="images/products/asian/tractor-emulsion.webp" alt="Tractor Emulsion by Asian Paints" loading="lazy" width="600" height="600"></div>
   <div class="product__body">
@@ -123,13 +124,20 @@
     <h3>Tractor Emulsion</h3>
     <p>Smooth finish with superior washability and no shade fading.</p>
     <ul class="chips"><li>4-year warranty</li><li>Washable</li><li>Smooth matt</li></ul>
-    <div class="product__actions">
-      <a class="btn btn--sm btn--wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20Tractor%20Emulsion%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Enquire</a>
+    <div class="buy">
+      <label class="buy__field"><span>Size</span><select data-opt="Size"><option value="1 L">1 L</option><option value="4 L">4 L</option><option value="10 L">10 L</option><option value="20 L">20 L</option></select></label>
+      <div class="buy__row">
+        <div class="qty"><button type="button" data-step="-1" aria-label="Less">&minus;</button><input type="number" min="1" max="999" value="1" inputmode="numeric" aria-label="Quantity"><button type="button" data-step="1" aria-label="More">+</button></div>
+        <button class="btn btn--sm btn--cart" type="button" data-add><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.6 12.2a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.5L22 7H6"/></svg> Add</button>
+      </div>
+    </div>
+    <div class="product__links">
+      <a class="link-wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20Tractor%20Emulsion%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Ask on WhatsApp</a>
       <a class="link-arrow" href="https://www.asianpaints.com/paint-products/interior-wall-paints/plain-finishes/tractor-emulsion.html" target="_blank" rel="noopener">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
     </div>
   </div>
 </article>
-<article class="product">
+<article class="product" data-pid="asian-apcolite-premium-emulsion" data-name="Apcolite Premium Emulsion" data-brand="Asian Paints" data-img="images/products/asian/apcolite-premium-emulsion.webp" data-fixed="{}">
   <span class="tier tier--luxury">Luxury</span>
   <div class="product__img"><img src="images/products/asian/apcolite-premium-emulsion.webp" alt="Apcolite Premium Emulsion by Asian Paints" loading="lazy" width="600" height="600"></div>
   <div class="product__body">
@@ -137,13 +145,20 @@
     <h3>Apcolite Premium Emulsion</h3>
     <p>Stain Guard technology keeps walls clean; easy to wash.</p>
     <ul class="chips"><li>5-year warranty</li><li>Stain Guard</li><li>Washable</li></ul>
-    <div class="product__actions">
-      <a class="btn btn--sm btn--wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20Apcolite%20Premium%20Emulsion%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Enquire</a>
+    <div class="buy">
+      <label class="buy__field"><span>Size</span><select data-opt="Size"><option value="1 L">1 L</option><option value="4 L">4 L</option><option value="10 L">10 L</option><option value="20 L">20 L</option></select></label>
+      <div class="buy__row">
+        <div class="qty"><button type="button" data-step="-1" aria-label="Less">&minus;</button><input type="number" min="1" max="999" value="1" inputmode="numeric" aria-label="Quantity"><button type="button" data-step="1" aria-label="More">+</button></div>
+        <button class="btn btn--sm btn--cart" type="button" data-add><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.6 12.2a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.5L22 7H6"/></svg> Add</button>
+      </div>
+    </div>
+    <div class="product__links">
+      <a class="link-wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20Apcolite%20Premium%20Emulsion%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Ask on WhatsApp</a>
       <a class="link-arrow" href="https://www.asianpaints.com/paint-products/interior-wall-paints/plain-finishes/apcolite-premium-emulsion.html" target="_blank" rel="noopener">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
     </div>
   </div>
 </article>
-<article class="product">
+<article class="product" data-pid="asian-apcolite-shyne" data-name="Apcolite Shyne" data-brand="Asian Paints" data-img="images/products/asian/apcolite-shyne.webp" data-fixed="{}">
   <span class="tier tier--luxury">Luxury</span>
   <div class="product__img"><img src="images/products/asian/apcolite-shyne.webp" alt="Apcolite Shyne by Asian Paints" loading="lazy" width="600" height="600"></div>
   <div class="product__body">
@@ -151,8 +166,15 @@
     <h3>Apcolite Shyne</h3>
     <p>Rich sheen finish with excellent washability for a premium look.</p>
     <ul class="chips"><li>Sheen finish</li><li>Washable</li><li>Premium look</li></ul>
-    <div class="product__actions">
-      <a class="btn btn--sm btn--wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20Apcolite%20Shyne%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Enquire</a>
+    <div class="buy">
+      <label class="buy__field"><span>Size</span><select data-opt="Size"><option value="1 L">1 L</option><option value="4 L">4 L</option><option value="10 L">10 L</option><option value="20 L">20 L</option></select></label>
+      <div class="buy__row">
+        <div class="qty"><button type="button" data-step="-1" aria-label="Less">&minus;</button><input type="number" min="1" max="999" value="1" inputmode="numeric" aria-label="Quantity"><button type="button" data-step="1" aria-label="More">+</button></div>
+        <button class="btn btn--sm btn--cart" type="button" data-add><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.6 12.2a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.5L22 7H6"/></svg> Add</button>
+      </div>
+    </div>
+    <div class="product__links">
+      <a class="link-wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20Apcolite%20Shyne%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Ask on WhatsApp</a>
       <a class="link-arrow" href="https://www.asianpaints.com/paint-products/interior-wall-paints/plain-finishes/apcolite-advanced-shyne-premium-emulsion.html" target="_blank" rel="noopener">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
     </div>
   </div>
@@ -162,21 +184,28 @@
     <div class="pgroup">
       <div class="pgroup__head"><span class="tier tier--economy">Economy</span><h3>Great value for money</h3></div>
       <div class="products">
-<article class="product">
+<article class="product" data-pid="asian-tractor-uno" data-name="Tractor Uno Distemper" data-brand="Asian Paints" data-img="images/products/asian/tractor-uno.webp" data-fixed="{}">
   <span class="tier tier--economy">Economy</span>
   <div class="product__img"><img src="images/products/asian/tractor-uno.webp" alt="Tractor Uno Distemper by Asian Paints" loading="lazy" width="600" height="600"></div>
   <div class="product__body">
     <span class="product__cat">Distemper</span>
     <h3>Tractor Uno Distemper</h3>
     <p>Affordable acrylic distemper for a fresh, clean look on a budget.</p>
-    <ul class="chips"><li>Budget friendly</li><li>Acrylic distemper</li><li>2L to 20L</li></ul>
-    <div class="product__actions">
-      <a class="btn btn--sm btn--wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20Tractor%20Uno%20Distemper%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Enquire</a>
+    <ul class="chips"><li>Budget friendly</li><li>Acrylic distemper</li><li>Matt finish</li></ul>
+    <div class="buy">
+      <label class="buy__field"><span>Size</span><select data-opt="Size"><option value="1 kg">1 kg</option><option value="5 kg">5 kg</option><option value="10 kg">10 kg</option><option value="20 kg">20 kg</option></select></label>
+      <div class="buy__row">
+        <div class="qty"><button type="button" data-step="-1" aria-label="Less">&minus;</button><input type="number" min="1" max="999" value="1" inputmode="numeric" aria-label="Quantity"><button type="button" data-step="1" aria-label="More">+</button></div>
+        <button class="btn btn--sm btn--cart" type="button" data-add><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.6 12.2a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.5L22 7H6"/></svg> Add</button>
+      </div>
+    </div>
+    <div class="product__links">
+      <a class="link-wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20Tractor%20Uno%20Distemper%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Ask on WhatsApp</a>
       <a class="link-arrow" href="https://www.asianpaints.com/paint-products/interior-wall-paints/plain-finishes/tractor-uno.html" target="_blank" rel="noopener">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
     </div>
   </div>
 </article>
-<article class="product">
+<article class="product" data-pid="asian-neo-bharat-interior" data-name="Neo Bharat Latex (Interior)" data-brand="Asian Paints" data-img="images/products/asian/neo-bharat-interior.webp" data-fixed="{}">
   <span class="tier tier--economy">Economy</span>
   <div class="product__img"><img src="images/products/asian/neo-bharat-interior.webp" alt="Neo Bharat Latex (Interior) by Asian Paints" loading="lazy" width="600" height="600"></div>
   <div class="product__body">
@@ -184,13 +213,20 @@
     <h3>Neo Bharat Latex (Interior)</h3>
     <p>High coverage and a smooth finish in 1000+ shades.</p>
     <ul class="chips"><li>High coverage</li><li>1000+ shades</li><li>Smooth finish</li></ul>
-    <div class="product__actions">
-      <a class="btn btn--sm btn--wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20Neo%20Bharat%20Latex%20%28Interior%29%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Enquire</a>
+    <div class="buy">
+      <label class="buy__field"><span>Size</span><select data-opt="Size"><option value="1 L">1 L</option><option value="4 L">4 L</option><option value="10 L">10 L</option><option value="20 L">20 L</option></select></label>
+      <div class="buy__row">
+        <div class="qty"><button type="button" data-step="-1" aria-label="Less">&minus;</button><input type="number" min="1" max="999" value="1" inputmode="numeric" aria-label="Quantity"><button type="button" data-step="1" aria-label="More">+</button></div>
+        <button class="btn btn--sm btn--cart" type="button" data-add><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.6 12.2a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.5L22 7H6"/></svg> Add</button>
+      </div>
+    </div>
+    <div class="product__links">
+      <a class="link-wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20Neo%20Bharat%20Latex%20%28Interior%29%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Ask on WhatsApp</a>
       <a class="link-arrow" href="https://www.asianpaints.com/paint-products/interior-wall-paints/plain-finishes/neobharat-latex-interior-paint.html" target="_blank" rel="noopener">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
     </div>
   </div>
 </article>
-<article class="product">
+<article class="product" data-pid="asian-tractor-sparc" data-name="Tractor Sparc" data-brand="Asian Paints" data-img="images/products/asian/tractor-sparc.webp" data-fixed="{}">
   <span class="tier tier--economy">Economy</span>
   <div class="product__img"><img src="images/products/asian/tractor-sparc.webp" alt="Tractor Sparc by Asian Paints" loading="lazy" width="600" height="600"></div>
   <div class="product__body">
@@ -198,8 +234,15 @@
     <h3>Tractor Sparc</h3>
     <p>1.5x more coverage than distemper with better whiteness.</p>
     <ul class="chips"><li>2-year warranty</li><li>1.5x coverage</li><li>Better whiteness</li></ul>
-    <div class="product__actions">
-      <a class="btn btn--sm btn--wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20Tractor%20Sparc%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Enquire</a>
+    <div class="buy">
+      <label class="buy__field"><span>Size</span><select data-opt="Size"><option value="1 L">1 L</option><option value="4 L">4 L</option><option value="10 L">10 L</option><option value="20 L">20 L</option></select></label>
+      <div class="buy__row">
+        <div class="qty"><button type="button" data-step="-1" aria-label="Less">&minus;</button><input type="number" min="1" max="999" value="1" inputmode="numeric" aria-label="Quantity"><button type="button" data-step="1" aria-label="More">+</button></div>
+        <button class="btn btn--sm btn--cart" type="button" data-add><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.6 12.2a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.5L22 7H6"/></svg> Add</button>
+      </div>
+    </div>
+    <div class="product__links">
+      <a class="link-wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20Tractor%20Sparc%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Ask on WhatsApp</a>
       <a class="link-arrow" href="https://www.asianpaints.com/paint-products/interior-wall-paints/plain-finishes/tractor-sparc.html" target="_blank" rel="noopener">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
     </div>
   </div>
@@ -219,7 +262,7 @@
     <div class="pgroup">
       <div class="pgroup__head"><span class="tier tier--luxury">Luxury</span><h3>Apex: dust proof, up to 6 years</h3></div>
       <div class="products">
-<article class="product">
+<article class="product" data-pid="asian-apex-shyne" data-name="Apex Shyne Dust Proof" data-brand="Asian Paints" data-img="images/products/asian/apex-shyne.webp" data-fixed="{}">
   <span class="tier tier--luxury">Luxury</span>
   <div class="product__img"><img src="images/products/asian/apex-shyne.webp" alt="Apex Shyne Dust Proof by Asian Paints" loading="lazy" width="600" height="600"></div>
   <div class="product__body">
@@ -227,13 +270,20 @@
     <h3>Apex Shyne Dust Proof</h3>
     <p>High-sheen exterior finish that resists dust and algae.</p>
     <ul class="chips"><li>6-year warranty</li><li>Dust proof</li><li>Anti-algal</li></ul>
-    <div class="product__actions">
-      <a class="btn btn--sm btn--wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20Apex%20Shyne%20Dust%20Proof%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Enquire</a>
+    <div class="buy">
+      <label class="buy__field"><span>Size</span><select data-opt="Size"><option value="1 L">1 L</option><option value="4 L">4 L</option><option value="10 L">10 L</option><option value="20 L">20 L</option></select></label>
+      <div class="buy__row">
+        <div class="qty"><button type="button" data-step="-1" aria-label="Less">&minus;</button><input type="number" min="1" max="999" value="1" inputmode="numeric" aria-label="Quantity"><button type="button" data-step="1" aria-label="More">+</button></div>
+        <button class="btn btn--sm btn--cart" type="button" data-add><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.6 12.2a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.5L22 7H6"/></svg> Add</button>
+      </div>
+    </div>
+    <div class="product__links">
+      <a class="link-wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20Apex%20Shyne%20Dust%20Proof%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Ask on WhatsApp</a>
       <a class="link-arrow" href="https://www.asianpaints.com/paint-products/exterior-wall-paints/apex-shyne.html" target="_blank" rel="noopener">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
     </div>
   </div>
 </article>
-<article class="product">
+<article class="product" data-pid="asian-apex-dustproof" data-name="Apex Dust Proof Emulsion" data-brand="Asian Paints" data-img="images/products/asian/apex-dustproof.webp" data-fixed="{}">
   <span class="tier tier--luxury">Luxury</span>
   <div class="product__img"><img src="images/products/asian/apex-dustproof.webp" alt="Apex Dust Proof Emulsion by Asian Paints" loading="lazy" width="600" height="600"></div>
   <div class="product__body">
@@ -241,8 +291,15 @@
     <h3>Apex Dust Proof Emulsion</h3>
     <p>Dust-proof technology with high washability for outside walls.</p>
     <ul class="chips"><li>6-year warranty</li><li>Dust proof</li><li>Washable</li></ul>
-    <div class="product__actions">
-      <a class="btn btn--sm btn--wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20Apex%20Dust%20Proof%20Emulsion%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Enquire</a>
+    <div class="buy">
+      <label class="buy__field"><span>Size</span><select data-opt="Size"><option value="1 L">1 L</option><option value="4 L">4 L</option><option value="10 L">10 L</option><option value="20 L">20 L</option></select></label>
+      <div class="buy__row">
+        <div class="qty"><button type="button" data-step="-1" aria-label="Less">&minus;</button><input type="number" min="1" max="999" value="1" inputmode="numeric" aria-label="Quantity"><button type="button" data-step="1" aria-label="More">+</button></div>
+        <button class="btn btn--sm btn--cart" type="button" data-add><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.6 12.2a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.5L22 7H6"/></svg> Add</button>
+      </div>
+    </div>
+    <div class="product__links">
+      <a class="link-wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20Apex%20Dust%20Proof%20Emulsion%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Ask on WhatsApp</a>
       <a class="link-arrow" href="https://www.asianpaints.com/paint-products/exterior-wall-paints/apex-dustproof-emulsion.html" target="_blank" rel="noopener">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
     </div>
   </div>
@@ -252,7 +309,7 @@
     <div class="pgroup">
       <div class="pgroup__head"><span class="tier tier--economy">Economy</span><h3>Ace &amp; Neo Bharat: strong and affordable</h3></div>
       <div class="products">
-<article class="product">
+<article class="product" data-pid="asian-neo-bharat-exterior" data-name="Neo Bharat Latex (Exterior)" data-brand="Asian Paints" data-img="images/products/asian/neo-bharat-exterior.webp" data-fixed="{}">
   <span class="tier tier--economy">Economy</span>
   <div class="product__img"><img src="images/products/asian/neo-bharat-exterior.webp" alt="Neo Bharat Latex (Exterior) by Asian Paints" loading="lazy" width="600" height="600"></div>
   <div class="product__body">
@@ -260,13 +317,20 @@
     <h3>Neo Bharat Latex (Exterior)</h3>
     <p>Durable, weather-resistant exterior paint in 1000+ shades.</p>
     <ul class="chips"><li>Weather resistant</li><li>1000+ shades</li><li>Budget friendly</li></ul>
-    <div class="product__actions">
-      <a class="btn btn--sm btn--wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20Neo%20Bharat%20Latex%20%28Exterior%29%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Enquire</a>
+    <div class="buy">
+      <label class="buy__field"><span>Size</span><select data-opt="Size"><option value="1 L">1 L</option><option value="4 L">4 L</option><option value="10 L">10 L</option><option value="20 L">20 L</option></select></label>
+      <div class="buy__row">
+        <div class="qty"><button type="button" data-step="-1" aria-label="Less">&minus;</button><input type="number" min="1" max="999" value="1" inputmode="numeric" aria-label="Quantity"><button type="button" data-step="1" aria-label="More">+</button></div>
+        <button class="btn btn--sm btn--cart" type="button" data-add><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.6 12.2a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.5L22 7H6"/></svg> Add</button>
+      </div>
+    </div>
+    <div class="product__links">
+      <a class="link-wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20Neo%20Bharat%20Latex%20%28Exterior%29%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Ask on WhatsApp</a>
       <a class="link-arrow" href="https://www.asianpaints.com/paint-products/exterior-wall-paints/neobharat-latex-exterior-paint.html" target="_blank" rel="noopener">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
     </div>
   </div>
 </article>
-<article class="product">
+<article class="product" data-pid="asian-ace-sparc" data-name="Ace Sparc" data-brand="Asian Paints" data-img="images/products/asian/ace-sparc.webp" data-fixed="{}">
   <span class="tier tier--economy">Economy</span>
   <div class="product__img"><img src="images/products/asian/ace-sparc.webp" alt="Ace Sparc by Asian Paints" loading="lazy" width="600" height="600"></div>
   <div class="product__body">
@@ -274,13 +338,20 @@
     <h3>Ace Sparc</h3>
     <p>Value-for-money exterior emulsion with vibrant shades.</p>
     <ul class="chips"><li>2-year warranty</li><li>Vibrant shades</li><li>Value for money</li></ul>
-    <div class="product__actions">
-      <a class="btn btn--sm btn--wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20Ace%20Sparc%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Enquire</a>
+    <div class="buy">
+      <label class="buy__field"><span>Size</span><select data-opt="Size"><option value="1 L">1 L</option><option value="4 L">4 L</option><option value="10 L">10 L</option><option value="20 L">20 L</option></select></label>
+      <div class="buy__row">
+        <div class="qty"><button type="button" data-step="-1" aria-label="Less">&minus;</button><input type="number" min="1" max="999" value="1" inputmode="numeric" aria-label="Quantity"><button type="button" data-step="1" aria-label="More">+</button></div>
+        <button class="btn btn--sm btn--cart" type="button" data-add><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.6 12.2a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.5L22 7H6"/></svg> Add</button>
+      </div>
+    </div>
+    <div class="product__links">
+      <a class="link-wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20Ace%20Sparc%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Ask on WhatsApp</a>
       <a class="link-arrow" href="https://www.asianpaints.com/paint-products/exterior-wall-paints/ace-sparc.html" target="_blank" rel="noopener">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
     </div>
   </div>
 </article>
-<article class="product">
+<article class="product" data-pid="asian-ace-shyne" data-name="Ace Shyne" data-brand="Asian Paints" data-img="images/products/asian/ace-shyne.webp" data-fixed="{}">
   <span class="tier tier--economy">Economy</span>
   <div class="product__img"><img src="images/products/asian/ace-shyne.webp" alt="Ace Shyne by Asian Paints" loading="lazy" width="600" height="600"></div>
   <div class="product__body">
@@ -288,13 +359,20 @@
     <h3>Ace Shyne</h3>
     <p>High-sheen finish with water resistance for outside walls.</p>
     <ul class="chips"><li>4-year warranty</li><li>High sheen</li><li>Water resistant</li></ul>
-    <div class="product__actions">
-      <a class="btn btn--sm btn--wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20Ace%20Shyne%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Enquire</a>
+    <div class="buy">
+      <label class="buy__field"><span>Size</span><select data-opt="Size"><option value="1 L">1 L</option><option value="4 L">4 L</option><option value="10 L">10 L</option><option value="20 L">20 L</option></select></label>
+      <div class="buy__row">
+        <div class="qty"><button type="button" data-step="-1" aria-label="Less">&minus;</button><input type="number" min="1" max="999" value="1" inputmode="numeric" aria-label="Quantity"><button type="button" data-step="1" aria-label="More">+</button></div>
+        <button class="btn btn--sm btn--cart" type="button" data-add><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.6 12.2a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.5L22 7H6"/></svg> Add</button>
+      </div>
+    </div>
+    <div class="product__links">
+      <a class="link-wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20Ace%20Shyne%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Ask on WhatsApp</a>
       <a class="link-arrow" href="https://www.asianpaints.com/paint-products/exterior-wall-paints/ace-shyne.html" target="_blank" rel="noopener">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
     </div>
   </div>
 </article>
-<article class="product">
+<article class="product" data-pid="asian-ace-power-plus" data-name="Ace Power+" data-brand="Asian Paints" data-img="images/products/asian/ace-power-plus.webp" data-fixed="{}">
   <span class="tier tier--economy">Economy</span>
   <div class="product__img"><img src="images/products/asian/ace-power-plus.webp" alt="Ace Power+ by Asian Paints" loading="lazy" width="600" height="600"></div>
   <div class="product__body">
@@ -302,8 +380,15 @@
     <h3>Ace Power+</h3>
     <p>Anti-fade technology and weather guard with a stylish matt finish.</p>
     <ul class="chips"><li>4-year warranty</li><li>Anti-fade</li><li>Matt finish</li></ul>
-    <div class="product__actions">
-      <a class="btn btn--sm btn--wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20Ace%20Power%2B%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Enquire</a>
+    <div class="buy">
+      <label class="buy__field"><span>Size</span><select data-opt="Size"><option value="1 L">1 L</option><option value="4 L">4 L</option><option value="10 L">10 L</option><option value="20 L">20 L</option></select></label>
+      <div class="buy__row">
+        <div class="qty"><button type="button" data-step="-1" aria-label="Less">&minus;</button><input type="number" min="1" max="999" value="1" inputmode="numeric" aria-label="Quantity"><button type="button" data-step="1" aria-label="More">+</button></div>
+        <button class="btn btn--sm btn--cart" type="button" data-add><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.6 12.2a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.5L22 7H6"/></svg> Add</button>
+      </div>
+    </div>
+    <div class="product__links">
+      <a class="link-wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20Ace%20Power%2B%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Ask on WhatsApp</a>
       <a class="link-arrow" href="https://www.asianpaints.com/paint-products/exterior-wall-paints/ace-power-plus.html" target="_blank" rel="noopener">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
     </div>
   </div>
@@ -322,7 +407,7 @@
     </div>
     <div class="filters" data-filters="wp-grid" role="group" aria-label="Filter waterproofing products"><button type="button" data-filter="all" class="is-active" aria-pressed="true">All products</button><button type="button" data-filter="terrace" class="" aria-pressed="false">Terrace &amp; Tanks</button><button type="button" data-filter="bathrooms" class="" aria-pressed="false">Bathrooms</button><button type="button" data-filter="cracks" class="" aria-pressed="false">Cracks &amp; Joints</button><button type="button" data-filter="interior" class="" aria-pressed="false">Interior</button><button type="button" data-filter="exterior" class="" aria-pressed="false">Exteriors</button><button type="button" data-filter="tiling" class="" aria-pressed="false">Tiling</button></div>
     <div class="products" id="wp-grid">
-<article class="product" data-tags="terrace exterior">
+<article class="product" data-tags="terrace exterior" data-pid="asian-smartcare-damp-proof" data-name="SmartCare Damp Proof" data-brand="Asian Paints" data-img="images/products/asian/smartcare-damp-proof.webp" data-fixed="{}">
   
   <div class="product__img"><img src="images/products/asian/smartcare-damp-proof.webp" alt="SmartCare Damp Proof by Asian Paints" loading="lazy" width="600" height="600"></div>
   <div class="product__body">
@@ -330,13 +415,20 @@
     <h3>SmartCare Damp Proof</h3>
     <p>Two-coat protection for terraces and exterior walls against seepage and damp patches.</p>
     <ul class="chips"><li>10-year warranty</li><li>Heat reduction</li><li>Terrace</li></ul>
-    <div class="product__actions">
-      <a class="btn btn--sm btn--wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20SmartCare%20Damp%20Proof%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Enquire</a>
+    <div class="buy">
+      <label class="buy__field"><span>Size</span><select data-opt="Size"><option value="1 L">1 L</option><option value="4 L">4 L</option><option value="10 L">10 L</option><option value="20 L">20 L</option></select></label>
+      <div class="buy__row">
+        <div class="qty"><button type="button" data-step="-1" aria-label="Less">&minus;</button><input type="number" min="1" max="999" value="1" inputmode="numeric" aria-label="Quantity"><button type="button" data-step="1" aria-label="More">+</button></div>
+        <button class="btn btn--sm btn--cart" type="button" data-add><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.6 12.2a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.5L22 7H6"/></svg> Add</button>
+      </div>
+    </div>
+    <div class="product__links">
+      <a class="link-wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20SmartCare%20Damp%20Proof%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Ask on WhatsApp</a>
       <a class="link-arrow" href="https://www.asianpaints.com/waterproofing-products/smartcare-damp-proof.html" target="_blank" rel="noopener">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
     </div>
   </div>
 </article>
-<article class="product" data-tags="terrace bathrooms">
+<article class="product" data-tags="terrace bathrooms" data-pid="asian-hydroloc-xtreme" data-name="SmartCare Hydroloc Xtreme" data-brand="Asian Paints" data-img="images/products/asian/hydroloc-xtreme.webp" data-fixed="{}">
   
   <div class="product__img"><img src="images/products/asian/hydroloc-xtreme.webp" alt="SmartCare Hydroloc Xtreme by Asian Paints" loading="lazy" width="600" height="600"></div>
   <div class="product__body">
@@ -344,13 +436,20 @@
     <h3>SmartCare Hydroloc Xtreme</h3>
     <p>Advanced waterproofing membrane for roofs, tanks and wet areas.</p>
     <ul class="chips"><li>5-year warranty</li><li>Membrane</li><li>Roof &amp; tanks</li></ul>
-    <div class="product__actions">
-      <a class="btn btn--sm btn--wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20SmartCare%20Hydroloc%20Xtreme%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Enquire</a>
+    <div class="buy">
+      <label class="buy__field"><span>Size</span><select data-opt="Size"><option value="1 L">1 L</option><option value="4 L">4 L</option><option value="10 L">10 L</option><option value="20 L">20 L</option></select></label>
+      <div class="buy__row">
+        <div class="qty"><button type="button" data-step="-1" aria-label="Less">&minus;</button><input type="number" min="1" max="999" value="1" inputmode="numeric" aria-label="Quantity"><button type="button" data-step="1" aria-label="More">+</button></div>
+        <button class="btn btn--sm btn--cart" type="button" data-add><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.6 12.2a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.5L22 7H6"/></svg> Add</button>
+      </div>
+    </div>
+    <div class="product__links">
+      <a class="link-wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20SmartCare%20Hydroloc%20Xtreme%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Ask on WhatsApp</a>
       <a class="link-arrow" href="https://www.asianpaints.com/waterproofing-products/hydroloc-xtreme.html" target="_blank" rel="noopener">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
     </div>
   </div>
 </article>
-<article class="product" data-tags="interior exterior bathrooms">
+<article class="product" data-tags="interior exterior bathrooms" data-pid="asian-damp-block-2k" data-name="SmartCare Damp Block 2K" data-brand="Asian Paints" data-img="images/products/asian/damp-block-2k.webp" data-fixed="{}">
   
   <div class="product__img"><img src="images/products/asian/damp-block-2k.webp" alt="SmartCare Damp Block 2K by Asian Paints" loading="lazy" width="600" height="600"></div>
   <div class="product__body">
@@ -358,13 +457,20 @@
     <h3>SmartCare Damp Block 2K</h3>
     <p>Two-component waterproof coating for interior and exterior walls.</p>
     <ul class="chips"><li>3-year warranty</li><li>2-component</li><li>Walls &amp; bathrooms</li></ul>
-    <div class="product__actions">
-      <a class="btn btn--sm btn--wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20SmartCare%20Damp%20Block%202K%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Enquire</a>
+    <div class="buy">
+      <label class="buy__field"><span>Size</span><select data-opt="Size"><option value="3 L">3 L</option><option value="15 L">15 L</option></select></label>
+      <div class="buy__row">
+        <div class="qty"><button type="button" data-step="-1" aria-label="Less">&minus;</button><input type="number" min="1" max="999" value="1" inputmode="numeric" aria-label="Quantity"><button type="button" data-step="1" aria-label="More">+</button></div>
+        <button class="btn btn--sm btn--cart" type="button" data-add><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.6 12.2a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.5L22 7H6"/></svg> Add</button>
+      </div>
+    </div>
+    <div class="product__links">
+      <a class="link-wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20SmartCare%20Damp%20Block%202K%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Ask on WhatsApp</a>
       <a class="link-arrow" href="https://www.asianpaints.com/waterproofing-products/smartcare-damp-block-2k.html" target="_blank" rel="noopener">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
     </div>
   </div>
 </article>
-<article class="product" data-tags="exterior">
+<article class="product" data-tags="exterior" data-pid="asian-damp-sheath-exterior" data-name="SmartCare Damp Sheath Exterior" data-brand="Asian Paints" data-img="images/products/asian/damp-sheath-exterior.webp" data-fixed="{}">
   
   <div class="product__img"><img src="images/products/asian/damp-sheath-exterior.webp" alt="SmartCare Damp Sheath Exterior by Asian Paints" loading="lazy" width="600" height="600"></div>
   <div class="product__body">
@@ -372,13 +478,20 @@
     <h3>SmartCare Damp Sheath Exterior</h3>
     <p>Waterproof base coat for exterior plaster, applied before paint.</p>
     <ul class="chips"><li>5-year warranty</li><li>Exterior walls</li><li>Under paint</li></ul>
-    <div class="product__actions">
-      <a class="btn btn--sm btn--wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20SmartCare%20Damp%20Sheath%20Exterior%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Enquire</a>
+    <div class="buy">
+      <label class="buy__field"><span>Size</span><select data-opt="Size"><option value="1 L">1 L</option><option value="4 L">4 L</option><option value="10 L">10 L</option><option value="20 L">20 L</option></select></label>
+      <div class="buy__row">
+        <div class="qty"><button type="button" data-step="-1" aria-label="Less">&minus;</button><input type="number" min="1" max="999" value="1" inputmode="numeric" aria-label="Quantity"><button type="button" data-step="1" aria-label="More">+</button></div>
+        <button class="btn btn--sm btn--cart" type="button" data-add><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.6 12.2a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.5L22 7H6"/></svg> Add</button>
+      </div>
+    </div>
+    <div class="product__links">
+      <a class="link-wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20SmartCare%20Damp%20Sheath%20Exterior%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Ask on WhatsApp</a>
       <a class="link-arrow" href="https://www.asianpaints.com/waterproofing-products/damp-sheath-exterior.html" target="_blank" rel="noopener">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
     </div>
   </div>
 </article>
-<article class="product" data-tags="interior">
+<article class="product" data-tags="interior" data-pid="asian-damp-sheath-interior" data-name="SmartCare Damp Sheath Interior" data-brand="Asian Paints" data-img="images/products/asian/damp-sheath-interior.webp" data-fixed="{}">
   
   <div class="product__img"><img src="images/products/asian/damp-sheath-interior.webp" alt="SmartCare Damp Sheath Interior by Asian Paints" loading="lazy" width="600" height="600"></div>
   <div class="product__body">
@@ -386,13 +499,20 @@
     <h3>SmartCare Damp Sheath Interior</h3>
     <p>Anti-damp coating that stops dampness on interior walls.</p>
     <ul class="chips"><li>3-year warranty</li><li>Anti-damp</li><li>Interior walls</li></ul>
-    <div class="product__actions">
-      <a class="btn btn--sm btn--wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20SmartCare%20Damp%20Sheath%20Interior%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Enquire</a>
+    <div class="buy">
+      <label class="buy__field"><span>Size</span><select data-opt="Size"><option value="1 L">1 L</option><option value="4 L">4 L</option><option value="10 L">10 L</option><option value="20 L">20 L</option></select></label>
+      <div class="buy__row">
+        <div class="qty"><button type="button" data-step="-1" aria-label="Less">&minus;</button><input type="number" min="1" max="999" value="1" inputmode="numeric" aria-label="Quantity"><button type="button" data-step="1" aria-label="More">+</button></div>
+        <button class="btn btn--sm btn--cart" type="button" data-add><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.6 12.2a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.5L22 7H6"/></svg> Add</button>
+      </div>
+    </div>
+    <div class="product__links">
+      <a class="link-wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20SmartCare%20Damp%20Sheath%20Interior%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Ask on WhatsApp</a>
       <a class="link-arrow" href="https://www.asianpaints.com/waterproofing-products/smartcare-damp-sheath-interior.html" target="_blank" rel="noopener">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
     </div>
   </div>
 </article>
-<article class="product" data-tags="cracks exterior">
+<article class="product" data-tags="cracks exterior" data-pid="asian-crack-seal" data-name="SmartCare Crack Seal" data-brand="Asian Paints" data-img="images/products/asian/crack-seal.webp" data-fixed="{}">
   
   <div class="product__img"><img src="images/products/asian/crack-seal.webp" alt="SmartCare Crack Seal by Asian Paints" loading="lazy" width="600" height="600"></div>
   <div class="product__body">
@@ -400,13 +520,20 @@
     <h3>SmartCare Crack Seal</h3>
     <p>Fills fine cracks on walls and stops water seepage.</p>
     <ul class="chips"><li>Fine cracks</li><li>Stops seepage</li><li>Easy to apply</li></ul>
-    <div class="product__actions">
-      <a class="btn btn--sm btn--wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20SmartCare%20Crack%20Seal%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Enquire</a>
+    <div class="buy">
+      <label class="buy__field"><span>Size</span><select data-opt="Size"><option value="1 kg">1 kg</option><option value="5 kg">5 kg</option></select></label>
+      <div class="buy__row">
+        <div class="qty"><button type="button" data-step="-1" aria-label="Less">&minus;</button><input type="number" min="1" max="999" value="1" inputmode="numeric" aria-label="Quantity"><button type="button" data-step="1" aria-label="More">+</button></div>
+        <button class="btn btn--sm btn--cart" type="button" data-add><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.6 12.2a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.5L22 7H6"/></svg> Add</button>
+      </div>
+    </div>
+    <div class="product__links">
+      <a class="link-wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20SmartCare%20Crack%20Seal%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Ask on WhatsApp</a>
       <a class="link-arrow" href="https://www.asianpaints.com/waterproofing-products/smartcare-crack-seal.html" target="_blank" rel="noopener">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
     </div>
   </div>
 </article>
-<article class="product" data-tags="cracks terrace">
+<article class="product" data-tags="cracks terrace" data-pid="asian-repair-polymer" data-name="SmartCare Repair Polymer" data-brand="Asian Paints" data-img="images/products/asian/repair-polymer.webp" data-fixed="{}">
   
   <div class="product__img"><img src="images/products/asian/repair-polymer.webp" alt="SmartCare Repair Polymer by Asian Paints" loading="lazy" width="600" height="600"></div>
   <div class="product__body">
@@ -414,13 +541,20 @@
     <h3>SmartCare Repair Polymer</h3>
     <p>Bonding agent to repair floors, chajjas, beams and slabs.</p>
     <ul class="chips"><li>Bonding agent</li><li>Repairs</li><li>Concrete</li></ul>
-    <div class="product__actions">
-      <a class="btn btn--sm btn--wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20SmartCare%20Repair%20Polymer%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Enquire</a>
+    <div class="buy">
+      <label class="buy__field"><span>Size</span><select data-opt="Size"><option value="1 L">1 L</option><option value="4 L">4 L</option><option value="10 L">10 L</option><option value="20 L">20 L</option></select></label>
+      <div class="buy__row">
+        <div class="qty"><button type="button" data-step="-1" aria-label="Less">&minus;</button><input type="number" min="1" max="999" value="1" inputmode="numeric" aria-label="Quantity"><button type="button" data-step="1" aria-label="More">+</button></div>
+        <button class="btn btn--sm btn--cart" type="button" data-add><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.6 12.2a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.5L22 7H6"/></svg> Add</button>
+      </div>
+    </div>
+    <div class="product__links">
+      <a class="link-wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20SmartCare%20Repair%20Polymer%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Ask on WhatsApp</a>
       <a class="link-arrow" href="https://www.asianpaints.com/waterproofing-products/smartcare-repair-polymer.html" target="_blank" rel="noopener">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
     </div>
   </div>
 </article>
-<article class="product" data-tags="tiling bathrooms">
+<article class="product" data-tags="tiling bathrooms" data-pid="asian-tile-adhesive" data-name="SmartCare Tile Adhesive" data-brand="Asian Paints" data-img="images/products/asian/tile-adhesive.webp" data-fixed="{}">
   
   <div class="product__img"><img src="images/products/asian/tile-adhesive.webp" alt="SmartCare Tile Adhesive by Asian Paints" loading="lazy" width="600" height="600"></div>
   <div class="product__body">
@@ -428,8 +562,15 @@
     <h3>SmartCare Tile Adhesive</h3>
     <p>High-bond adhesive for ceramic, vitrified and glass tiles.</p>
     <ul class="chips"><li>High bond</li><li>Vitrified tiles</li><li>Floors &amp; walls</li></ul>
-    <div class="product__actions">
-      <a class="btn btn--sm btn--wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20SmartCare%20Tile%20Adhesive%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Enquire</a>
+    <div class="buy">
+      <label class="buy__field"><span>Size</span><select data-opt="Size"><option value="20 kg">20 kg</option></select></label>
+      <div class="buy__row">
+        <div class="qty"><button type="button" data-step="-1" aria-label="Less">&minus;</button><input type="number" min="1" max="999" value="1" inputmode="numeric" aria-label="Quantity"><button type="button" data-step="1" aria-label="More">+</button></div>
+        <button class="btn btn--sm btn--cart" type="button" data-add><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.6 12.2a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.5L22 7H6"/></svg> Add</button>
+      </div>
+    </div>
+    <div class="product__links">
+      <a class="link-wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20SmartCare%20Tile%20Adhesive%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Ask on WhatsApp</a>
       <a class="link-arrow" href="https://www.asianpaints.com/waterproofing-products/smartcare-tile-adhesive.html" target="_blank" rel="noopener">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
     </div>
   </div>
@@ -446,7 +587,7 @@
       <p>Fill pores and small dents for a smooth, even wall before primer and paint.</p>
     </div>
     <div class="products">
-<article class="product">
+<article class="product" data-pid="asian-acrylic-wall-putty" data-name="TruCare Acrylic Wall Putty" data-brand="Asian Paints" data-img="images/products/asian/acrylic-wall-putty.webp" data-fixed="{}">
   
   <div class="product__img"><img src="images/products/asian/acrylic-wall-putty.webp" alt="TruCare Acrylic Wall Putty by Asian Paints" loading="lazy" width="600" height="600"></div>
   <div class="product__body">
@@ -454,13 +595,20 @@
     <h3>TruCare Acrylic Wall Putty</h3>
     <p>Ready-to-use acrylic putty with a strong grip for a long-lasting finish.</p>
     <ul class="chips"><li>Ready to use</li><li>Strong grip</li><li>Interior</li></ul>
-    <div class="product__actions">
-      <a class="btn btn--sm btn--wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20TruCare%20Acrylic%20Wall%20Putty%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Enquire</a>
+    <div class="buy">
+      <label class="buy__field"><span>Size</span><select data-opt="Size"><option value="1 kg">1 kg</option><option value="5 kg">5 kg</option><option value="20 kg">20 kg</option></select></label>
+      <div class="buy__row">
+        <div class="qty"><button type="button" data-step="-1" aria-label="Less">&minus;</button><input type="number" min="1" max="999" value="1" inputmode="numeric" aria-label="Quantity"><button type="button" data-step="1" aria-label="More">+</button></div>
+        <button class="btn btn--sm btn--cart" type="button" data-add><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.6 12.2a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.5L22 7H6"/></svg> Add</button>
+      </div>
+    </div>
+    <div class="product__links">
+      <a class="link-wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20TruCare%20Acrylic%20Wall%20Putty%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Ask on WhatsApp</a>
       <a class="link-arrow" href="https://www.asianpaints.com/paint-products/interior-wall-paints/plain-finishes/acrylic-wall-putty.html" target="_blank" rel="noopener">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
     </div>
   </div>
 </article>
-<article class="product">
+<article class="product" data-pid="asian-trucare-putty" data-name="TruCare Powder Acrylic Putty" data-brand="Asian Paints" data-img="images/products/asian/trucare-putty.webp" data-fixed="{}">
   
   <div class="product__img"><img src="images/products/asian/trucare-putty.webp" alt="TruCare Powder Acrylic Putty by Asian Paints" loading="lazy" width="600" height="600"></div>
   <div class="product__body">
@@ -468,22 +616,36 @@
     <h3>TruCare Powder Acrylic Putty</h3>
     <p>Gives a marble-like, ultra-smooth base for glossy topcoats.</p>
     <ul class="chips"><li>Ultra smooth</li><li>Powder</li><li>Interior &amp; exterior</li></ul>
-    <div class="product__actions">
-      <a class="btn btn--sm btn--wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20TruCare%20Powder%20Acrylic%20Putty%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Enquire</a>
+    <div class="buy">
+      <label class="buy__field"><span>Size</span><select data-opt="Size"><option value="20 kg">20 kg</option><option value="40 kg">40 kg</option></select></label>
+      <div class="buy__row">
+        <div class="qty"><button type="button" data-step="-1" aria-label="Less">&minus;</button><input type="number" min="1" max="999" value="1" inputmode="numeric" aria-label="Quantity"><button type="button" data-step="1" aria-label="More">+</button></div>
+        <button class="btn btn--sm btn--cart" type="button" data-add><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.6 12.2a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.5L22 7H6"/></svg> Add</button>
+      </div>
+    </div>
+    <div class="product__links">
+      <a class="link-wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20TruCare%20Powder%20Acrylic%20Putty%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Ask on WhatsApp</a>
       <a class="link-arrow" href="https://www.asianpaints.com/products/undercoats/trucare-powder-acrylic-putty.html" target="_blank" rel="noopener">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
     </div>
   </div>
 </article>
-<article class="product">
+<article class="product" data-pid="asian-waterproofing-putty" data-name="SmartCare Waterproofing Putty" data-brand="Asian Paints" data-img="images/products/asian/waterproofing-putty.webp" data-fixed="{}">
   
   <div class="product__img"><img src="images/products/asian/waterproofing-putty.webp" alt="SmartCare Waterproofing Putty by Asian Paints" loading="lazy" width="600" height="600"></div>
   <div class="product__body">
     <span class="product__cat">Wall Putty</span>
     <h3>SmartCare Waterproofing Putty</h3>
     <p>Smooth base for damp-prone walls with water and efflorescence resistance.</p>
-    <ul class="chips"><li>Water resistant</li><li>Anti-efflorescence</li><li>1 kg to 40 kg</li></ul>
-    <div class="product__actions">
-      <a class="btn btn--sm btn--wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20SmartCare%20Waterproofing%20Putty%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Enquire</a>
+    <ul class="chips"><li>Water resistant</li><li>Anti-efflorescence</li><li>Damp walls</li></ul>
+    <div class="buy">
+      <label class="buy__field"><span>Size</span><select data-opt="Size"><option value="1 kg">1 kg</option><option value="20 kg">20 kg</option><option value="40 kg">40 kg</option></select></label>
+      <div class="buy__row">
+        <div class="qty"><button type="button" data-step="-1" aria-label="Less">&minus;</button><input type="number" min="1" max="999" value="1" inputmode="numeric" aria-label="Quantity"><button type="button" data-step="1" aria-label="More">+</button></div>
+        <button class="btn btn--sm btn--cart" type="button" data-add><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.6 12.2a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.5L22 7H6"/></svg> Add</button>
+      </div>
+    </div>
+    <div class="product__links">
+      <a class="link-wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20SmartCare%20Waterproofing%20Putty%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Ask on WhatsApp</a>
       <a class="link-arrow" href="https://www.asianpaints.com/waterproofing-products/smartcare-waterproofing-putty.html" target="_blank" rel="noopener">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
     </div>
   </div>
@@ -502,7 +664,7 @@
     <div class="pgroup">
       <div class="pgroup__head"><span class="tier tier--pro">Interior</span><h3>Interior wall primers</h3></div>
       <div class="products">
-<article class="product">
+<article class="product" data-pid="asian-trucare-interior-primer" data-name="TruCare Interior Wall Primer" data-brand="Asian Paints" data-img="images/products/asian/trucare-interior-primer.webp" data-fixed="{}">
   
   <div class="product__img"><img src="images/products/asian/trucare-interior-primer.webp" alt="TruCare Interior Wall Primer by Asian Paints" loading="lazy" width="600" height="600"></div>
   <div class="product__body">
@@ -510,13 +672,20 @@
     <h3>TruCare Interior Wall Primer</h3>
     <p>Strong adhesion of the paint film on interior walls.</p>
     <ul class="chips"><li>Strong adhesion</li><li>Interior</li><li>Smooth base</li></ul>
-    <div class="product__actions">
-      <a class="btn btn--sm btn--wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20TruCare%20Interior%20Wall%20Primer%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Enquire</a>
+    <div class="buy">
+      <label class="buy__field"><span>Size</span><select data-opt="Size"><option value="1 L">1 L</option><option value="4 L">4 L</option><option value="10 L">10 L</option><option value="20 L">20 L</option></select></label>
+      <div class="buy__row">
+        <div class="qty"><button type="button" data-step="-1" aria-label="Less">&minus;</button><input type="number" min="1" max="999" value="1" inputmode="numeric" aria-label="Quantity"><button type="button" data-step="1" aria-label="More">+</button></div>
+        <button class="btn btn--sm btn--cart" type="button" data-add><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.6 12.2a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.5L22 7H6"/></svg> Add</button>
+      </div>
+    </div>
+    <div class="product__links">
+      <a class="link-wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20TruCare%20Interior%20Wall%20Primer%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Ask on WhatsApp</a>
       <a class="link-arrow" href="https://www.asianpaints.com/products/undercoats/trucare-interior-wall-primer-solvent-thinnable.html" target="_blank" rel="noopener">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
     </div>
   </div>
 </article>
-<article class="product">
+<article class="product" data-pid="asian-sparc-interior-primer" data-name="Sparc Interior Primer" data-brand="Asian Paints" data-img="images/products/asian/sparc-interior-primer.webp" data-fixed="{}">
   
   <div class="product__img"><img src="images/products/asian/sparc-interior-primer.webp" alt="Sparc Interior Primer by Asian Paints" loading="lazy" width="600" height="600"></div>
   <div class="product__body">
@@ -524,8 +693,15 @@
     <h3>Sparc Interior Primer</h3>
     <p>Excellent whiteness and a smooth surface for your topcoat.</p>
     <ul class="chips"><li>Whiteness</li><li>Adhesion</li><li>Economical</li></ul>
-    <div class="product__actions">
-      <a class="btn btn--sm btn--wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20Sparc%20Interior%20Primer%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Enquire</a>
+    <div class="buy">
+      <label class="buy__field"><span>Size</span><select data-opt="Size"><option value="1 L">1 L</option><option value="4 L">4 L</option><option value="10 L">10 L</option><option value="20 L">20 L</option></select></label>
+      <div class="buy__row">
+        <div class="qty"><button type="button" data-step="-1" aria-label="Less">&minus;</button><input type="number" min="1" max="999" value="1" inputmode="numeric" aria-label="Quantity"><button type="button" data-step="1" aria-label="More">+</button></div>
+        <button class="btn btn--sm btn--cart" type="button" data-add><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.6 12.2a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.5L22 7H6"/></svg> Add</button>
+      </div>
+    </div>
+    <div class="product__links">
+      <a class="link-wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20Sparc%20Interior%20Primer%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Ask on WhatsApp</a>
       <a class="link-arrow" href="https://www.asianpaints.com/products/undercoats/sparc-interior-primer.html" target="_blank" rel="noopener">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
     </div>
   </div>
@@ -535,7 +711,7 @@
     <div class="pgroup">
       <div class="pgroup__head"><span class="tier tier--pro">Exterior</span><h3>Exterior wall primers</h3></div>
       <div class="products">
-<article class="product">
+<article class="product" data-pid="asian-trucare-exterior-primer" data-name="TruCare Exterior Wall Primer Advanced" data-brand="Asian Paints" data-img="images/products/asian/trucare-exterior-primer.webp" data-fixed="{}">
   
   <div class="product__img"><img src="images/products/asian/trucare-exterior-primer.webp" alt="TruCare Exterior Wall Primer Advanced by Asian Paints" loading="lazy" width="600" height="600"></div>
   <div class="product__body">
@@ -543,13 +719,20 @@
     <h3>TruCare Exterior Wall Primer Advanced</h3>
     <p>Balance of whiteness, adhesion and topcoat finish for outside walls.</p>
     <ul class="chips"><li>Advanced</li><li>Adhesion</li><li>Exterior</li></ul>
-    <div class="product__actions">
-      <a class="btn btn--sm btn--wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20TruCare%20Exterior%20Wall%20Primer%20Advanced%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Enquire</a>
+    <div class="buy">
+      <label class="buy__field"><span>Size</span><select data-opt="Size"><option value="1 L">1 L</option><option value="4 L">4 L</option><option value="10 L">10 L</option><option value="20 L">20 L</option></select></label>
+      <div class="buy__row">
+        <div class="qty"><button type="button" data-step="-1" aria-label="Less">&minus;</button><input type="number" min="1" max="999" value="1" inputmode="numeric" aria-label="Quantity"><button type="button" data-step="1" aria-label="More">+</button></div>
+        <button class="btn btn--sm btn--cart" type="button" data-add><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.6 12.2a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.5L22 7H6"/></svg> Add</button>
+      </div>
+    </div>
+    <div class="product__links">
+      <a class="link-wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20TruCare%20Exterior%20Wall%20Primer%20Advanced%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Ask on WhatsApp</a>
       <a class="link-arrow" href="https://www.asianpaints.com/products/undercoats/trucare-exterior-wall-primer-advanced.html" target="_blank" rel="noopener">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
     </div>
   </div>
 </article>
-<article class="product">
+<article class="product" data-pid="asian-sparc-exterior-primer" data-name="Sparc Exterior Primer" data-brand="Asian Paints" data-img="images/products/asian/sparc-exterior-primer.webp" data-fixed="{}">
   
   <div class="product__img"><img src="images/products/asian/sparc-exterior-primer.webp" alt="Sparc Exterior Primer by Asian Paints" loading="lazy" width="600" height="600"></div>
   <div class="product__body">
@@ -557,8 +740,15 @@
     <h3>Sparc Exterior Primer</h3>
     <p>Smooth, white base with strong adhesion for long-lasting exteriors.</p>
     <ul class="chips"><li>Whiteness</li><li>Strong adhesion</li><li>Economical</li></ul>
-    <div class="product__actions">
-      <a class="btn btn--sm btn--wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20Sparc%20Exterior%20Primer%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Enquire</a>
+    <div class="buy">
+      <label class="buy__field"><span>Size</span><select data-opt="Size"><option value="1 L">1 L</option><option value="4 L">4 L</option><option value="10 L">10 L</option><option value="20 L">20 L</option></select></label>
+      <div class="buy__row">
+        <div class="qty"><button type="button" data-step="-1" aria-label="Less">&minus;</button><input type="number" min="1" max="999" value="1" inputmode="numeric" aria-label="Quantity"><button type="button" data-step="1" aria-label="More">+</button></div>
+        <button class="btn btn--sm btn--cart" type="button" data-add><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.6 12.2a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.5L22 7H6"/></svg> Add</button>
+      </div>
+    </div>
+    <div class="product__links">
+      <a class="link-wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20Sparc%20Exterior%20Primer%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Ask on WhatsApp</a>
       <a class="link-arrow" href="https://www.asianpaints.com/products/undercoats/sparc-exterior-primer.html" target="_blank" rel="noopener">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
     </div>
   </div>
@@ -573,10 +763,12 @@
     <div class="section-head">
       <span class="eyebrow">Enamel Paints</span>
       <h2>Enamels for doors, windows &amp; grills</h2>
-      <p>Glossy and satin enamels for wood and metal surfaces.</p>
+      <p>Glossy and satin enamels for wood and metal surfaces, with the right primer underneath.</p>
     </div>
-    <div class="products">
-<article class="product">
+    <div class="pgroup">
+      <div class="pgroup__head"><span class="tier tier--pro">Enamel</span><h3>Enamel paints</h3></div>
+      <div class="products">
+<article class="product" data-pid="asian-apcolite-gloss-enamel" data-name="Apcolite Premium Gloss Enamel" data-brand="Asian Paints" data-img="images/products/asian/apcolite-gloss-enamel.webp" data-fixed="{}">
   
   <div class="product__img"><img src="images/products/asian/apcolite-gloss-enamel.webp" alt="Apcolite Premium Gloss Enamel by Asian Paints" loading="lazy" width="600" height="600"></div>
   <div class="product__body">
@@ -584,13 +776,20 @@
     <h3>Apcolite Premium Gloss Enamel</h3>
     <p>Lustrous, durable gloss finish for doors, windows and grills.</p>
     <ul class="chips"><li>High gloss</li><li>Wood &amp; metal</li><li>Premium</li></ul>
-    <div class="product__actions">
-      <a class="btn btn--sm btn--wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20Apcolite%20Premium%20Gloss%20Enamel%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Enquire</a>
+    <div class="buy">
+      <label class="buy__field"><span>Size</span><select data-opt="Size"><option value="500 ml">500 ml</option><option value="1 L">1 L</option><option value="4 L">4 L</option></select></label>
+      <div class="buy__row">
+        <div class="qty"><button type="button" data-step="-1" aria-label="Less">&minus;</button><input type="number" min="1" max="999" value="1" inputmode="numeric" aria-label="Quantity"><button type="button" data-step="1" aria-label="More">+</button></div>
+        <button class="btn btn--sm btn--cart" type="button" data-add><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.6 12.2a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.5L22 7H6"/></svg> Add</button>
+      </div>
+    </div>
+    <div class="product__links">
+      <a class="link-wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20Apcolite%20Premium%20Gloss%20Enamel%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Ask on WhatsApp</a>
       <a class="link-arrow" href="https://www.asianpaints.com/enamel-paints/apcolite-premium-gloss-enamel.html" target="_blank" rel="noopener">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
     </div>
   </div>
 </article>
-<article class="product">
+<article class="product" data-pid="asian-apcolite-satin-enamel" data-name="Apcolite Premium Satin Enamel" data-brand="Asian Paints" data-img="images/products/asian/apcolite-satin-enamel.webp" data-fixed="{}">
   
   <div class="product__img"><img src="images/products/asian/apcolite-satin-enamel.webp" alt="Apcolite Premium Satin Enamel by Asian Paints" loading="lazy" width="600" height="600"></div>
   <div class="product__body">
@@ -598,13 +797,20 @@
     <h3>Apcolite Premium Satin Enamel</h3>
     <p>Soft sheen enamel for a rich, elegant look on wood and metal.</p>
     <ul class="chips"><li>Soft sheen</li><li>Wood &amp; metal</li><li>Premium</li></ul>
-    <div class="product__actions">
-      <a class="btn btn--sm btn--wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20Apcolite%20Premium%20Satin%20Enamel%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Enquire</a>
+    <div class="buy">
+      <label class="buy__field"><span>Size</span><select data-opt="Size"><option value="500 ml">500 ml</option><option value="1 L">1 L</option><option value="4 L">4 L</option></select></label>
+      <div class="buy__row">
+        <div class="qty"><button type="button" data-step="-1" aria-label="Less">&minus;</button><input type="number" min="1" max="999" value="1" inputmode="numeric" aria-label="Quantity"><button type="button" data-step="1" aria-label="More">+</button></div>
+        <button class="btn btn--sm btn--cart" type="button" data-add><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.6 12.2a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.5L22 7H6"/></svg> Add</button>
+      </div>
+    </div>
+    <div class="product__links">
+      <a class="link-wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20Apcolite%20Premium%20Satin%20Enamel%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Ask on WhatsApp</a>
       <a class="link-arrow" href="https://www.asianpaints.com/enamel-paints/apcolite-premium-satin-enamel.html" target="_blank" rel="noopener">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
     </div>
   </div>
 </article>
-<article class="product">
+<article class="product" data-pid="asian-tractor-enamel" data-name="Tractor Enamel" data-brand="Asian Paints" data-img="images/products/asian/tractor-enamel.webp" data-fixed="{}">
   
   <div class="product__img"><img src="images/products/asian/tractor-enamel.webp" alt="Tractor Enamel by Asian Paints" loading="lazy" width="600" height="600"></div>
   <div class="product__body">
@@ -612,13 +818,20 @@
     <h3>Tractor Enamel</h3>
     <p>Long-lasting glossy finish for metal and wood at a great price.</p>
     <ul class="chips"><li>Glossy</li><li>Long lasting</li><li>Economical</li></ul>
-    <div class="product__actions">
-      <a class="btn btn--sm btn--wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20Tractor%20Enamel%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Enquire</a>
+    <div class="buy">
+      <label class="buy__field"><span>Size</span><select data-opt="Size"><option value="500 ml">500 ml</option><option value="1 L">1 L</option><option value="4 L">4 L</option></select></label>
+      <div class="buy__row">
+        <div class="qty"><button type="button" data-step="-1" aria-label="Less">&minus;</button><input type="number" min="1" max="999" value="1" inputmode="numeric" aria-label="Quantity"><button type="button" data-step="1" aria-label="More">+</button></div>
+        <button class="btn btn--sm btn--cart" type="button" data-add><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.6 12.2a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.5L22 7H6"/></svg> Add</button>
+      </div>
+    </div>
+    <div class="product__links">
+      <a class="link-wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20Tractor%20Enamel%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Ask on WhatsApp</a>
       <a class="link-arrow" href="https://www.asianpaints.com/enamel-paints/tractor-enamel.html" target="_blank" rel="noopener">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
     </div>
   </div>
 </article>
-<article class="product">
+<article class="product" data-pid="asian-tractor-sparc-enamel" data-name="Tractor Sparc Enamel" data-brand="Asian Paints" data-img="images/products/asian/tractor-sparc-enamel.webp" data-fixed="{}">
   
   <div class="product__img"><img src="images/products/asian/tractor-sparc-enamel.webp" alt="Tractor Sparc Enamel by Asian Paints" loading="lazy" width="600" height="600"></div>
   <div class="product__body">
@@ -626,13 +839,68 @@
     <h3>Tractor Sparc Enamel</h3>
     <p>Affordable high-sheen enamel for homes and small projects.</p>
     <ul class="chips"><li>High sheen</li><li>Affordable</li><li>Wood &amp; metal</li></ul>
-    <div class="product__actions">
-      <a class="btn btn--sm btn--wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20Tractor%20Sparc%20Enamel%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Enquire</a>
+    <div class="buy">
+      <label class="buy__field"><span>Size</span><select data-opt="Size"><option value="500 ml">500 ml</option><option value="1 L">1 L</option><option value="4 L">4 L</option></select></label>
+      <div class="buy__row">
+        <div class="qty"><button type="button" data-step="-1" aria-label="Less">&minus;</button><input type="number" min="1" max="999" value="1" inputmode="numeric" aria-label="Quantity"><button type="button" data-step="1" aria-label="More">+</button></div>
+        <button class="btn btn--sm btn--cart" type="button" data-add><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.6 12.2a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.5L22 7H6"/></svg> Add</button>
+      </div>
+    </div>
+    <div class="product__links">
+      <a class="link-wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20Tractor%20Sparc%20Enamel%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Ask on WhatsApp</a>
       <a class="link-arrow" href="https://www.asianpaints.com/enamel-paints/tractor-sparc-enamel.html" target="_blank" rel="noopener">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
     </div>
   </div>
 </article>
 </div>
+    </div>
+    <div class="pgroup">
+      <div class="pgroup__head"><span class="tier tier--pro">Primer</span><h3>Wood &amp; metal primers</h3></div>
+      <div class="products">
+<article class="product" data-pid="asian-wood-primer" data-name="TruCare Wood Primer" data-brand="Asian Paints" data-img="images/products/asian/wood-primer.webp" data-fixed="{}">
+  
+  <div class="product__img"><img src="images/products/asian/wood-primer.webp" alt="TruCare Wood Primer by Asian Paints" loading="lazy" width="600" height="600"></div>
+  <div class="product__body">
+    <span class="product__cat">Wood Primer</span>
+    <h3>TruCare Wood Primer</h3>
+    <p>Seals new wood and helps enamel stick well for a smooth finish.</p>
+    <ul class="chips"><li>For wood</li><li>Good sealing</li><li>Before enamel</li></ul>
+    <div class="buy">
+      <label class="buy__field"><span>Size</span><select data-opt="Size"><option value="500 ml">500 ml</option><option value="1 L">1 L</option><option value="4 L">4 L</option></select></label>
+      <div class="buy__row">
+        <div class="qty"><button type="button" data-step="-1" aria-label="Less">&minus;</button><input type="number" min="1" max="999" value="1" inputmode="numeric" aria-label="Quantity"><button type="button" data-step="1" aria-label="More">+</button></div>
+        <button class="btn btn--sm btn--cart" type="button" data-add><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.6 12.2a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.5L22 7H6"/></svg> Add</button>
+      </div>
+    </div>
+    <div class="product__links">
+      <a class="link-wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20TruCare%20Wood%20Primer%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Ask on WhatsApp</a>
+      <a class="link-arrow" href="https://www.asianpaints.com/products/undercoats/wood-primer.html" target="_blank" rel="noopener">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
+    </div>
+  </div>
+</article>
+<article class="product" data-pid="asian-red-oxide-metal-primer" data-name="TruCare Red Oxide Metal Primer" data-brand="Asian Paints" data-img="images/products/asian/red-oxide-metal-primer.webp" data-fixed="{}">
+  
+  <div class="product__img"><img src="images/products/asian/red-oxide-metal-primer.webp" alt="TruCare Red Oxide Metal Primer by Asian Paints" loading="lazy" width="600" height="600"></div>
+  <div class="product__body">
+    <span class="product__cat">Metal Primer</span>
+    <h3>TruCare Red Oxide Metal Primer</h3>
+    <p>Rust protection for iron and steel gates, grills and windows before enamel.</p>
+    <ul class="chips"><li>For metal</li><li>Rust protection</li><li>Before enamel</li></ul>
+    <div class="buy">
+      <label class="buy__field"><span>Size</span><select data-opt="Size"><option value="500 ml">500 ml</option><option value="1 L">1 L</option><option value="4 L">4 L</option></select></label>
+      <div class="buy__row">
+        <div class="qty"><button type="button" data-step="-1" aria-label="Less">&minus;</button><input type="number" min="1" max="999" value="1" inputmode="numeric" aria-label="Quantity"><button type="button" data-step="1" aria-label="More">+</button></div>
+        <button class="btn btn--sm btn--cart" type="button" data-add><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.6 12.2a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.5L22 7H6"/></svg> Add</button>
+      </div>
+    </div>
+    <div class="product__links">
+      <a class="link-wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20Please%20share%20price%20and%20details%20of%20TruCare%20Red%20Oxide%20Metal%20Primer%20%28Asian%20Paints%29." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg> Ask on WhatsApp</a>
+      <a class="link-arrow" href="https://www.asianpaints.com/enamel-paints/trucare-red-oxide-metal-primer.html" target="_blank" rel="noopener">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
+    </div>
+  </div>
+</article>
+</div>
+    </div>
   </div>
 </section>
 
@@ -706,6 +974,7 @@
       <h4>Quick Links</h4>
       <ul class="footer__links">
         <li><a href="index.html">Home</a></li>
+        <li><a href="tools.html">Tools &amp; More</a></li>
         <li><a href="shades.html">Shade Cards</a></li>
         <li><a href="index.html#services">Our Services</a></li>
         <li><a href="index.html#team">Meet the Team</a></li>
@@ -733,5 +1002,6 @@
 <a class="fab-wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20I%20have%20a%20question." target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg></a>
 <button class="to-top" type="button" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
 <script src="js/main.js?v=2"></script>
+<script src="js/cart.js?v=1"></script>
 </body>
 </html>

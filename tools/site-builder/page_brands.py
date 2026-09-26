@@ -2,7 +2,9 @@ import json
 from pathlib import Path
 from layout import page, wa, tel
 from icons import i
-from products import ASIAN, BERGER, BIRLA, FOREVER, grid
+import json as _json
+from html import escape as _esc
+from products import ASIAN, BERGER, BIRLA, FOREVER, DRFIXIT, CEMENT_COLOUR, CEMENT_COLOURS, grid, card
 
 ASIAN_CARDS = json.load(open(Path(__file__).with_name("asian_shade_pages.json")))
 CARD_META = {
@@ -163,9 +165,16 @@ def asian():
     <div class="section-head">
       <span class="eyebrow">Enamel Paints</span>
       <h2>Enamels for doors, windows &amp; grills</h2>
-      <p>Glossy and satin enamels for wood and metal surfaces.</p>
+      <p>Glossy and satin enamels for wood and metal surfaces, with the right primer underneath.</p>
     </div>
-    {grid(ASIAN['enamel'], 'asian')}
+    <div class="pgroup">
+      <div class="pgroup__head"><span class="tier tier--pro">Enamel</span><h3>Enamel paints</h3></div>
+      {grid(ASIAN['enamel'], 'asian')}
+    </div>
+    <div class="pgroup">
+      <div class="pgroup__head"><span class="tier tier--pro">Primer</span><h3>Wood &amp; metal primers</h3></div>
+      {grid(ASIAN['enamel_primer'], 'asian')}
+    </div>
   </div>
 </section>
 
@@ -252,10 +261,16 @@ def berger():
 def birla():
     tabs = [
         ("exteriors", "Exteriors", "Exterior Wall Paint",
-         "Exterior paints by Birla Opus, made to protect your home from sun, rain and dust. We stock the Style range for great value and Calista Neo Star Shine for a premium sheen finish.",
+         "Exterior paints by Birla Opus, made to protect your home from sun, rain and dust. We stock the Style range (Power Bright, Power Bright Shine, Power Fit) for great value and Calista Neo Star Shine for a premium sheen finish.",
          grid(BIRLA['exterior'], 'birla')),
+        ("interiors", "Interiors", "Interior Wall Paint",
+         "Economy interior emulsions and distemper from the Birla Opus Style range: bright colour, easy to wash and gentle on the budget.",
+         grid(BIRLA['interior'], 'birla')),
+        ("waterproofing", "Waterproofing", "Alldry Wall n Roof",
+         "Waterproofing coating for roofs and outside walls. Pick the grade (3, 4, 7, 10 or 12) and the pack size; a higher grade gives longer protection.",
+         grid(BIRLA['waterproofing'], 'birla')),
         ("putty", "Wall Putty", "Wall Putty",
-         "An even, smooth wall is the base of a good paint job. One Pro Smooth acrylic putty fills pores and dents before primer.",
+         "An even, smooth wall is the base of a good paint job. Birla Opus acrylic putty, Birla White putty (normal and waterproof) and texture putty.",
          grid(BIRLA['putty'], 'birla')),
         ("primers", "Primers", "Interior &amp; Exterior Primers",
          "The right primer makes paint stick better, cover more and last longer. Choose interior or exterior below.",
@@ -372,12 +387,21 @@ def acc():
     panels = []
     for n, (slug, name, desc, pts, url) in enumerate(items):
         msg = f"Namaste Rana Paints! Please share the rate of {name} with home delivery."
-        panels.append(f"""<div class="feature-panel{' feature-panel--rev' if n % 2 else ''} reveal">
+        pid_attr = (f' data-pid="acc-{slug}" data-name="{name}" data-brand="ACC"'
+                    f' data-img="images/products/acc/{slug}.webp" data-fixed="{_esc(_json.dumps({"Size": "50 kg bag"}))}"')
+        panels.append(f"""<div class="feature-panel{' feature-panel--rev' if n % 2 else ''} reveal"{pid_attr}>
   <div>
     <div class="feature-panel__kicker">Featured Product</div>
     <h2>{name}</h2>
     <p>{desc}</p>
     <ul>{''.join(f'<li>{p}</li>' for p in pts)}</ul>
+    <div class="buy">
+      <span class="buy__fixed">Pack: <b>50 kg bag</b></span>
+      <div class="buy__row">
+        <div class="qty"><button type="button" data-step="-1" aria-label="Less">&minus;</button><input type="number" min="1" max="999" value="1" inputmode="numeric" aria-label="Number of bags"><button type="button" data-step="1" aria-label="More">+</button></div>
+        <button class="btn btn--sm btn--cart" type="button" data-add>{i('cart', '2')} Add bags</button>
+      </div>
+    </div>
     <div class="feature-panel__actions">
       <a class="btn btn--white" href="{wa(msg)}" target="_blank" rel="noopener">{i('wa')} Ask Rate</a>
       <a class="btn btn--ghost-white" href="{url}" target="_blank" rel="noopener">View Details</a>
@@ -392,7 +416,7 @@ def acc():
       {crumbs('ACC Cement')}
       <img class="acc-logo" src="images/brands/acc.svg" alt="ACC" width="160" height="56">
       <h1>Strong homes start with ACC cement</h1>
-      <p>Authorised ACC cement dealer in Passi Kandi, Dasuya. Three trusted ACC cements, steel for your construction, and <strong>home delivery of cement</strong> to your site.</p>
+      <p>Authorised ACC cement dealer in Passi Kandi, Dasuya. Three trusted ACC cements, Dr. Fixit waterproofing, cement colours, steel for your construction, and <strong>home delivery of cement</strong> to your site.</p>
       <div class="bhero__actions">
         <a class="btn btn--white" href="#products">Our Cement Range</a>
         <a class="btn btn--wa" href="{wa('Namaste Rana Paints! I need ACC cement rates with home delivery.')}" target="_blank" rel="noopener">{i('wa')} Ask Rates</a>
@@ -414,6 +438,31 @@ def acc():
       <a class="btn" href="{tel('94171 23935')}">{i('phone')} Order Now</a>
     </div>
 {chr(10).join(panels)}
+  </div>
+</section>
+
+<section class="section section--soft" id="waterproofing">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Waterproofing with Cement</span>
+      <h2>Dr. Fixit waterproofing chemicals</h2>
+      <p>Mix into your cement work for a leak-proof roof, tank or wall. We keep the two most-used Dr. Fixit products.</p>
+    </div>
+    <div style="max-width:640px">{grid(DRFIXIT, 'drfixit')}</div>
+  </div>
+</section>
+
+<section class="section" id="cement-colour">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Cement Colour</span>
+      <h2>Powder colour for cement (20 kg bag)</h2>
+      <p>Give floors, courtyards and outside plaster a lasting colour. Choose from 10 colours.</p>
+    </div>
+    <div class="cc">
+      <div class="cc__card">{card(CEMENT_COLOUR, 'misc')}</div>
+      <ul class="cc__swatches" aria-label="Available cement colours">{''.join(f'<li><span style="background:{hx}"></span>{n}</li>' for n, hx in CEMENT_COLOURS)}</ul>
+    </div>
   </div>
 </section>
 

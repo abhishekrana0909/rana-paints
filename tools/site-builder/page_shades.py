@@ -83,7 +83,7 @@ def build():
 """
     scripts = ('<script src="js/data/berger-shades.js"></script>\n'
                '<script src="js/data/birla-shades.js"></script>\n'
-               '<script src="js/shades.js?v=2"></script>\n')
+               '<script src="js/shades.js?v=3"></script>\n')
     return page("Shade Cards: Asian Paints, Berger, Birla Opus | Rana Paints",
                 "Asian Paints shade cards (Tractor, Ace & Apex, Apcolite) and 3,800+ Berger and Birla Opus shades with names and codes. Rana Paints, Dasuya.",
                 body, active="shades.html", scripts=scripts)

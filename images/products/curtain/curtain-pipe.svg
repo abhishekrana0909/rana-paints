@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 300" role="img" aria-label="Steel curtain pipe">
+  <defs><linearGradient id="s" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4f6f8"/><stop offset=".45" stop-color="#b9c0c8"/><stop offset=".55" stop-color="#8e969f"/><stop offset="1" stop-color="#dfe3e8"/></linearGradient><linearGradient id="v" x1="0" x2="1"><stop offset="0" stop-color="#9aa2ab"/><stop offset=".4" stop-color="#f1f3f5"/><stop offset="1" stop-color="#8b939c"/></linearGradient></defs>
+  <g transform="rotate(-18 210 150)">
+    <rect x="40" y="138" width="340" height="24" rx="12" fill="url(#s)"/>
+    <rect x="16" y="126" width="34" height="48" rx="8" fill="url(#v)"/>
+    <rect x="370" y="126" width="34" height="48" rx="8" fill="url(#v)"/>
+    <rect x="140" y="132" width="16" height="36" rx="4" fill="#6b737c"/>
+    <rect x="264" y="132" width="16" height="36" rx="4" fill="#6b737c"/>
+  </g>
+  <text x="210" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="20" fill="#33333d">12 ft  ·  15 ft</text>
+</svg>

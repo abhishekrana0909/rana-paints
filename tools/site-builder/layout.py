@@ -43,7 +43,7 @@ def head(title, desc, extra=""):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&amp;family=Barlow:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=4">
+<link rel="stylesheet" href="css/style.css?v=5">
 {extra}</head>"""
 
 
@@ -92,8 +92,8 @@ def header(active=""):
 {drop}
           </div>
         </li>
+        <li><a class="nav__link" href="tools.html"{cur('tools.html')}>Tools &amp; More</a></li>
         <li><a class="nav__link" href="shades.html"{cur('shades.html')}>Shades</a></li>
-        <li><a class="nav__link" href="index.html#services">Services</a></li>
         <li><a class="nav__link" href="index.html#team">About Us</a></li>
         <li><a class="nav__link" href="index.html#contact">Contact</a></li>
       </ul>
@@ -110,6 +110,7 @@ def header(active=""):
         <span><small>Call now</small><strong>94171 23935</strong></span>
       </a>
     </div>
+    <button class="cart-btn" type="button" data-cart-open aria-label="Open cart">{i('cart', '2')}<span class="cart-btn__label">Cart</span><span class="cart-count" data-cart-count hidden>0</span></button>
     <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-nav"><span></span></button>
   </div>
 </header>"""
@@ -139,6 +140,7 @@ def footer():
       <h4>Quick Links</h4>
       <ul class="footer__links">
         <li><a href="index.html">Home</a></li>
+        <li><a href="tools.html">Tools &amp; More</a></li>
         <li><a href="shades.html">Shade Cards</a></li>
         <li><a href="index.html#services">Our Services</a></li>
         <li><a href="index.html#team">Meet the Team</a></li>
@@ -179,6 +181,7 @@ def page(title, desc, body, active="", body_class="", scripts="", extra_head="")
 </main>
 {footer()}
 <script src="js/main.js?v=2"></script>
+<script src="js/cart.js?v=1"></script>
 {scripts}</body>
 </html>
 """
