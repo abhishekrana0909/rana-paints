@@ -24,7 +24,7 @@ def build():
     slides = [
         ("images/stock/hero-living.webp", "Calm living room with soft beige walls"),
         ("images/stock/hero-bedroom.webp", "Warm wooden bedroom with sage green walls"),
-        ("images/stock/hero-house.webp", "Warm wooden house exterior in the evening light"),
+        ("images/stock/hero-terracotta.webp", "Calm terracotta corridor with arches and plants"),
     ]
     slide_html = "\n".join(
         f'      <div class="hero__slide{" is-active" if k == 0 else ""}"><img src="{src}" alt="{alt}"'
@@ -56,18 +56,51 @@ def build():
     strip = "\n".join(f'        <a href="{h}" aria-label="{n}"><img src="{img}" alt="{n}" loading="lazy"></a>' for h, img, n, _ in BRANDS)
 
     services = [
-        ("roller", "Interior &amp; Exterior Painting", "Our own team of painters with 15+ years of experience paints your home neatly and on time."),
-        ("estimate", "Site Visit &amp; Estimate", "Our contractor visits your site, checks the walls and gives you a clear estimate for paint and labour."),
-        ("umbrella", "Waterproofing Solutions", "Terrace, bathroom, water tank and damp wall solutions with Asian Paints SmartCare and more."),
-        ("palette", "Computerised Colour Mixing", "Any shade from the shade card, mixed exactly on ColorWorld and Corob tinting machines."),
-        ("bricks", "Cement &amp; Steel Supply", "ACC cement and steel for building your new home, with home delivery of cement."),
-        ("layers", "Putty, Primer &amp; Enamel", "Complete range of wall putty, primers, enamels and painting tools under one roof."),
+        ("roller", "Interior &amp; Exterior Painting", "Our own team of painters with 15+ years of experience paints your home neatly and on time.",
+         ["Own team of painters, 15+ years of experience", "Interior, exterior, enamel and texture work", "Neat finish, done on the promised date"],
+         [("Book a site visit", "#site-visit", False), ("Ask on WhatsApp", wa("Namaste Rana Paints! I want to get my house painted."), True)]),
+        ("estimate", "Site Visit &amp; Estimate", "Our contractor visits your site, checks the walls and gives you a clear estimate for paint and labour.",
+         ["Contractor Manjit Rana visits your site", "Walls checked and measured properly", "Clear estimate for material and labour"],
+         [("Call 99884 12088", tel("99884 12088"), False), ("Book online", "#site-visit", False)]),
+        ("umbrella", "Waterproofing Solutions", "Terrace, bathroom, water tank and damp wall solutions with Asian Paints SmartCare and more.",
+         ["Terrace, bathroom, tank and damp walls", "Asian Paints SmartCare and Birla Opus Alldry", "Dr. Fixit 101 and 301 with cement"],
+         [("Asian waterproofing", "asian-paints.html#waterproofing", False), ("Dr. Fixit", "acc-cement.html#waterproofing", False)]),
+        ("palette", "Computerised Colour Mixing", "Any shade from the shade card, mixed exactly on ColorWorld and Corob tinting machines.",
+         ["Asian Paints ColorWorld and Berger ColorWorld", "Birla Opus Corob machine", "5000+ shades, exact colour every time"],
+         [("Browse shades", "shades.html", False), ("Our machines", "#machines", False)]),
+        ("bricks", "Cement &amp; Steel Supply", "ACC cement and steel for building your new home, with home delivery of cement.",
+         ["ACC Gold Water Shield, Concrete Plus, Suraksha Power", "Steel for your construction", "Cement delivered to your site"],
+         [("See ACC cement", "acc-cement.html", False), ("Ask rates", wa("Namaste Rana Paints! I need cement and steel rates."), True)]),
+        ("layers", "Putty, Primer &amp; Enamel", "Complete range of wall putty, primers, enamels and painting tools under one roof.",
+         ["Wall putty from Asian, Birla White and Berger", "Interior and exterior primers", "Enamels, rollers, brushes and spray paints"],
+         [("Wall putty", "asian-paints.html#putty", False), ("Tools &amp; more", "tools.html", False)]),
     ]
-    sv = "\n".join(f"""      <div class="service reveal">
-        <div class="service__icon">{i(ic, '1.6')}</div>
-        <h3>{t}</h3>
-        <p>{d}</p>
-      </div>""" for ic, t, d in services)
+    X_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>'
+
+    def book(n, ic, t, d, pts, acts):
+        lis = "".join(f"<li>{x}</li>" for x in pts)
+        btns = "".join(
+            f'<a class="btn btn--sm{" btn--wa" if wa_btn else " btn--outline"}" href="{href}"{" target=\"_blank\" rel=\"noopener\"" if wa_btn else ""}>{lab}</a>'
+            for lab, href, wa_btn in acts)
+        return f"""      <div class="service book">
+        <div class="book__page">
+          <div class="book__inner">
+            <div class="book__top"><span class="book__no">0{n}</span><h3>{t}</h3><button class="book__close" type="button" aria-label="Close {t}">{X_ICON}</button></div>
+            <ul class="book__list">{lis}</ul>
+            <div class="book__actions">{btns}</div>
+          </div>
+        </div>
+        <div class="book__cover">
+          <div class="book__front" role="button" tabindex="0" aria-expanded="false" aria-label="Open: {t}">
+            <div class="service__icon">{i(ic, '1.6')}</div>
+            <h3>{t}</h3>
+            <p>{d}</p>
+            <span class="book__hint">Open <span>{i('right', '2.2')}</span></span>
+          </div>
+          <div class="book__back" aria-hidden="true"><span>RANA</span><span>PAINTS</span></div>
+        </div>
+      </div>"""
+    sv = chr(10).join(book(k + 1, *row) for k, row in enumerate(services))
 
     machines = [
         ("images/brands/asian-paints.svg", "Asian Paints ColorWorld", "Computerised tinting for Asian Paints emulsions and enamels. Pick a shade from the fan deck and we mix it right at the shop.",
@@ -161,7 +194,7 @@ def build():
   <div class="container">
     <div class="about">
       <div class="about__media reveal">
-        <img src="images/stock/painting-wall.webp" alt="Painting a soft cream wall with a roller" loading="lazy">
+        <img src="images/stock/painting-hand.webp" alt="A hand painting a wall with a roller" loading="lazy">
         <img class="about__small" src="images/stock/swatches-warm.webp" alt="Warm earthy paint shade cards" loading="lazy">
         <div class="about__since"><span>Serving since</span><strong>2000</strong></div>
       </div>

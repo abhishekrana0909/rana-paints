@@ -125,6 +125,11 @@
     [".bhero__inner > *, .pbanner__inner > *", "up", 0.15]
   ];
   var rvItems = [];
+  // reveal khatam hone ke baad dheemi transition hata do, taaki hover turant chale
+  function settle(el) {
+    var d = parseFloat(el.style.getPropertyValue("--rvd")) || 0;
+    setTimeout(function () { el.classList.add("rv-done"); }, 1350 + d * 1000);
+  }
   function mark(el, dir, delay) {
     if (el.classList.contains("rv")) return;
     el.classList.remove("reveal");
@@ -150,6 +155,7 @@
         if (!en.isIntersecting) return;
         en.target.classList.add("is-in");
         io.unobserve(en.target);
+        settle(en.target);
       });
     }, { threshold: 0.12, rootMargin: "0px 0px -6% 0px" });
     rvItems.forEach(function (el) { io.observe(el); });
@@ -158,12 +164,12 @@
       setTimeout(function () {
         rvItems.forEach(function (el) {
           var r = el.getBoundingClientRect();
-          if (r.top < window.innerHeight && r.bottom > 0) el.classList.add("is-in");
+          if (r.top < window.innerHeight && r.bottom > 0) { el.classList.add("is-in"); settle(el); }
         });
       }, 2500);
     });
     // hero turant
-    setTimeout(function () { $$(".hero .rv").forEach(function (el) { el.classList.add("is-in"); }); }, 90);
+    setTimeout(function () { $$(".hero .rv").forEach(function (el) { el.classList.add("is-in"); settle(el); }); }, 90);
   } else {
     $$(".reveal").forEach(function (el) { el.classList.add("is-in"); });
   }
@@ -177,6 +183,30 @@
     }, { threshold: 0.4 });
     $$("[data-count]").forEach(function (el) { cio.observe(el); });
   }
+
+  /* ---------- Service kitaab: click pe khulti hai ---------- */
+  var books = $$(".book");
+  function setBook(book, open) {
+    var front = $(".book__front", book);
+    book.classList.toggle("is-open", open);
+    front.setAttribute("aria-expanded", open ? "true" : "false");
+    if (open) setTimeout(function () {
+      var c = $(".book__close", book);
+      if (c && book.classList.contains("is-open")) c.focus({ preventScroll: true });
+    }, 700);
+  }
+  function closeBooks(except) {
+    books.forEach(function (b) { if (b !== except && b.classList.contains("is-open")) setBook(b, false); });
+  }
+  books.forEach(function (book) {
+    var front = $(".book__front", book), close = $(".book__close", book);
+    function open() { closeBooks(book); setBook(book, true); }
+    front.addEventListener("click", open);
+    front.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); open(); } });
+    close.addEventListener("click", function () { setBook(book, false); front.focus({ preventScroll: true }); });
+  });
+  document.addEventListener("click", function (e) { if (!e.target.closest(".book")) closeBooks(); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeBooks(); });
 
   /* ---------- FAQ: smooth khulna / band hona ---------- */
   $$(".faq__item").forEach(function (item) {

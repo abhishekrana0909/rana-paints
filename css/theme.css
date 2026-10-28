@@ -315,3 +315,94 @@ h3 { font-size: 1.25rem; }
   .header { backdrop-filter: none; -webkit-backdrop-filter: none; background: #fff6ec; }
   .nav { background: #fffaf4; }
 }
+
+/* =========================================================
+   Service cards = kitaab (click pe cover 3D mein khulta hai)
+   ========================================================= */
+.service.book { --dir: -1; padding: 0; background: none; border: 0; box-shadow: none; overflow: visible; display: grid; perspective: 1700px; }
+.service.book:hover { background: none; box-shadow: none; transform: none; }
+.service.book:nth-child(3n + 1) { --dir: 1; }
+.service.book.is-open { z-index: 6; }
+
+.book__cover { grid-area: 1 / 1; display: grid; transform-style: preserve-3d; transform-origin: calc(50% + var(--dir) * 50%) 50%; transition: transform 1.15s var(--ease); }
+.service.book:not(.is-open):hover .book__cover { transform: rotateY(calc(var(--dir) * 15deg)); }
+.service.book.is-open .book__cover { transform: rotateY(calc(var(--dir) * 152deg)); pointer-events: none; }
+
+.book__front, .book__back { grid-area: 1 / 1; backface-visibility: hidden; -webkit-backface-visibility: hidden; border-radius: var(--radius); }
+.book__front { display: flex; flex-direction: column; padding: 34px 28px 28px; background: var(--card); border: 1px solid var(--line); cursor: pointer; outline-offset: 3px; transition: background .5s var(--ease), color .5s, box-shadow .6s var(--ease); }
+.book__front h3 { transition: color .4s; }
+.book__front p { margin: 0 0 18px; color: var(--muted); transition: color .4s; }
+.book__front:hover { background: var(--red); box-shadow: 0 26px 60px rgba(200, 35, 43, .25); }
+.book__front:hover h3, .book__front:hover p { color: #fff; }
+.book__front:hover .service__icon { background: rgba(255,255,255,.18); color: #fff; transform: rotate(-6deg) scale(1.06); }
+.book__front:focus-visible { outline: 3px solid var(--red); }
+.book__hint { margin-top: auto; display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: .74rem; letter-spacing: .12em; text-transform: uppercase; color: var(--red); transition: color .4s; }
+.book__hint span { display: grid; place-items: center; width: 26px; height: 26px; border-radius: 8px; background: var(--red-soft); transition: transform .5s var(--ease), background .4s; }
+.book__hint svg { width: 14px; height: 14px; }
+.book__front:hover .book__hint { color: #fff; }
+.book__front:hover .book__hint span { background: rgba(255,255,255,.2); transform: translateX(4px); }
+
+.book__back { transform: rotateY(180deg); display: grid; place-content: center; text-align: center; background: linear-gradient(135deg, #d9373f, #b01e26); color: rgba(255,255,255,.9); font-family: var(--font-logo); font-weight: 800; line-height: .95; box-shadow: inset 0 0 0 10px rgba(255,255,255,.08); }
+.book__back span:first-child { font-size: 3.4rem; letter-spacing: .04em; }
+.book__back span:last-child { font-size: 1.5rem; letter-spacing: .5em; margin-right: -.5em; opacity: .8; }
+
+.book__page { grid-area: 1 / 1; border-radius: var(--radius); border: 1px solid var(--line); background: linear-gradient(135deg, #fffaf2, #fbeadb); box-shadow: inset calc(var(--dir) * -20px) 0 26px -20px rgba(110, 70, 35, .28), var(--shadow); padding: 26px 26px 24px; }
+.book__inner { height: 100%; display: flex; flex-direction: column; gap: 14px; visibility: hidden; transition: visibility 0s linear .9s; }
+.service.book.is-open .book__inner { visibility: visible; transition-delay: 0s; }
+.book__inner > * { opacity: 0; transform: translateY(14px); transition: opacity .5s var(--ease), transform .6s var(--ease); }
+.service.book.is-open .book__inner > * { opacity: 1; transform: none; transition-delay: calc(.45s + var(--i, 0) * .09s); }
+.book__inner > :nth-child(2) { --i: 1; }
+.book__inner > :nth-child(3) { --i: 2; }
+.book__top { display: flex; align-items: flex-start; gap: 12px; }
+.book__no { font-family: var(--font-mono); color: var(--red); font-size: .8rem; padding-top: 6px; }
+.book__top h3 { flex: 1; margin: 0; font-size: 1.15rem; color: var(--ink) !important; }
+.book__close { flex: none; width: 34px; height: 34px; border-radius: 10px; border: 1px solid var(--line); background: var(--card); color: var(--ink); display: grid; place-items: center; transition: background .3s, color .3s, transform .5s var(--ease); }
+.book__close svg { width: 15px; height: 15px; }
+.book__close:hover { background: var(--red); color: #fff; border-color: var(--red); transform: rotate(90deg); }
+.book__list { margin: 0; padding: 0; list-style: none; display: grid; gap: 9px; }
+.book__list li { position: relative; padding-left: 22px; color: var(--ink-2); font-size: .94rem; line-height: 1.45; }
+.book__list li::before { content: ""; position: absolute; left: 2px; top: .5em; width: 9px; height: 9px; border-radius: 50%; background: var(--red); box-shadow: 0 0 0 4px var(--red-soft); }
+.book__actions { margin-top: auto; display: flex; flex-wrap: wrap; gap: 8px; }
+.book__actions .btn { flex: 1 1 auto; justify-content: center; }
+.book__actions .btn--outline:hover { background: var(--ink); color: #fff; border-color: var(--ink); }
+
+@media (max-width: 1024px) {
+  .service.book:nth-child(3n + 1) { --dir: -1; }
+  .service.book:nth-child(2n + 1) { --dir: 1; }
+}
+@media (max-width: 640px) {
+  .service.book .book__cover { transform-origin: 50% 0; }
+  .service.book:not(.is-open):hover .book__cover { transform: rotateX(10deg); }
+  .service.book.is-open .book__cover { transform: rotateX(128deg); }
+  .book__page { box-shadow: inset 0 20px 26px -20px rgba(110, 70, 35, .28), var(--shadow); }
+  .book__back { transform: rotateX(180deg); }
+}
+
+/* =========================================================
+   Brand logos: mouse le jao toh bada hota hai
+   ========================================================= */
+.marquee__row { gap: 64px; padding-right: 64px; }
+.marquee__row a { padding: 0 16px; border-radius: 16px; transition: transform .6s var(--ease), filter .4s, opacity .4s, background .4s, box-shadow .6s var(--ease); }
+.marquee__row a:hover { transform: scale(1.4); background: #fff; box-shadow: 0 16px 36px rgba(110, 70, 35, .18); position: relative; z-index: 2; }
+
+/* =========================================================
+   How we work: hover pe ghoom ke aana
+   ========================================================= */
+.steps li { border-radius: 16px; transition: transform .7s var(--ease), background .5s, padding .5s var(--ease), box-shadow .5s; }
+.steps li:hover { transform: translateX(12px); background: linear-gradient(90deg, rgba(200, 35, 43, .08), rgba(200, 35, 43, 0) 80%); padding-left: 12px; }
+.steps__n { display: inline-block; transition: transform .9s var(--ease), color .4s; }
+.steps li:hover .steps__n { transform: perspective(500px) rotateY(360deg) scale(1.3); }
+.steps h3 { transition: color .4s, transform .6s var(--ease); }
+.steps li:hover h3 { color: var(--red); transform: translateX(4px); }
+.steps__go { transition: transform .9s var(--ease), background .4s, color .4s, border-color .4s; }
+.steps li:hover .steps__go { transform: translateX(6px) rotate(360deg); background: var(--red); color: #fff; border-color: var(--red); }
+
+/* reveal ke baad hover turant chalna chahiye (rv ki dheemi transition hat jaati hai) */
+.rv.rv-done { transition: transform .6s var(--ease), box-shadow .6s var(--ease), background .45s, color .45s, padding .5s var(--ease) !important; }
+.service.book.rv-done { transition: none !important; }
+
+/* khulti kitaab ka cover screen se bahar jaaye toh side-scroll na bane */
+#services { overflow-x: clip; }
+
+/* slide-in wale elements shuru mein side se bahar hote hain: phone pe side-scroll na bane */
+main { overflow-x: clip; }
