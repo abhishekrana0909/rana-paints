@@ -22,9 +22,9 @@ JSONLD = """<script type="application/ld+json">
 
 def build():
     slides = [
-        ("images/stock/hero-living.webp", "Living room with a deep green painted wall"),
-        ("images/stock/hero-exterior.webp", "Modern house exterior painted in warm tones"),
-        ("images/stock/hero-bedroom.webp", "Bedroom with a navy blue accent wall"),
+        ("images/stock/hero-living.webp", "Calm living room with soft beige walls"),
+        ("images/stock/hero-bedroom.webp", "Warm wooden bedroom with sage green walls"),
+        ("images/stock/hero-house.webp", "Warm wooden house exterior in the evening light"),
     ]
     slide_html = "\n".join(
         f'      <div class="hero__slide{" is-active" if k == 0 else ""}"><img src="{src}" alt="{alt}"'
@@ -34,15 +34,15 @@ def build():
 
     brand_cards = [
         ("asian-paints.html", "images/brands/asian-paints.svg", "Asian Paints", "images/products/asian/tractor-emulsion.webp",
-         "linear-gradient(135deg,#ffe6d9,#ffc7b6)", "Interior &amp; exterior emulsions, waterproofing, putty, primers and enamels."),
+         "#f8e2d6", "Interior &amp; exterior emulsions, waterproofing, putty, primers and enamels."),
         ("birla-opus.html", "images/brands/birla-opus.svg", "Birla Opus", "images/products/birla/calista-neo-star-shine.webp",
-         "linear-gradient(135deg,#efe9fa,#d9ccf2)", "Style and Calista exterior paints, putty and primers."),
+         "#efe7e0", "Style and Calista exterior paints, putty and primers."),
         ("berger-paints.html", "images/brands/berger-paints.png", "Berger Paints", "images/products/berger/weathercoat-glow.webp",
-         "linear-gradient(135deg,#e2edfb,#bcd3f3)", "WeatherCoat Glow, Walmasta, wall putty and primers."),
+         "#ebe5dd", "WeatherCoat Glow, Walmasta, wall putty and primers."),
         ("forever-paints.html", "images/brands/forever-paints.png", "Forever Paints", "images/products/forever/forever-emulsion.webp",
-         "linear-gradient(135deg,#fde6ea,#f7c3cc)", "Budget-friendly emulsions, primer and rustic putty."),
+         "#f6e4dc", "Budget-friendly emulsions, primer and rustic putty."),
         ("acc-cement.html", "images/brands/acc.svg", "ACC Cement", "images/products/acc/acc-gold-water-shield.webp",
-         "linear-gradient(135deg,#fff1c7,#f6c343)", "Gold Water Shield, Concrete Plus and Suraksha Power, with home delivery."),
+         "#f6e7cc", "Gold Water Shield, Concrete Plus and Suraksha Power, with home delivery."),
     ]
     bc = "\n".join(f"""      <a class="brand-card reveal" href="{h}">
         <div class="brand-card__top" style="--c:{bg}"><img src="{prod}" alt="" loading="lazy"{' class="is-photo"' if 'berger' in prod else ''}></div>
@@ -106,36 +106,51 @@ def build():
     body = f"""
 <!-- ============ HERO ============ -->
 <section class="hero" aria-label="Welcome">
-  <div class="hero__slides">
-{slide_html}
-  </div>
   <div class="container hero__inner">
-    <div>
-      <div class="hero__badge"><b>SINCE 2000</b> Authorised dealer &middot; Passi Kandi, Dasuya</div>
-      <h1>Rang Aapke,<br><span>Bharosa Hamara</span></h1>
-      <p class="hero__lead">Paints, putty, waterproofing and cement for every home. Asian Paints, Birla Opus, Berger, Forever and ACC, all under one roof, with our own team of expert painters.</p>
-      <div class="hero__actions">
-        <a class="btn" href="#brands">Explore Brands {i('right', '2.2')}</a>
-        <a class="btn btn--ghost-white" href="shades.html">Explore Shades</a>
+    <div class="hero__text">
+      <div class="hero__trust" data-rv="up">
+        <span class="hero__faces"><img src="images/team/daler-singh-rana.webp" alt=""><img src="images/team/manjit-rana.webp" alt=""><img src="images/team/abhishek-rana.webp" alt=""></span>
+        <span><strong>Since 2000</strong><small>Trusted by families across Dasuya</small></span>
       </div>
-      <div class="hero__stat">
-        <div class="hero__stat-box"><strong>5000+</strong><small>Shades</small></div>
-        <p>Mixed exactly on our<br>computerised colour machines</p>
+      <h1 data-rv="up">Rang Aapke,<br><span>Bharosa Hamara</span></h1>
+      <p class="hero__lead" data-rv="up">Paints, putty, waterproofing and cement for every home. Asian Paints, Birla Opus, Berger, Forever and ACC, all under one roof, with our own team of painters.</p>
+      <div class="hero__actions" data-rv="up">
+        <a class="btn btn--arrow" href="#brands">Explore Brands <span class="btn__arrow">{i('right', '2.2')}</span></a>
+        <a class="btn btn--outline" href="shades.html">Explore Shades</a>
+      </div>
+      <ul class="hero__points" data-rv="up">
+        <li><strong data-count="5000" data-suffix="+">5000+</strong><span>Shades</span></li>
+        <li><strong data-count="25" data-suffix="+">25+</strong><span>Years of trust</span></li>
+        <li><strong data-count="15" data-suffix="+">15+</strong><span>Years painter experience</span></li>
+      </ul>
+    </div>
+    <div class="hero__visual" data-rv="right">
+      <div class="hero__frame">
+        <div class="hero__slides">
+{slide_html}
+        </div>
+      </div>
+      <div class="hero__float" aria-hidden="true">
+        <span class="hero__float-dots"><i style="background:#c8232b"></i><i style="background:#e8a15b"></i><i style="background:#8aa486"></i><i style="background:#d9c3a5"></i></span>
+        <span><strong>Exact shade</strong><small>Computerised mixing</small></span>
+      </div>
+      <div class="hero__dots">
+        <button class="hero__arrow hero__arrow--prev" type="button" aria-label="Previous slide">{i('left', '2.2')}</button>
+        {dots}
+        <button class="hero__arrow hero__arrow--next" type="button" aria-label="Next slide">{i('right', '2.2')}</button>
       </div>
     </div>
   </div>
-  <div class="hero__dots">
-    <button class="hero__arrow hero__arrow--prev" type="button" aria-label="Previous slide">{i('left', '2.2')}</button>
-    {dots}
-    <button class="hero__arrow hero__arrow--next" type="button" aria-label="Next slide">{i('right', '2.2')}</button>
-  </div>
 </section>
 
-<!-- ============ DEALER STRIP ============ -->
-<section class="brandstrip" aria-label="Authorised dealer of">
-  <div class="container">
-    <div class="brandstrip__label">Authorised Dealer<small>Genuine products, right price</small></div>
-    <div class="brandstrip__logos">
+<!-- ============ DEALER MARQUEE ============ -->
+<section class="marquee" aria-label="Authorised dealer of">
+  <p class="marquee__label">Authorised dealer of</p>
+  <div class="marquee__track">
+    <div class="marquee__row">
+{strip}
+    </div>
+    <div class="marquee__row" aria-hidden="true">
 {strip}
     </div>
   </div>
@@ -146,8 +161,8 @@ def build():
   <div class="container">
     <div class="about">
       <div class="about__media reveal">
-        <img src="images/stock/painters-team.webp" alt="Painters painting a bright red and blue wall" loading="lazy">
-        <img class="about__small" src="images/stock/swatches.webp" alt="Colour shade card fan" loading="lazy">
+        <img src="images/stock/painting-wall.webp" alt="Painting a soft cream wall with a roller" loading="lazy">
+        <img class="about__small" src="images/stock/swatches-warm.webp" alt="Warm earthy paint shade cards" loading="lazy">
         <div class="about__since"><span>Serving since</span><strong>2000</strong></div>
       </div>
       <div class="reveal">
@@ -161,16 +176,16 @@ def build():
           <li>{i('check', '3')}<span><strong>Cement &amp; steel supply</strong> for building your home, with home delivery of cement</span></li>
         </ul>
         <div class="hero__actions">
-          <a class="btn" href="#team">Meet Our Team</a>
+          <a class="btn btn--arrow" href="#team">Meet Our Team <span class="btn__arrow">{i('right', '2.2')}</span></a>
           <a class="btn btn--outline" href="{tel('94171 23935')}">{i('phone')} Call Us</a>
         </div>
       </div>
     </div>
     <div class="stats">
-      <div class="stat reveal"><strong data-count="25" data-suffix="+">25+</strong><span>Years of trust</span></div>
-      <div class="stat reveal"><strong data-count="15" data-suffix="+">15+</strong><span>Years painter experience</span></div>
       <div class="stat reveal"><strong data-count="5">5</strong><span>Authorised brands</span></div>
-      <div class="stat reveal"><strong data-count="5000" data-suffix="+">5000+</strong><span>Shades available</span></div>
+      <div class="stat reveal"><strong data-count="3">3</strong><span>Colour mixing machines</span></div>
+      <div class="stat reveal"><strong data-count="100" data-suffix="+">100+</strong><span>Products to order online</span></div>
+      <div class="stat reveal"><strong data-count="12">12</strong><span>Wall stencil designs</span></div>
     </div>
   </div>
 </section>
@@ -208,6 +223,28 @@ def build():
   </div>
 </section>
 
+<!-- ============ HOW WE WORK ============ -->
+<section class="section" id="how">
+  <div class="container how">
+    <div class="how__media" data-rv="left">
+      <img src="images/stock/minimal-arch.webp" alt="Calm room with a soft beige arch" loading="lazy">
+      <div class="how__note"><strong>Free advice</strong><span>Not sure which paint? Just ask us.</span></div>
+    </div>
+    <div>
+      <div class="section-head">
+        <span class="eyebrow">How we work</span>
+        <h2>From the first shade to the last coat</h2>
+      </div>
+      <ol class="steps">
+        <li><span class="steps__n">01</span><div><h3>Pick your shade &amp; product</h3><p>Browse shade cards and products here or at the shop. We help you choose the right paint for the room and budget.</p></div><a class="steps__go" href="shades.html" aria-label="See shades">{i('right', '2.2')}</a></li>
+        <li><span class="steps__n">02</span><div><h3>Site visit &amp; estimate</h3><p>Our contractor checks your walls and tells you how much material and labour the job needs.</p></div><a class="steps__go" href="#site-visit" aria-label="Book a site visit">{i('right', '2.2')}</a></li>
+        <li><span class="steps__n">03</span><div><h3>Exact colour, ready to go</h3><p>Your shade is mixed on our computerised machine. Cement is delivered to your site.</p></div><a class="steps__go" href="#machines" aria-label="Colour machines">{i('right', '2.2')}</a></li>
+        <li><span class="steps__n">04</span><div><h3>Our painters do the rest</h3><p>A team with 15+ years of experience paints your home neatly and on time.</p></div><a class="steps__go" href="#team" aria-label="Meet the team">{i('right', '2.2')}</a></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
 <!-- ============ COLOUR MACHINES ============ -->
 <section class="section section--soft" id="machines">
   <div class="container">
@@ -226,7 +263,7 @@ def build():
 <section class="section section--tight">
   <div class="container">
     <div class="split split--red reveal">
-      <div class="split__media"><img src="images/stock/construction.webp" alt="House under construction" loading="lazy"></div>
+      <div class="split__media"><img src="images/stock/construction-sunset.webp" alt="House being built at sunset" loading="lazy"></div>
       <div class="split__body">
         <span class="eyebrow">Cement &amp; Steel</span>
         <h2>Building a new home? We supply cement &amp; steel too</h2>
@@ -290,6 +327,26 @@ def build():
       <button class="btn btn--wa" type="submit">{i('wa')} Send on WhatsApp</button>
       <p class="form__note">This opens WhatsApp with your details filled in. Nothing is stored on this website.</p>
     </form>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section section--soft" id="faq">
+  <div class="container faq">
+    <div class="section-head">
+      <span class="eyebrow">FAQ</span>
+      <h2>Questions people ask us</h2>
+      <p>Still have a question? Send us a message on WhatsApp, we usually reply the same day.</p>
+      <a class="btn btn--arrow" href="{wa('Namaste Rana Paints! I have a question.')}" target="_blank" rel="noopener">Ask on WhatsApp <span class="btn__arrow">{i('right', '2.2')}</span></a>
+    </div>
+    <div class="faq__list">
+      <details class="faq__item" open><summary>How do I order from the website?<span class="faq__icon" aria-hidden="true"></span></summary><div class="faq__a"><p>Choose the size and quantity on any product and press Add. Open the cart at the top, write your name and send the list on WhatsApp. We reply with the price and keep your order ready.</p></div></details>
+      <details class="faq__item"><summary>Do you deliver cement to my site?<span class="faq__icon" aria-hidden="true"></span></summary><div class="faq__a"><p>Yes. We deliver ACC cement to your home or construction site. Tell us the number of bags and the location.</p></div></details>
+      <details class="faq__item"><summary>Can you make any shade from the shade card?<span class="faq__icon" aria-hidden="true"></span></summary><div class="faq__a"><p>Yes. We have computerised colour mixing machines for Asian Paints (ColorWorld), Birla Opus (Corob) and Berger, so your shade comes out exactly right.</p></div></details>
+      <details class="faq__item"><summary>Do you also paint the house?<span class="faq__icon" aria-hidden="true"></span></summary><div class="faq__a"><p>Yes. We have our own team of painters with 15+ years of experience. Our contractor Manjit Rana handles the work.</p></div></details>
+      <details class="faq__item"><summary>Will someone come to check my walls first?<span class="faq__icon" aria-hidden="true"></span></summary><div class="faq__a"><p>Yes. Our contractor visits the site, checks the walls and gives you an estimate for paint and labour. Call 99884 12088 or 94178 88704.</p></div></details>
+      <details class="faq__item"><summary>Which brands do you sell?<span class="faq__icon" aria-hidden="true"></span></summary><div class="faq__a"><p>We are authorised dealers of Asian Paints, Birla Opus, Berger Paints, Forever Paints and ACC Cement. We also keep Dr. Fixit, Birla White putty, tools, spray paints and curtain fittings.</p></div></details>
+    </div>
   </div>
 </section>
 

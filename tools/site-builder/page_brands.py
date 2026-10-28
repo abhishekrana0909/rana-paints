@@ -469,7 +469,7 @@ def acc():
 <section class="section section--soft">
   <div class="container">
     <div class="split reveal">
-      <div class="split__media"><img src="images/stock/steel.webp" alt="Steel reinforcement bars at a construction site" loading="lazy"></div>
+      <div class="split__media"><img src="images/stock/steel-rebar.webp" alt="Steel reinforcement bars at a construction site" loading="lazy"></div>
       <div class="split__body">
         <span class="eyebrow">Steel Supply</span>
         <h2>Steel for your construction</h2>

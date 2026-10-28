@@ -51,15 +51,9 @@ def i(name, sw="1.8"):
             f'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{P[name]}</svg>')
 
 
-LOGO_MARK = ('<svg class="logo__mark" viewBox="0 0 48 48" aria-hidden="true">'
-             '<rect x="4" y="5" width="30" height="14" rx="4" fill="#d2161e"/>'
-             '<rect x="8" y="8.5" width="20" height="3" rx="1.5" fill="#fff" opacity=".45"/>'
-             '<path d="M10 19v7a2.6 2.6 0 0 0 5.2 0v-7z" fill="#d2161e"/>'
-             '<path d="M34 12h5a3 3 0 0 1 3 3v5.5a3 3 0 0 1-3 3H24v5" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>'
-             '<rect x="20" y="28" width="8" height="16" rx="3" fill="currentColor"/></svg>')
+# Logo: "Roller Badge" (owner ne option 1 chuna)
+BADGE = '<rect width="100" height="100" rx="24" fill="#c8232b"/><rect x="18" y="19" width="58" height="24" rx="8" fill="#fff"/><path d="M27 25v12M38 25v12M49 25v12M60 25v12" stroke="#f3c4c6" stroke-width="3" stroke-linecap="round"/><path d="M76 31h9v21H52v10" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><rect x="46" y="62" width="12" height="28" rx="5" fill="#fff"/><path d="M24 43v13a5 5 0 0 0 10 0V43z" fill="#fff"/>'
 
-FAVICON = ('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">'
-           '<rect x="4" y="5" width="30" height="14" rx="4" fill="#d2161e"/>'
-           '<path d="M10 19v7a2.6 2.6 0 0 0 5.2 0v-7z" fill="#d2161e"/>'
-           '<path d="M34 12h5a3 3 0 0 1 3 3v5.5a3 3 0 0 1-3 3H24v5" fill="none" stroke="#16161b" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>'
-           '<rect x="20" y="28" width="8" height="16" rx="3" fill="#16161b"/></svg>')
+LOGO_MARK = '<svg class="logo__mark" viewBox="0 0 100 100" aria-hidden="true">' + BADGE + '</svg>'
+
+FAVICON = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">' + BADGE + '</svg>'

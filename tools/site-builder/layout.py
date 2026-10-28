@@ -42,8 +42,9 @@ def head(title, desc, extra=""):
 <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&amp;family=Barlow:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=9">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=10">
+<link rel="stylesheet" href="css/theme.css?v=3">
 {extra}</head>"""
 
 
@@ -67,7 +68,7 @@ def topbar():
 
 def logo(cls=""):
     return (f'<a class="logo {cls}" href="index.html" aria-label="Rana Paints home">{LOGO_MARK}'
-            '<span class="logo__text"><span class="logo__name">RANA <b>PAINTS</b></span>'
+            '<span class="logo__text"><span class="logo__name">RANA</span><span class="logo__sub">PAINTS</span>'
             '<span class="logo__tag">Paint &amp; Cement Store</span></span></a>')
 
 
@@ -158,10 +159,11 @@ def footer():
       </ul>
     </div>
   </div>
+  <div class="container"><div class="footer__mark" aria-hidden="true">RANA PAINTS</div></div>
   <div class="footer__bottom">
     <div class="container">
-      <span>&copy; <span data-year>2026</span> <b>{SHOP}</b>. All rights reserved.</span>
-      <span>Authorised dealer: Asian Paints &middot; Birla Opus &middot; Berger Paints &middot; Forever Paints &middot; ACC Cement</span>
+      <span>&copy; <span data-year>2026</span> <b>{SHOP}</b>. Authorised dealer of Asian Paints, Birla Opus, Berger, Forever &amp; ACC.</span>
+      <a class="footer__top" href="#main">Back to top {i('up', '2.2')}</a>
     </div>
   </div>
 </footer>
@@ -180,7 +182,7 @@ def page(title, desc, body, active="", body_class="", scripts="", extra_head="")
 {body}
 </main>
 {footer()}
-<script src="js/main.js?v=2"></script>
+<script src="js/main.js?v=4"></script>
 <script src="js/cart.js?v=2"></script>
 {scripts}</body>
 </html>

@@ -63,58 +63,138 @@
   onScroll();
   if (toTop) toTop.addEventListener("click", function () { window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" }); });
 
-  /* ---------- Hero slider ---------- */
+  /* ---------- Hero slider ----------
+     Active dot ek progress bar ki tarah bharta hai (CSS animation).
+     Jab woh bhar jaata hai (animationend), agli photo aa jaati hai.
+     Mouse upar ho toh CSS animation ruk jaati hai, toh slider bhi ruk jaata hai. */
   var hero = $(".hero");
   if (hero) {
     var slides = $$(".hero__slide", hero);
     var dots = $$(".hero__dots [data-slide]", hero);
-    var current = 0, timer = null;
+    var current = 0;
     function show(i) {
       current = (i + slides.length) % slides.length;
       slides.forEach(function (s, k) { s.classList.toggle("is-active", k === current); });
       dots.forEach(function (d, k) {
-        d.classList.toggle("is-active", k === current);
+        d.classList.remove("is-active");
+        if (k === current) { void d.offsetWidth; d.classList.add("is-active"); }
         d.setAttribute("aria-current", k === current ? "true" : "false");
       });
     }
-    function start() { if (!reduceMotion && slides.length > 1) { stop(); timer = setInterval(function () { show(current + 1); }, 6000); } }
-    function stop() { if (timer) clearInterval(timer); timer = null; }
-    dots.forEach(function (d) { d.addEventListener("click", function () { show(+d.dataset.slide); start(); }); });
+    dots.forEach(function (d) {
+      d.addEventListener("click", function () { show(+d.dataset.slide); });
+      d.addEventListener("animationend", function (e) {
+        if (d.classList.contains("is-active") && e.animationName === "dotfill") show(current + 1);
+      });
+    });
     var prev = $(".hero__arrow--prev", hero), next = $(".hero__arrow--next", hero);
-    if (prev) prev.addEventListener("click", function () { show(current - 1); start(); });
-    if (next) next.addEventListener("click", function () { show(current + 1); start(); });
-    hero.addEventListener("mouseenter", stop);
-    hero.addEventListener("mouseleave", start);
-    show(0); start();
+    if (prev) prev.addEventListener("click", function () { show(current - 1); });
+    if (next) next.addEventListener("click", function () { show(current + 1); });
+    show(0);
   }
 
-  /* ---------- Reveal on scroll + counters ---------- */
+  /* ---------- Counters ---------- */
   function countUp(el) {
     var end = parseInt(el.dataset.count, 10), suffix = el.dataset.suffix || "";
     if (reduceMotion) { el.textContent = end.toLocaleString("en-IN") + suffix; return; }
-    var t0 = null, dur = 1400;
+    var t0 = null, dur = 1800;
     function step(t) {
       if (!t0) t0 = t;
       var p = Math.min((t - t0) / dur, 1);
       el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3))).toLocaleString("en-IN") + suffix;
       if (p < 1) requestAnimationFrame(step);
     }
+    el.textContent = "0" + suffix;
     requestAnimationFrame(step);
   }
-  if ("IntersectionObserver" in window) {
+
+  /* ---------- Scroll animations (Eduboc jaisa) ----------
+     Har section ki cheezein side ya neeche se dheere slide hokar aati hain.
+     Ek group ke cards ek ke baad ek aate hain (stagger). */
+  var AUTO = [
+    [".section-head > *", "up", 0.09],
+    [".about__media", "left", 0], [".about > div:not(.about__media)", "right", 0],
+    [".stat", "up", 0.1], [".brand-card", "up", 0.08], [".service", "up", 0.08],
+    [".how__media", "left", 0], [".steps li", "right", 0.1], [".machine", "up", 0.1],
+    [".split", "zoom", 0], [".member", "up", 0.12], [".faq__item", "up", 0.07],
+    [".quote__inner > div", "left", 0], [".quote__inner > form", "right", 0],
+    [".cta", "zoom", 0], [".contact-card", "left", 0.08], [".map", "right", 0],
+    [".product", "up", 0.07], [".feature-panel", "zoom", 0], [".delivery, .band", "up", 0],
+    [".shadecard", "up", 0.1], [".pgroup__head", "left", 0], [".more-strip", "up", 0],
+    [".footer__grid > div", "up", 0.08], [".footer__mark", "up", 0], [".tabpanel__head", "up", 0],
+    [".bhero__inner > *, .pbanner__inner > *", "up", 0.15]
+  ];
+  var rvItems = [];
+  function mark(el, dir, delay) {
+    if (el.classList.contains("rv")) return;
+    el.classList.remove("reveal");
+    el.classList.add("rv", "rv--" + dir);
+    if (delay) el.style.setProperty("--rvd", delay.toFixed(2) + "s");
+    rvItems.push(el);
+  }
+  if (!reduceMotion && "IntersectionObserver" in window) {
+    // hero: page khulte hi ek ek karke
+    $$(".hero [data-rv]").forEach(function (el, k) { mark(el, el.dataset.rv, 0.15 + k * 0.12); });
+    AUTO.forEach(function (rule) {
+      var groups = new Map();
+      $$(rule[0]).forEach(function (el) {
+        if (el.closest(".hero")) return;
+        var g = groups.get(el.parentElement) || 0;
+        groups.set(el.parentElement, g + 1);
+        mark(el, rule[1], Math.min(g, 6) * rule[2]);
+      });
+    });
+    $$(".reveal").forEach(function (el) { mark(el, "up", 0); });
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {
         if (!en.isIntersecting) return;
         en.target.classList.add("is-in");
-        if (en.target.dataset.count) countUp(en.target);
         io.unobserve(en.target);
       });
-    }, { threshold: 0.12 });
-    $$(".reveal, [data-count]").forEach(function (el) { io.observe(el); });
+    }, { threshold: 0.12, rootMargin: "0px 0px -6% 0px" });
+    rvItems.forEach(function (el) { io.observe(el); });
+    // backup: agar kisi wajah se animation na chale, toh screen pe dikh rahi cheez dikha do
+    window.addEventListener("load", function () {
+      setTimeout(function () {
+        rvItems.forEach(function (el) {
+          var r = el.getBoundingClientRect();
+          if (r.top < window.innerHeight && r.bottom > 0) el.classList.add("is-in");
+        });
+      }, 2500);
+    });
+    // hero turant
+    setTimeout(function () { $$(".hero .rv").forEach(function (el) { el.classList.add("is-in"); }); }, 90);
   } else {
     $$(".reveal").forEach(function (el) { el.classList.add("is-in"); });
-    $$("[data-count]").forEach(countUp);
   }
+  if ("IntersectionObserver" in window) {
+    var cio = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        countUp(en.target);
+        cio.unobserve(en.target);
+      });
+    }, { threshold: 0.4 });
+    $$("[data-count]").forEach(function (el) { cio.observe(el); });
+  }
+
+  /* ---------- FAQ: smooth khulna / band hona ---------- */
+  $$(".faq__item").forEach(function (item) {
+    var summary = $("summary", item), body = $(".faq__a", item);
+    summary.addEventListener("click", function (e) {
+      if (reduceMotion || !body.animate) return;
+      e.preventDefault();
+      if (item.open) {
+        var h = body.offsetHeight;
+        body.animate([{ height: h + "px", opacity: 1 }, { height: "0px", opacity: 0 }], { duration: 450, easing: "cubic-bezier(.22,1,.36,1)" })
+          .onfinish = function () { item.open = false; };
+      } else {
+        item.open = true;
+        var h2 = body.offsetHeight;
+        body.animate([{ height: "0px", opacity: 0 }, { height: h2 + "px", opacity: 1 }], { duration: 550, easing: "cubic-bezier(.22,1,.36,1)" });
+      }
+    });
+  });
 
   /* ---------- Filter chips ---------- */
   $$("[data-filters]").forEach(function (bar) {

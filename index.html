@@ -13,8 +13,9 @@
 <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&amp;family=Barlow:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=9">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=10">
+<link rel="stylesheet" href="css/theme.css?v=3">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -51,7 +52,7 @@
 </div>
 <header class="header">
   <div class="container header__inner">
-    <a class="logo " href="index.html" aria-label="Rana Paints home"><svg class="logo__mark" viewBox="0 0 48 48" aria-hidden="true"><rect x="4" y="5" width="30" height="14" rx="4" fill="#d2161e"/><rect x="8" y="8.5" width="20" height="3" rx="1.5" fill="#fff" opacity=".45"/><path d="M10 19v7a2.6 2.6 0 0 0 5.2 0v-7z" fill="#d2161e"/><path d="M34 12h5a3 3 0 0 1 3 3v5.5a3 3 0 0 1-3 3H24v5" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><rect x="20" y="28" width="8" height="16" rx="3" fill="currentColor"/></svg><span class="logo__text"><span class="logo__name">RANA <b>PAINTS</b></span><span class="logo__tag">Paint &amp; Cement Store</span></span></a>
+    <a class="logo " href="index.html" aria-label="Rana Paints home"><svg class="logo__mark" viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="24" fill="#c8232b"/><rect x="18" y="19" width="58" height="24" rx="8" fill="#fff"/><path d="M27 25v12M38 25v12M49 25v12M60 25v12" stroke="#f3c4c6" stroke-width="3" stroke-linecap="round"/><path d="M76 31h9v21H52v10" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><rect x="46" y="62" width="12" height="28" rx="5" fill="#fff"/><path d="M24 43v13a5 5 0 0 0 10 0V43z" fill="#fff"/></svg><span class="logo__text"><span class="logo__name">RANA</span><span class="logo__sub">PAINTS</span><span class="logo__tag">Paint &amp; Cement Store</span></span></a>
     <nav class="nav" id="site-nav" aria-label="Main">
       <ul class="nav__list">
         <li><a class="nav__link" href="index.html" aria-current="page">Home</a></li>
@@ -91,38 +92,57 @@
 
 <!-- ============ HERO ============ -->
 <section class="hero" aria-label="Welcome">
-  <div class="hero__slides">
-      <div class="hero__slide is-active"><img src="images/stock/hero-living.webp" alt="Living room with a deep green painted wall" fetchpriority="high"></div>
-      <div class="hero__slide"><img src="images/stock/hero-exterior.webp" alt="Modern house exterior painted in warm tones" loading="lazy"></div>
-      <div class="hero__slide"><img src="images/stock/hero-bedroom.webp" alt="Bedroom with a navy blue accent wall" loading="lazy"></div>
-  </div>
   <div class="container hero__inner">
-    <div>
-      <div class="hero__badge"><b>SINCE 2000</b> Authorised dealer &middot; Passi Kandi, Dasuya</div>
-      <h1>Rang Aapke,<br><span>Bharosa Hamara</span></h1>
-      <p class="hero__lead">Paints, putty, waterproofing and cement for every home. Asian Paints, Birla Opus, Berger, Forever and ACC, all under one roof, with our own team of expert painters.</p>
-      <div class="hero__actions">
-        <a class="btn" href="#brands">Explore Brands <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="btn btn--ghost-white" href="shades.html">Explore Shades</a>
+    <div class="hero__text">
+      <div class="hero__trust" data-rv="up">
+        <span class="hero__faces"><img src="images/team/daler-singh-rana.webp" alt=""><img src="images/team/manjit-rana.webp" alt=""><img src="images/team/abhishek-rana.webp" alt=""></span>
+        <span><strong>Since 2000</strong><small>Trusted by families across Dasuya</small></span>
       </div>
-      <div class="hero__stat">
-        <div class="hero__stat-box"><strong>5000+</strong><small>Shades</small></div>
-        <p>Mixed exactly on our<br>computerised colour machines</p>
+      <h1 data-rv="up">Rang Aapke,<br><span>Bharosa Hamara</span></h1>
+      <p class="hero__lead" data-rv="up">Paints, putty, waterproofing and cement for every home. Asian Paints, Birla Opus, Berger, Forever and ACC, all under one roof, with our own team of painters.</p>
+      <div class="hero__actions" data-rv="up">
+        <a class="btn btn--arrow" href="#brands">Explore Brands <span class="btn__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+        <a class="btn btn--outline" href="shades.html">Explore Shades</a>
+      </div>
+      <ul class="hero__points" data-rv="up">
+        <li><strong data-count="5000" data-suffix="+">5000+</strong><span>Shades</span></li>
+        <li><strong data-count="25" data-suffix="+">25+</strong><span>Years of trust</span></li>
+        <li><strong data-count="15" data-suffix="+">15+</strong><span>Years painter experience</span></li>
+      </ul>
+    </div>
+    <div class="hero__visual" data-rv="right">
+      <div class="hero__frame">
+        <div class="hero__slides">
+      <div class="hero__slide is-active"><img src="images/stock/hero-living.webp" alt="Calm living room with soft beige walls" fetchpriority="high"></div>
+      <div class="hero__slide"><img src="images/stock/hero-bedroom.webp" alt="Warm wooden bedroom with sage green walls" loading="lazy"></div>
+      <div class="hero__slide"><img src="images/stock/hero-house.webp" alt="Warm wooden house exterior in the evening light" loading="lazy"></div>
+        </div>
+      </div>
+      <div class="hero__float" aria-hidden="true">
+        <span class="hero__float-dots"><i style="background:#c8232b"></i><i style="background:#e8a15b"></i><i style="background:#8aa486"></i><i style="background:#d9c3a5"></i></span>
+        <span><strong>Exact shade</strong><small>Computerised mixing</small></span>
+      </div>
+      <div class="hero__dots">
+        <button class="hero__arrow hero__arrow--prev" type="button" aria-label="Previous slide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+        <button type="button" data-slide="0" aria-label="Slide 1"></button><button type="button" data-slide="1" aria-label="Slide 2"></button><button type="button" data-slide="2" aria-label="Slide 3"></button>
+        <button class="hero__arrow hero__arrow--next" type="button" aria-label="Next slide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
       </div>
     </div>
   </div>
-  <div class="hero__dots">
-    <button class="hero__arrow hero__arrow--prev" type="button" aria-label="Previous slide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
-    <button type="button" data-slide="0" aria-label="Slide 1"></button><button type="button" data-slide="1" aria-label="Slide 2"></button><button type="button" data-slide="2" aria-label="Slide 3"></button>
-    <button class="hero__arrow hero__arrow--next" type="button" aria-label="Next slide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
-  </div>
 </section>
 
-<!-- ============ DEALER STRIP ============ -->
-<section class="brandstrip" aria-label="Authorised dealer of">
-  <div class="container">
-    <div class="brandstrip__label">Authorised Dealer<small>Genuine products, right price</small></div>
-    <div class="brandstrip__logos">
+<!-- ============ DEALER MARQUEE ============ -->
+<section class="marquee" aria-label="Authorised dealer of">
+  <p class="marquee__label">Authorised dealer of</p>
+  <div class="marquee__track">
+    <div class="marquee__row">
+        <a href="asian-paints.html" aria-label="Asian Paints"><img src="images/brands/asian-paints.svg" alt="Asian Paints" loading="lazy"></a>
+        <a href="birla-opus.html" aria-label="Birla Opus"><img src="images/brands/birla-opus.svg" alt="Birla Opus" loading="lazy"></a>
+        <a href="berger-paints.html" aria-label="Berger Paints"><img src="images/brands/berger-paints.png" alt="Berger Paints" loading="lazy"></a>
+        <a href="forever-paints.html" aria-label="Forever Paints"><img src="images/brands/forever-paints.png" alt="Forever Paints" loading="lazy"></a>
+        <a href="acc-cement.html" aria-label="ACC Cement"><img src="images/brands/acc.svg" alt="ACC Cement" loading="lazy"></a>
+    </div>
+    <div class="marquee__row" aria-hidden="true">
         <a href="asian-paints.html" aria-label="Asian Paints"><img src="images/brands/asian-paints.svg" alt="Asian Paints" loading="lazy"></a>
         <a href="birla-opus.html" aria-label="Birla Opus"><img src="images/brands/birla-opus.svg" alt="Birla Opus" loading="lazy"></a>
         <a href="berger-paints.html" aria-label="Berger Paints"><img src="images/brands/berger-paints.png" alt="Berger Paints" loading="lazy"></a>
@@ -137,8 +157,8 @@
   <div class="container">
     <div class="about">
       <div class="about__media reveal">
-        <img src="images/stock/painters-team.webp" alt="Painters painting a bright red and blue wall" loading="lazy">
-        <img class="about__small" src="images/stock/swatches.webp" alt="Colour shade card fan" loading="lazy">
+        <img src="images/stock/painting-wall.webp" alt="Painting a soft cream wall with a roller" loading="lazy">
+        <img class="about__small" src="images/stock/swatches-warm.webp" alt="Warm earthy paint shade cards" loading="lazy">
         <div class="about__since"><span>Serving since</span><strong>2000</strong></div>
       </div>
       <div class="reveal">
@@ -152,16 +172,16 @@
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span><strong>Cement &amp; steel supply</strong> for building your home, with home delivery of cement</span></li>
         </ul>
         <div class="hero__actions">
-          <a class="btn" href="#team">Meet Our Team</a>
+          <a class="btn btn--arrow" href="#team">Meet Our Team <span class="btn__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
           <a class="btn btn--outline" href="tel:+919417123935"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg> Call Us</a>
         </div>
       </div>
     </div>
     <div class="stats">
-      <div class="stat reveal"><strong data-count="25" data-suffix="+">25+</strong><span>Years of trust</span></div>
-      <div class="stat reveal"><strong data-count="15" data-suffix="+">15+</strong><span>Years painter experience</span></div>
       <div class="stat reveal"><strong data-count="5">5</strong><span>Authorised brands</span></div>
-      <div class="stat reveal"><strong data-count="5000" data-suffix="+">5000+</strong><span>Shades available</span></div>
+      <div class="stat reveal"><strong data-count="3">3</strong><span>Colour mixing machines</span></div>
+      <div class="stat reveal"><strong data-count="100" data-suffix="+">100+</strong><span>Products to order online</span></div>
+      <div class="stat reveal"><strong data-count="12">12</strong><span>Wall stencil designs</span></div>
     </div>
   </div>
 </section>
@@ -176,7 +196,7 @@
     </div>
     <div class="brands-grid">
       <a class="brand-card reveal" href="asian-paints.html">
-        <div class="brand-card__top" style="--c:linear-gradient(135deg,#ffe6d9,#ffc7b6)"><img src="images/products/asian/tractor-emulsion.webp" alt="" loading="lazy"></div>
+        <div class="brand-card__top" style="--c:#f8e2d6"><img src="images/products/asian/tractor-emulsion.webp" alt="" loading="lazy"></div>
         <div class="brand-card__body">
           <img class="brand-card__logo" src="images/brands/asian-paints.svg" alt="Asian Paints" loading="lazy">
           <p>Interior &amp; exterior emulsions, waterproofing, putty, primers and enamels.</p>
@@ -184,7 +204,7 @@
         </div>
       </a>
       <a class="brand-card reveal" href="birla-opus.html">
-        <div class="brand-card__top" style="--c:linear-gradient(135deg,#efe9fa,#d9ccf2)"><img src="images/products/birla/calista-neo-star-shine.webp" alt="" loading="lazy"></div>
+        <div class="brand-card__top" style="--c:#efe7e0"><img src="images/products/birla/calista-neo-star-shine.webp" alt="" loading="lazy"></div>
         <div class="brand-card__body">
           <img class="brand-card__logo" src="images/brands/birla-opus.svg" alt="Birla Opus" loading="lazy">
           <p>Style and Calista exterior paints, putty and primers.</p>
@@ -192,7 +212,7 @@
         </div>
       </a>
       <a class="brand-card reveal" href="berger-paints.html">
-        <div class="brand-card__top" style="--c:linear-gradient(135deg,#e2edfb,#bcd3f3)"><img src="images/products/berger/weathercoat-glow.webp" alt="" loading="lazy" class="is-photo"></div>
+        <div class="brand-card__top" style="--c:#ebe5dd"><img src="images/products/berger/weathercoat-glow.webp" alt="" loading="lazy" class="is-photo"></div>
         <div class="brand-card__body">
           <img class="brand-card__logo" src="images/brands/berger-paints.png" alt="Berger Paints" loading="lazy">
           <p>WeatherCoat Glow, Walmasta, wall putty and primers.</p>
@@ -200,7 +220,7 @@
         </div>
       </a>
       <a class="brand-card reveal" href="forever-paints.html">
-        <div class="brand-card__top" style="--c:linear-gradient(135deg,#fde6ea,#f7c3cc)"><img src="images/products/forever/forever-emulsion.webp" alt="" loading="lazy"></div>
+        <div class="brand-card__top" style="--c:#f6e4dc"><img src="images/products/forever/forever-emulsion.webp" alt="" loading="lazy"></div>
         <div class="brand-card__body">
           <img class="brand-card__logo" src="images/brands/forever-paints.png" alt="Forever Paints" loading="lazy">
           <p>Budget-friendly emulsions, primer and rustic putty.</p>
@@ -208,7 +228,7 @@
         </div>
       </a>
       <a class="brand-card reveal" href="acc-cement.html">
-        <div class="brand-card__top" style="--c:linear-gradient(135deg,#fff1c7,#f6c343)"><img src="images/products/acc/acc-gold-water-shield.webp" alt="" loading="lazy"></div>
+        <div class="brand-card__top" style="--c:#f6e7cc"><img src="images/products/acc/acc-gold-water-shield.webp" alt="" loading="lazy"></div>
         <div class="brand-card__body">
           <img class="brand-card__logo" src="images/brands/acc.svg" alt="ACC Cement" loading="lazy">
           <p>Gold Water Shield, Concrete Plus and Suraksha Power, with home delivery.</p>
@@ -267,6 +287,28 @@
   </div>
 </section>
 
+<!-- ============ HOW WE WORK ============ -->
+<section class="section" id="how">
+  <div class="container how">
+    <div class="how__media" data-rv="left">
+      <img src="images/stock/minimal-arch.webp" alt="Calm room with a soft beige arch" loading="lazy">
+      <div class="how__note"><strong>Free advice</strong><span>Not sure which paint? Just ask us.</span></div>
+    </div>
+    <div>
+      <div class="section-head">
+        <span class="eyebrow">How we work</span>
+        <h2>From the first shade to the last coat</h2>
+      </div>
+      <ol class="steps">
+        <li><span class="steps__n">01</span><div><h3>Pick your shade &amp; product</h3><p>Browse shade cards and products here or at the shop. We help you choose the right paint for the room and budget.</p></div><a class="steps__go" href="shades.html" aria-label="See shades"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+        <li><span class="steps__n">02</span><div><h3>Site visit &amp; estimate</h3><p>Our contractor checks your walls and tells you how much material and labour the job needs.</p></div><a class="steps__go" href="#site-visit" aria-label="Book a site visit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+        <li><span class="steps__n">03</span><div><h3>Exact colour, ready to go</h3><p>Your shade is mixed on our computerised machine. Cement is delivered to your site.</p></div><a class="steps__go" href="#machines" aria-label="Colour machines"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+        <li><span class="steps__n">04</span><div><h3>Our painters do the rest</h3><p>A team with 15+ years of experience paints your home neatly and on time.</p></div><a class="steps__go" href="#team" aria-label="Meet the team"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
 <!-- ============ COLOUR MACHINES ============ -->
 <section class="section section--soft" id="machines">
   <div class="container">
@@ -302,7 +344,7 @@
 <section class="section section--tight">
   <div class="container">
     <div class="split split--red reveal">
-      <div class="split__media"><img src="images/stock/construction.webp" alt="House under construction" loading="lazy"></div>
+      <div class="split__media"><img src="images/stock/construction-sunset.webp" alt="House being built at sunset" loading="lazy"></div>
       <div class="split__body">
         <span class="eyebrow">Cement &amp; Steel</span>
         <h2>Building a new home? We supply cement &amp; steel too</h2>
@@ -403,6 +445,26 @@
   </div>
 </section>
 
+<!-- ============ FAQ ============ -->
+<section class="section section--soft" id="faq">
+  <div class="container faq">
+    <div class="section-head">
+      <span class="eyebrow">FAQ</span>
+      <h2>Questions people ask us</h2>
+      <p>Still have a question? Send us a message on WhatsApp, we usually reply the same day.</p>
+      <a class="btn btn--arrow" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20I%20have%20a%20question." target="_blank" rel="noopener">Ask on WhatsApp <span class="btn__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+    </div>
+    <div class="faq__list">
+      <details class="faq__item" open><summary>How do I order from the website?<span class="faq__icon" aria-hidden="true"></span></summary><div class="faq__a"><p>Choose the size and quantity on any product and press Add. Open the cart at the top, write your name and send the list on WhatsApp. We reply with the price and keep your order ready.</p></div></details>
+      <details class="faq__item"><summary>Do you deliver cement to my site?<span class="faq__icon" aria-hidden="true"></span></summary><div class="faq__a"><p>Yes. We deliver ACC cement to your home or construction site. Tell us the number of bags and the location.</p></div></details>
+      <details class="faq__item"><summary>Can you make any shade from the shade card?<span class="faq__icon" aria-hidden="true"></span></summary><div class="faq__a"><p>Yes. We have computerised colour mixing machines for Asian Paints (ColorWorld), Birla Opus (Corob) and Berger, so your shade comes out exactly right.</p></div></details>
+      <details class="faq__item"><summary>Do you also paint the house?<span class="faq__icon" aria-hidden="true"></span></summary><div class="faq__a"><p>Yes. We have our own team of painters with 15+ years of experience. Our contractor Manjit Rana handles the work.</p></div></details>
+      <details class="faq__item"><summary>Will someone come to check my walls first?<span class="faq__icon" aria-hidden="true"></span></summary><div class="faq__a"><p>Yes. Our contractor visits the site, checks the walls and gives you an estimate for paint and labour. Call 99884 12088 or 94178 88704.</p></div></details>
+      <details class="faq__item"><summary>Which brands do you sell?<span class="faq__icon" aria-hidden="true"></span></summary><div class="faq__a"><p>We are authorised dealers of Asian Paints, Birla Opus, Berger Paints, Forever Paints and ACC Cement. We also keep Dr. Fixit, Birla White putty, tools, spray paints and curtain fittings.</p></div></details>
+    </div>
+  </div>
+</section>
+
 <!-- ============ CONTACT ============ -->
 <section class="section" id="contact">
   <div class="container">
@@ -450,7 +512,7 @@
 <footer class="footer">
   <div class="container footer__grid">
     <div>
-      <a class="logo " href="index.html" aria-label="Rana Paints home"><svg class="logo__mark" viewBox="0 0 48 48" aria-hidden="true"><rect x="4" y="5" width="30" height="14" rx="4" fill="#d2161e"/><rect x="8" y="8.5" width="20" height="3" rx="1.5" fill="#fff" opacity=".45"/><path d="M10 19v7a2.6 2.6 0 0 0 5.2 0v-7z" fill="#d2161e"/><path d="M34 12h5a3 3 0 0 1 3 3v5.5a3 3 0 0 1-3 3H24v5" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><rect x="20" y="28" width="8" height="16" rx="3" fill="currentColor"/></svg><span class="logo__text"><span class="logo__name">RANA <b>PAINTS</b></span><span class="logo__tag">Paint &amp; Cement Store</span></span></a>
+      <a class="logo " href="index.html" aria-label="Rana Paints home"><svg class="logo__mark" viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="24" fill="#c8232b"/><rect x="18" y="19" width="58" height="24" rx="8" fill="#fff"/><path d="M27 25v12M38 25v12M49 25v12M60 25v12" stroke="#f3c4c6" stroke-width="3" stroke-linecap="round"/><path d="M76 31h9v21H52v10" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><rect x="46" y="62" width="12" height="28" rx="5" fill="#fff"/><path d="M24 43v13a5 5 0 0 0 10 0V43z" fill="#fff"/></svg><span class="logo__text"><span class="logo__name">RANA</span><span class="logo__sub">PAINTS</span><span class="logo__tag">Paint &amp; Cement Store</span></span></a>
       <p style="margin-top:18px">Serving homes in Passi Kandi, Dasuya and nearby villages since 2000. Authorised dealer of India's top paint brands and ACC cement, with our own team of expert painters.</p>
       <div class="footer__social">
         <a href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg></a>
@@ -491,16 +553,17 @@
       </ul>
     </div>
   </div>
+  <div class="container"><div class="footer__mark" aria-hidden="true">RANA PAINTS</div></div>
   <div class="footer__bottom">
     <div class="container">
-      <span>&copy; <span data-year>2026</span> <b>Rana Paint &amp; Cement Store</b>. All rights reserved.</span>
-      <span>Authorised dealer: Asian Paints &middot; Birla Opus &middot; Berger Paints &middot; Forever Paints &middot; ACC Cement</span>
+      <span>&copy; <span data-year>2026</span> <b>Rana Paint &amp; Cement Store</b>. Authorised dealer of Asian Paints, Birla Opus, Berger, Forever &amp; ACC.</span>
+      <a class="footer__top" href="#main">Back to top <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></a>
     </div>
   </div>
 </footer>
 <a class="fab-wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20I%20have%20a%20question." target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg></a>
 <button class="to-top" type="button" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
-<script src="js/main.js?v=2"></script>
+<script src="js/main.js?v=4"></script>
 <script src="js/cart.js?v=2"></script>
 </body>
 </html>
