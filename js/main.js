@@ -184,6 +184,41 @@
     $$("[data-count]").forEach(function (el) { cio.observe(el); });
   }
 
+  /* ---------- Brand cards: tilt (mouse ke saath chalta hai) ----------
+     Sirf mouse wale device pe. Touch pe card seedha rehta hai. */
+  if (!reduceMotion && window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+    $$(".brand-card").forEach(function (card) {
+      var raf = 0, px = 0.5, py = 0.5;
+      function paint() {
+        raf = 0;
+        card.style.setProperty("--ry", ((px - 0.5) * 14).toFixed(2) + "deg");
+        card.style.setProperty("--rx", ((0.5 - py) * 11).toFixed(2) + "deg");
+        card.style.setProperty("--mx", (px * 100).toFixed(1) + "%");
+        card.style.setProperty("--my", (py * 100).toFixed(1) + "%");
+      }
+      card.addEventListener("pointermove", function (e) {
+        var r = card.getBoundingClientRect();
+        px = Math.min(1, Math.max(0, (e.clientX - r.left) / r.width));
+        py = Math.min(1, Math.max(0, (e.clientY - r.top) / r.height));
+        card.classList.add("is-tilting");
+        if (!raf) raf = requestAnimationFrame(paint);
+      });
+      card.addEventListener("pointerleave", function () {
+        card.classList.remove("is-tilting");
+        card.style.setProperty("--rx", "0deg");
+        card.style.setProperty("--ry", "0deg");
+      });
+    });
+  }
+
+  /* ---------- Paint drops: sirf tab chalti hain jab section screen pe ho ---------- */
+  var fx = $(".machines__fx");
+  if (fx && "IntersectionObserver" in window) {
+    new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { fx.classList.toggle("is-live", en.isIntersecting); });
+    }, { threshold: 0.05 }).observe(fx.parentElement);
+  }
+
   /* ---------- Service kitaab: click pe khulti hai ---------- */
   var books = $$(".book");
   function setBook(book, open) {

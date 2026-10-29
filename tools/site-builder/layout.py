@@ -44,7 +44,7 @@ def head(title, desc, extra=""):
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@500&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css?v=10">
-<link rel="stylesheet" href="css/theme.css?v=7">
+<link rel="stylesheet" href="css/theme.css?v=10">
 {extra}</head>"""
 
 
@@ -182,7 +182,7 @@ def page(title, desc, body, active="", body_class="", scripts="", extra_head="")
 {body}
 </main>
 {footer()}
-<script src="js/main.js?v=5"></script>
+<script src="js/main.js?v=8"></script>
 <script src="js/cart.js?v=2"></script>
 {scripts}</body>
 </html>

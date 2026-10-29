@@ -32,26 +32,48 @@ def build():
         for k, (src, alt) in enumerate(slides))
     dots = "".join(f'<button type="button" data-slide="{k}" aria-label="Slide {k + 1}"></button>' for k in range(len(slides)))
 
+    # (page, logo, naam, peeche wali photo, aage wali photo, brand ka rang, halka background, description)
+    BC = "images/brandcards/"
     brand_cards = [
-        ("asian-paints.html", "images/brands/asian-paints.svg", "Asian Paints", "images/products/asian/tractor-emulsion.webp",
-         "#f8e2d6", "Interior &amp; exterior emulsions, waterproofing, putty, primers and enamels."),
-        ("birla-opus.html", "images/brands/birla-opus.svg", "Birla Opus", "images/products/birla/calista-neo-star-shine.webp",
-         "#efe7e0", "Style and Calista exterior paints, putty and primers."),
-        ("berger-paints.html", "images/brands/berger-paints.png", "Berger Paints", "images/products/berger/weathercoat-glow.webp",
-         "#ebe5dd", "WeatherCoat Glow, Walmasta, wall putty and primers."),
-        ("forever-paints.html", "images/brands/forever-paints.png", "Forever Paints", "images/products/forever/forever-emulsion.webp",
-         "#f6e4dc", "Budget-friendly emulsions, primer and rustic putty."),
-        ("acc-cement.html", "images/brands/acc.svg", "ACC Cement", "images/products/acc/acc-gold-water-shield.webp",
-         "#f6e7cc", "Gold Water Shield, Concrete Plus and Suraksha Power, with home delivery."),
+        ("asian-paints.html", "images/brands/asian-paints.svg", "Asian Paints", BC + "asian-a.webp", BC + "asian-b.webp",
+         "#e0312f", "#f8e4d9", "Interior &amp; exterior emulsions, waterproofing, putty, primers and enamels."),
+        ("birla-opus.html", "images/brands/birla-opus.svg", "Birla Opus", BC + "birla-a.webp", BC + "birla-b.webp",
+         "#5b3fa0", "#efe8e1", "Style and Calista paints, Alldry waterproofing, putty and primers."),
+        ("berger-paints.html", "images/brands/berger-paints.png", "Berger Paints", BC + "berger-a.webp", BC + "berger-b.webp",
+         "#0b4ea2", "#ebe6de", "WeatherCoat Glow, Walmasta, wall putty and primers."),
+        ("forever-paints.html", "images/brands/forever-paints.png", "Forever Paints", BC + "forever-a.webp", BC + "forever-b.webp",
+         "#c8102e", "#f7e6de", "Budget-friendly emulsions, primer and rustic putty."),
+        ("acc-cement.html", "images/brands/acc.svg", "ACC Cement", BC + "acc-a.webp", BC + "acc-b.webp",
+         "#d71920", "#f7e9d0", "Gold Water Shield, Concrete Plus and Suraksha Power, with home delivery."),
     ]
-    bc = "\n".join(f"""      <a class="brand-card reveal" href="{h}">
-        <div class="brand-card__top" style="--c:{bg}"><img src="{prod}" alt="" loading="lazy"{' class="is-photo"' if 'berger' in prod else ''}></div>
-        <div class="brand-card__body">
-          <img class="brand-card__logo" src="{logo}" alt="{name}" loading="lazy">
-          <p>{desc}</p>
-          <span class="link-arrow">Explore {name} {i('right', '2')}</span>
+
+    def brand_card(h, logo_html, desc, imgs_html, brand, bg, label):
+        return f"""      <a class="brand-card reveal" href="{h}" style="--brand:{brand};--c:{bg}" aria-label="{label}">
+        <div class="brand-card__in">
+          <div class="brand-card__stage">
+            <div class="brand-card__bg"></div>
+            <span class="brand-card__ground"></span>
+            <div class="brand-card__img">{imgs_html}</div>
+          </div>
+          <div class="brand-card__body">
+            {logo_html}
+            <p>{desc}</p>
+            <span class="link-arrow">Explore {label} {i('right', '2')}</span>
+          </div>
         </div>
-      </a>""" for h, logo, name, prod, bg, desc in brand_cards)
+      </a>"""
+
+    bc = chr(10).join(
+        brand_card(h, f'<img class="brand-card__logo" src="{logo}" alt="{name}" loading="lazy">', desc,
+                   f'<img class="p-back" src="{ia}" alt="" loading="lazy"><img class="p-front" src="{ib}" alt="{name} products" loading="lazy">',
+                   brand, bg, name)
+        for h, logo, name, ia, ib, brand, bg, desc in brand_cards)
+    tools_imgs = ('<img class="p-back" src="images/products/spray/spray-red.svg" alt="" loading="lazy">'
+                  '<img class="p-mid" src="images/products/tools/atul-brush.svg" alt="" loading="lazy">'
+                  '<img class="p-front" src="images/products/tools/normal-roller.svg" alt="Rollers, brushes and spray paints" loading="lazy">')
+    bc += chr(10) + brand_card("tools.html", '<span class="brand-card__word">Tools &amp; More</span>',
+                              "Rollers, brushes, putty scrapers, CUBE spray paints, turpentine, curtain fittings and wall stencils.",
+                              tools_imgs, "#c8232b", "#f3e6d8", "Tools &amp; More")
 
     strip = "\n".join(f'        <a href="{h}" aria-label="{n}"><img src="{img}" alt="{n}" loading="lazy"></a>' for h, img, n, _ in BRANDS)
 
@@ -145,7 +167,7 @@ def build():
         <span class="hero__faces"><img src="images/team/daler-singh-rana.webp" alt=""><img src="images/team/manjit-rana.webp" alt=""><img src="images/team/abhishek-rana.webp" alt=""></span>
         <span><strong>Since 2000</strong><small>Trusted by families across Dasuya</small></span>
       </div>
-      <h1 data-rv="up">Rang Aapke,<br><span>Bharosa Hamara</span></h1>
+      <h1 data-rv="up">Sukoon Ke Rang,<br><span>Mazboot Neev</span></h1>
       <p class="hero__lead" data-rv="up">Paints, putty, waterproofing and cement for every home. Asian Paints, Birla Opus, Berger, Forever and ACC, all under one roof, with our own team of painters.</p>
       <div class="hero__actions" data-rv="up">
         <a class="btn btn--arrow" href="#brands">Explore Brands <span class="btn__arrow">{i('right', '2.2')}</span></a>
@@ -194,7 +216,7 @@ def build():
   <div class="container">
     <div class="about">
       <div class="about__media reveal">
-        <img src="images/stock/painting-hand.webp" alt="A hand painting a wall with a roller" loading="lazy">
+        <img src="images/stock/terracotta-wall.webp" alt="A warm terracotta painted wall with a green plant" loading="lazy">
         <img class="about__small" src="images/stock/swatches-warm.webp" alt="Warm earthy paint shade cards" loading="lazy">
         <div class="about__since"><span>Serving since</span><strong>2000</strong></div>
       </div>
@@ -234,11 +256,6 @@ def build():
     <div class="brands-grid">
 {bc}
     </div>
-    <a class="more-strip reveal" href="tools.html">
-      <span class="more-strip__text"><strong>Tools &amp; More</strong><span>Rollers, brushes, putty scrapers, CUBE spray paints, turpentine oil, curtain fittings and wall stencils</span></span>
-      <span class="more-strip__icons">{i('roller', '1.5')}{i('brush', '1.5')}{i('drop', '1.5')}{i('door', '1.5')}{i('palette', '1.5')}</span>
-      <span class="link-arrow">Explore {i('right', '2')}</span>
-    </a>
   </div>
 </section>
 
@@ -280,6 +297,7 @@ def build():
 
 <!-- ============ COLOUR MACHINES ============ -->
 <section class="section section--soft" id="machines">
+    <div class="machines__fx" aria-hidden="true"><i style="--x:6%;--s:14px;--c:#c8232b;--d:0s;--t:7.5s"></i><i style="--x:13%;--s:20px;--c:#e0a14f;--d:2.3s;--t:9.5s"></i><i style="--x:21%;--s:12px;--c:#8aa486;--d:4.1s;--t:8.2s"></i><i style="--x:29%;--s:24px;--c:#c9694a;--d:1.2s;--t:10.5s"></i><i style="--x:38%;--s:16px;--c:#d9c3a5;--d:5.6s;--t:7.8s"></i><i style="--x:46%;--s:18px;--c:#9b6b8e;--d:3.3s;--t:9.0s"></i><i style="--x:54%;--s:13px;--c:#6f93a8;--d:6.8s;--t:8.8s"></i><i style="--x:62%;--s:22px;--c:#c8232b;--d:0.7s;--t:10.0s"></i><i style="--x:70%;--s:15px;--c:#e0a14f;--d:4.9s;--t:7.2s"></i><i style="--x:78%;--s:19px;--c:#8aa486;--d:2.9s;--t:9.8s"></i><i style="--x:86%;--s:12px;--c:#c9694a;--d:6.1s;--t:8.4s"></i><i style="--x:93%;--s:21px;--c:#d9c3a5;--d:1.8s;--t:9.2s"></i></div>
   <div class="container">
     <div class="section-head">
       <span class="eyebrow">Colour Mixing</span>
