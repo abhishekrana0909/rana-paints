@@ -126,8 +126,9 @@ h3 { font-size: 1.25rem; }
 .hero__visual { position: relative; align-self: stretch; min-height: 380px; }
 .hero__slides { position: absolute; inset: 0; }
 .hero__slide { transition: opacity 1.4s var(--ease); }
-.hero__slide img { transform: scale(1.08); transition: transform 9s linear; }
-.hero__slide.is-active img { transform: scale(1); }
+/* Ken Burns: jab slide dikhti hai tab dheere zoom + khisakti hai; fade-out ke baad hi reset hoti hai */
+.hero__slide img { transform: scale(1) translate3d(0, 0, 0); transition: transform 0s linear 1.6s; will-change: transform; }
+.hero__slide.is-active img { transform: scale(1.14) translate3d(-2.2%, -1.2%, 0); transition: transform 14s linear 0s; }
 .hero__float { position: absolute; left: -38px; bottom: 74px; z-index: 2; display: flex; align-items: center; gap: 12px; padding: 12px 18px 12px 12px; background: #fff; border-radius: 16px; box-shadow: var(--shadow-lg); animation: floaty 6s ease-in-out infinite; }
 .hero__float strong { display: block; font-size: .95rem; color: var(--ink); line-height: 1.2; }
 .hero__float small { color: var(--muted); font-size: .78rem; }
@@ -502,3 +503,23 @@ main { overflow-x: clip; }
 .machine:hover .machine__dots span:nth-child(6) { transition-delay: .25s; }
 @media (prefers-reduced-motion: reduce) { .machines__fx { display: none; } }
 @media (max-width: 640px) { .machines__fx i:nth-child(n+8) { display: none; } }
+
+/* =========================================================
+   Hero: khidki se aati dhoop ki kirnein (dheere guzarti hain)
+   ========================================================= */
+.hero::before { content: ""; position: absolute; top: -15%; bottom: -15%; left: 0; width: 70%; z-index: 1; pointer-events: none; opacity: 0;
+  background:
+    linear-gradient(104deg, transparent 22%, rgba(255,226,160,.5) 34%, rgba(255,246,214,.9) 40%, rgba(255,226,160,.45) 47%, transparent 56%),
+    linear-gradient(104deg, transparent 52%, rgba(255,232,175,.4) 60%, rgba(255,246,214,.7) 64%, rgba(255,232,175,.32) 69%, transparent 77%);
+  filter: blur(10px); transform: translateX(-80%); animation: sunSweep 15s ease-in-out 1.2s infinite; will-change: transform, opacity; }
+@keyframes sunSweep {
+  0%   { transform: translateX(-80%); opacity: 0; }
+  18%  { opacity: 1; }
+  62%  { opacity: 1; }
+  100% { transform: translateX(110%); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero::before { display: none; }
+  .hero__slide.is-active img { transform: none; transition: none; }
+}
+@media (max-width: 640px) { .hero::before { width: 120%; } }
