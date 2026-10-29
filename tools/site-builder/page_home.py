@@ -161,6 +161,9 @@ def build():
     body = f"""
 <!-- ============ HERO ============ -->
 <section class="hero" aria-label="Welcome">
+  <div class="hero__slides">
+{slide_html}
+  </div>
   <div class="container hero__inner">
     <div class="hero__text">
       <div class="hero__trust" data-rv="up">
@@ -180,11 +183,6 @@ def build():
       </ul>
     </div>
     <div class="hero__visual" data-rv="right">
-      <div class="hero__frame">
-        <div class="hero__slides">
-{slide_html}
-        </div>
-      </div>
       <div class="hero__float" aria-hidden="true">
         <span class="hero__float-dots"><i style="background:#c8232b"></i><i style="background:#e8a15b"></i><i style="background:#8aa486"></i><i style="background:#d9c3a5"></i></span>
         <span><strong>Exact shade</strong><small>Computerised mixing</small></span>

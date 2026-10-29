@@ -1,4 +1,4 @@
-"""Shared page layout: <head>, top bar, header, footer."""
+﻿"""Shared page layout: <head>, top bar, header, footer."""
 from urllib.parse import quote
 from icons import i, LOGO_MARK
 
@@ -44,7 +44,7 @@ def head(title, desc, extra=""):
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@500&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css?v=10">
-<link rel="stylesheet" href="css/theme.css?v=10">
+<link rel="stylesheet" href="css/theme.css?v=11">
 {extra}</head>"""
 
 
