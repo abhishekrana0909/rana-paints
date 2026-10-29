@@ -227,12 +227,13 @@ h3 { font-size: 1.25rem; }
 /* site visit / quote: shaant leaf-shadow background */
 .quote { background: #fbead8; color: var(--ink); isolation: isolate; }
 /* peeche ki photo baadal ki tarah dheere hilti aur ghoomti rehti hai */
-.quote::before { content: ""; display: block; position: absolute; top: -18%; right: -18%; bottom: -18%; left: -18%; width: auto; height: auto; border: 0; border-radius: 0; z-index: -2; background: url("../images/stock/leaf-shadow-2.webp") center / cover no-repeat; animation: cloudDrift 46s ease-in-out infinite alternate; will-change: transform; }
+.quote::before { content: ""; display: block; position: absolute; top: -26%; right: -26%; bottom: -26%; left: -26%; width: auto; height: auto; border: 0; border-radius: 0; z-index: -2; background: url("../images/stock/leaf-shadow-2.webp") center / cover no-repeat; animation: cloudDrift 16s ease-in-out infinite alternate; will-change: transform; }
 .quote::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(251,234,216,.95) 0%, rgba(251,234,216,.82) 48%, rgba(251,234,216,.35) 100%); }
 @keyframes cloudDrift {
-  0%   { transform: translate3d(-3%, -2%, 0) rotate(-3deg) scale(1); }
-  50%  { transform: translate3d(2%, 3%, 0) rotate(2deg) scale(1.06); }
-  100% { transform: translate3d(4%, -2%, 0) rotate(4deg) scale(1.02); }
+  0%   { transform: translate3d(-7%, -5%, 0) rotate(-6deg) scale(1); }
+  33%  { transform: translate3d(5%, 6%, 0) rotate(3deg) scale(1.12); }
+  66%  { transform: translate3d(8%, -4%, 0) rotate(7deg) scale(1.05); }
+  100% { transform: translate3d(-4%, 5%, 0) rotate(-4deg) scale(1.14); }
 }
 @media (prefers-reduced-motion: reduce) { .quote::before { animation: none; } }
 .quote h2 { color: var(--ink); }
