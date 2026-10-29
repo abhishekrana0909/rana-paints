@@ -215,7 +215,6 @@ def build():
     <div class="about">
       <div class="about__media reveal">
         <img src="images/stock/terracotta-wall.webp" alt="A warm terracotta painted wall with a green plant" loading="lazy">
-        <img class="about__small" src="images/stock/swatches-warm.webp" alt="Warm earthy paint shade cards" loading="lazy">
         <div class="about__since"><span>Serving since</span><strong>2000</strong></div>
       </div>
       <div class="reveal">
