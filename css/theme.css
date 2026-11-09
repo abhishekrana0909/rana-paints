@@ -523,3 +523,6 @@ main { overflow-x: clip; }
   .hero__slide.is-active img { transform: none; transition: none; }
 }
 @media (max-width: 640px) { .hero::before { width: 120%; } }
+
+/* Abhishek ki photo mein chehra upar hai, isliye chhote gol avatar mein upar se crop */
+.hero__faces img:last-child { object-position: center 22%; }
