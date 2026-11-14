@@ -1,6 +1,6 @@
 # Rana Paints website
 
-Static website for "Rana Paint & Cement Store", Passi Kandi, Dasuya (Punjab). Owner: Daler Singh Rana & Son (son = Abhishek Rana, who is the user). Authorised dealer of Asian Paints, Birla Opus, Berger Paints, Forever Paints and ACC Cement. Theme (Nov 2026): navy + slate blue + sage + sand + cream. Palette: ink #0d1b2a, navy #1b263b, slate #415a77 (accent, stored in the old --red variable), sage #778d7a, sand #d4c4a8, cream #f4f1de. Colours are CSS variables at the top of css/theme.css; brand pages keep each brand's own accent.
+Static website for "Rana Paint & Cement Store", Passi Kandi, Dasuya (Punjab). Owner: Daler Singh Rana & Son (son = Abhishek Rana, who is the user). Authorised dealer of Asian Paints, Birla Opus, Berger Paints, Forever Paints and ACC Cement. Theme (Nov 2026): Bordo + Green + Cream. Palette: bordo #6c151e (accent, stored in the old --red variable), green #0f3d3a (text, buttons, footer), cream #f5dabf with lighter tints #fbeee0 / #f7e1c9. Colours are CSS variables at the top of css/theme.css; brand pages keep each brand's own accent.
 
 - Live: https://abhishekrana0909.github.io/rana-paints/ (GitHub Pages, `main` branch, root). Repo: https://github.com/abhishekrana0909/rana-paints (public).
 - The `.html` files are GENERATED. Edit `tools/site-builder/*.py` (products in `products.py`, header/footer/phone numbers in `layout.py`), then run `python tools/site-builder/build.py`. Hand edits to `.html` get overwritten.
