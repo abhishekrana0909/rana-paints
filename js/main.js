@@ -299,6 +299,8 @@
     }
     mtabs.forEach(function (b, k) {
       b.addEventListener("click", function () { showM(k); });
+      // mouse le jaate hi dikhao (touch pe click se badalta hai)
+      b.addEventListener("pointerenter", function (e) { if (e.pointerType === "mouse") showM(k); });
       b.addEventListener("keydown", function (e) {
         if (e.key === "ArrowDown" || e.key === "ArrowRight") { e.preventDefault(); showM((k + 1) % mtabs.length, true); }
         if (e.key === "ArrowUp" || e.key === "ArrowLeft") { e.preventDefault(); showM((k + mtabs.length - 1) % mtabs.length, true); }

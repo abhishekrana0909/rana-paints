@@ -133,7 +133,7 @@ def build():
          ["#7a3640", "#6ca5a0", "#bea793", "#e29f88", "#788598", "#f5edea"]),
     ]
     mtab_html = "\n".join(
-        f'''        <button type="button" class="mtab{" is-active" if k == 0 else ""}" role="tab" aria-selected="{"true" if k == 0 else "false"}" data-m="{k}"><img src="{logo}" alt=""><span>{t}</span></button>'''
+        f'''        <button type="button" class="mtab{" is-active" if k == 0 else ""}" role="tab" aria-selected="{"true" if k == 0 else "false"}" data-m="{k}"><span class="mtab__logo"><img src="{logo}" alt=""></span><span class="mtab__name">{t}</span></button>'''
         for k, (logo, t, d, cols) in enumerate(machines))
     mpanel_html = "\n".join(
         f'''        <article class="mpanel{" is-active" if k == 0 else ""}" role="tabpanel" data-m="{k}">

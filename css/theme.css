@@ -570,12 +570,17 @@ main { overflow-x: clip; }
    Colour mixing: tabs
    ========================================================= */
 .mtabs { display: grid; grid-template-columns: 330px 1fr; gap: 28px; align-items: stretch; }
-.mtabs__list { display: grid; gap: 12px; align-content: start; }
-.mtab { display: flex; align-items: center; gap: 16px; text-align: left; padding: 18px 20px; border-radius: 18px; border: 1px solid var(--line); background: rgba(255,255,255,.6); color: var(--ink); font: inherit; cursor: pointer; transition: background .5s var(--ease), border-color .5s, box-shadow .6s var(--ease), transform .7s var(--ease); }
-.mtab img { height: 30px; width: 84px; object-fit: contain; object-position: left; flex: none; }
-.mtab span { font-weight: 600; font-size: .98rem; line-height: 1.25; }
-.mtab:hover { transform: translateX(6px); }
-.mtab.is-active { background: var(--card); border-color: color-mix(in srgb, var(--red) 40%, var(--line)); box-shadow: var(--shadow); transform: translateX(12px); }
+.mtabs__list { display: grid; grid-template-rows: repeat(3, 1fr); gap: 16px; }
+.mtab { position: relative; display: flex; align-items: center; gap: 18px; text-align: left; padding: 0 24px 0 26px; min-height: 96px; border-radius: 20px; border: 1px solid var(--line); background: rgba(255,255,255,.55); color: var(--ink); font: inherit; cursor: pointer; overflow: hidden; transition: background .5s var(--ease), border-color .5s, box-shadow .6s var(--ease), color .4s; }
+.mtab::before { content: ""; position: absolute; left: 0; top: 18%; bottom: 18%; width: 4px; border-radius: 0 4px 4px 0; background: var(--red); transform: scaleY(0); transition: transform .6s var(--ease); }
+.mtab::after { content: ""; flex: none; margin-left: auto; width: 10px; height: 10px; border-top: 2px solid var(--red); border-right: 2px solid var(--red); transform: translateX(-10px) rotate(45deg); opacity: 0; transition: transform .6s var(--ease), opacity .4s; }
+.mtab__logo { flex: none; width: 92px; height: 46px; display: grid; place-items: center; }
+.mtab__logo img { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; }
+.mtab__name { font-weight: 600; font-size: 1rem; line-height: 1.25; }
+.mtab:hover { background: var(--card); }
+.mtab.is-active { background: var(--card); border-color: color-mix(in srgb, var(--red) 38%, var(--line)); box-shadow: var(--shadow); }
+.mtab.is-active::before { transform: scaleY(1); }
+.mtab.is-active::after { transform: translateX(0) rotate(45deg); opacity: 1; }
 .mtabs__panels { display: grid; }
 .mpanel { grid-area: 1 / 1; display: grid; grid-template-columns: 1.1fr .9fr; gap: 32px; align-items: center; padding: 44px; border-radius: 26px; background: var(--card); border: 1px solid var(--line); box-shadow: var(--shadow); opacity: 0; visibility: hidden; transform: translateY(20px); transition: opacity .7s var(--ease), transform .8s var(--ease), visibility .7s; }
 .mpanel.is-active { opacity: 1; visibility: visible; transform: none; }
@@ -596,10 +601,11 @@ main { overflow-x: clip; }
 @keyframes dotpop { 0% { transform: scale(0) translateY(-30px); } 60% { transform: scale(1.12) translateY(0); } 100% { transform: scale(1); } }
 @media (max-width: 900px) {
   .mtabs { grid-template-columns: 1fr; gap: 18px; }
-  .mtab img { width: 56px; }
-  .mtabs__list { grid-auto-flow: column; grid-auto-columns: minmax(250px, 1fr); overflow-x: auto; scrollbar-width: none; padding-bottom: 4px; }
+  .mtabs__list { grid-template-rows: none; grid-auto-flow: column; grid-auto-columns: minmax(230px, 1fr); overflow-x: auto; scrollbar-width: none; padding-bottom: 4px; }
+  .mtab { min-height: 72px; padding: 0 18px 0 20px; gap: 12px; }
+  .mtab__logo { width: 56px; height: 36px; }
+  .mtab::after { display: none; }
   .mtabs__list::-webkit-scrollbar { display: none; }
-  .mtab:hover, .mtab.is-active { transform: none; }
   .mpanel { grid-template-columns: 1fr; padding: 28px; gap: 22px; }
   .mpanel__dots span { width: 62px; height: 62px; }
 }
