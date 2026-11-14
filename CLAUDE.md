@@ -14,4 +14,5 @@ Static website for "Rana Paint & Cement Store", Passi Kandi, Dasuya (Punjab). Ow
 - `reference/` and `rana-paints-details.md` (gitignored) hold the owner's original photos and the full list of details the user gave.
 
 The user is learning Python and talks in Hinglish. Explain steps simply in Hinglish. When they are giving requirements, they like to send all details first and say "START" before anything is built.
-- Home sections (Nov 2026): Brands = horizontal slider (`.bslider`, arrows + mouse drag, JS in main.js), How we work = scroll-filling timeline (`.steps`), Colour mixing = tabs (`.mtabs`, `.mpanel`). All three are built in `page_home.py`, styled at the end of `css/theme.css`.
+- Home sections (Nov 2026): Brands = all 6 cards visible in a 3x2 grid, How we work = scroll-filling timeline (`.steps`), Colour mixing = tabs (`.mtabs`, `.mpanel`). All three are built in `page_home.py`, styled at the end of `css/theme.css`.
+- Services section = photo showcase (`.showcase`: left tabs, right photo panels, switches on hover/click; built in `page_home.py`, styled at the end of `css/theme.css`).

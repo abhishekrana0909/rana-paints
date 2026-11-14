@@ -533,25 +533,11 @@ main { overflow-x: clip; }
 }
 
 /* =========================================================
-   Brands slider: kheencho, ya arrow dabao
+   Brands: saare cards ek saath (3 x 2)
    ========================================================= */
-.bslider { position: relative; }
-.brands-grid { display: flex; gap: 24px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; overscroll-behavior-x: contain; cursor: grab; padding: 36px 6px 50px; margin: -36px -6px -14px; -webkit-overflow-scrolling: touch; }
-.brands-grid::-webkit-scrollbar { display: none; }
-.brands-grid.is-drag { cursor: grabbing; scroll-snap-type: none; }
-.brands-grid.is-drag * { user-select: none; }
-.brands-grid .brand-card { flex: 0 0 calc((100% - 48px) / 3); min-width: 0; scroll-snap-align: start; -webkit-user-drag: none; }
-.brands-grid img { -webkit-user-drag: none; }
-.bslider__bar { display: flex; align-items: center; gap: 28px; margin-top: 8px; }
-.bslider__prog { position: relative; flex: 1; height: 4px; border-radius: 4px; background: var(--line); overflow: hidden; }
-.bslider__prog i { position: absolute; left: 0; top: 0; bottom: 0; width: 40%; border-radius: 4px; background: var(--red); transition: transform .25s linear, width .3s; }
-.bslider__btns { display: flex; gap: 10px; }
-.bslider__btn { width: 48px; height: 48px; border-radius: 50%; border: 1px solid var(--line); background: var(--card); color: var(--ink); display: grid; place-items: center; cursor: pointer; transition: background .4s, color .4s, border-color .4s, transform .5s var(--ease), opacity .3s; }
-.bslider__btn svg { width: 18px; height: 18px; }
-.bslider__btn:hover:not(:disabled) { background: var(--red); border-color: var(--red); color: #fff; transform: scale(1.08); }
-.bslider__btn:disabled { opacity: .35; cursor: default; }
-@media (max-width: 1024px) { .brands-grid .brand-card { flex-basis: calc((100% - 24px) / 2); } }
-@media (max-width: 640px) { .brands-grid { gap: 16px; } .brands-grid .brand-card { flex-basis: 82%; } .bslider__bar { gap: 18px; } }
+.brands-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+@media (max-width: 1024px) { .brands-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) { .brands-grid { grid-template-columns: 1fr; gap: 18px; } }
 
 /* =========================================================
    How we work: scroll ke saath bharti timeline
@@ -610,3 +596,51 @@ main { overflow-x: clip; }
   .mpanel__dots span { width: 62px; height: 62px; }
 }
 @media (prefers-reduced-motion: reduce) { .mpanel__dots span { transform: none; animation: none !important; } }
+
+/* =========================================================
+   Services showcase: left mein list, right mein badi photo (cursor le jao to badle)
+   ========================================================= */
+.showcase { display: grid; grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr); gap: 28px; align-items: stretch; }
+.showcase__list { display: grid; gap: 10px; align-content: start; }
+.sv-tab { position: relative; display: grid; grid-template-columns: 34px 1fr 46px; gap: 14px; align-items: center; text-align: left; padding: 18px 20px 18px 22px; border-radius: 20px; border: 1px solid var(--line); background: rgba(255,255,255,.55); color: var(--ink); font: inherit; cursor: pointer; overflow: hidden; transition: background .5s var(--ease), border-color .5s, box-shadow .6s var(--ease); }
+.sv-tab::before { content: ""; position: absolute; left: 0; top: 16%; bottom: 16%; width: 4px; border-radius: 0 4px 4px 0; background: var(--red); transform: scaleY(0); transition: transform .6s var(--ease); }
+.sv-tab__no { font-family: var(--font-mono); font-size: .82rem; color: var(--muted); transition: color .4s; }
+.sv-tab__body strong { display: block; font-size: 1.08rem; font-weight: 600; letter-spacing: -.01em; }
+.sv-tab__body small { display: block; max-height: 0; opacity: 0; overflow: hidden; margin-top: 0; color: var(--muted); font-size: .92rem; line-height: 1.5; transition: max-height .6s var(--ease), opacity .5s, margin .5s var(--ease); }
+.sv-tab__ic { width: 46px; height: 46px; border-radius: 14px; display: grid; place-items: center; background: var(--red-soft); color: var(--red); transition: background .5s, color .5s, transform .7s var(--ease); }
+.sv-tab__ic svg { width: 22px; height: 22px; }
+.sv-tab:hover { background: var(--card); }
+.sv-tab.is-active { background: var(--card); border-color: color-mix(in srgb, var(--red) 38%, var(--line)); box-shadow: var(--shadow); }
+.sv-tab.is-active::before { transform: scaleY(1); }
+.sv-tab.is-active .sv-tab__no { color: var(--red); }
+.sv-tab.is-active .sv-tab__body small { max-height: 5.6em; opacity: 1; margin-top: 6px; }
+.sv-tab.is-active .sv-tab__ic { background: var(--red); color: #fff; transform: rotate(-6deg) scale(1.05); }
+.showcase__stage { position: relative; border-radius: 28px; overflow: hidden; min-height: 540px; background: var(--bg-soft); box-shadow: var(--shadow-lg); isolation: isolate; }
+.sv-panel { position: absolute; inset: 0; opacity: 0; visibility: hidden; transition: opacity .9s var(--ease), visibility .9s; }
+.sv-panel.is-active { opacity: 1; visibility: visible; }
+.sv-panel img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.08); transition: transform 9s linear; }
+.sv-panel.is-active img { transform: scale(1); }
+.sv-panel::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(34,28,24,.04) 28%, rgba(34,28,24,.8) 100%); }
+.sv-panel__body { position: absolute; left: 0; right: 0; bottom: 0; z-index: 1; display: grid; gap: 12px; padding: 38px; color: #fff; }
+.sv-panel__body > * { opacity: 0; transform: translateY(16px); transition: opacity .5s var(--ease), transform .7s var(--ease); }
+.sv-panel.is-active .sv-panel__body > * { opacity: 1; transform: none; transition-delay: calc(.3s + var(--n, 0) * .09s); }
+.sv-panel__body > :nth-child(2) { --n: 1; } .sv-panel__body > :nth-child(3) { --n: 2; } .sv-panel__body > :nth-child(4) { --n: 3; }
+.sv-panel__no { font-family: var(--font-mono); font-size: .78rem; letter-spacing: .16em; opacity: .85; }
+.sv-panel h3 { margin: 0; color: #fff; font-size: clamp(1.7rem, 2.7vw, 2.3rem); }
+.sv-panel__pts { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.sv-panel__pts li { padding: 7px 14px; border-radius: 999px; font-size: .85rem; background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.3); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); }
+.sv-panel__acts { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
+.sv-panel__acts .btn:not(.btn--wa) { background: #fff; border-color: #fff; color: var(--ink); }
+.sv-panel__acts .btn--outline:not(.btn--wa):hover { background: var(--red); border-color: var(--red); color: #fff; }
+@media (max-width: 900px) {
+  .showcase { grid-template-columns: 1fr; gap: 18px; }
+  .showcase__list { grid-auto-flow: column; grid-auto-columns: max-content; overflow-x: auto; scrollbar-width: none; gap: 8px; padding-bottom: 4px; }
+  .showcase__list::-webkit-scrollbar { display: none; }
+  .sv-tab { grid-template-columns: auto auto; gap: 10px; padding: 12px 18px; border-radius: 999px; }
+  .sv-tab__no, .sv-tab__body small, .sv-tab__ic { display: none; }
+  .sv-tab__body strong { font-size: .95rem; white-space: nowrap; }
+  .sv-tab::before { display: none; }
+  .showcase__stage { min-height: 500px; }
+  .sv-panel__body { padding: 24px; }
+}
+@media (prefers-reduced-motion: reduce) { .sv-panel img { transform: none; transition: none; } }

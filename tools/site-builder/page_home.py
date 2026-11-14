@@ -99,30 +99,43 @@ def build():
     ]
     X_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>'
 
-    def book(n, ic, t, d, pts, acts):
+    sv_imgs = [
+        ("images/stock/painting-wall.webp", "A painter rolling cream paint on a wall"),
+        ("images/stock/hero-house.webp", "A modern house with a green garden"),
+        ("images/stock/concrete-steps.webp", "Concrete steps in soft light"),
+        ("images/stock/swatches-warm.webp", "Paint shade cards in warm colours"),
+        ("images/stock/steel-rebar.webp", "Steel reinforcement bars"),
+        ("images/stock/hero-bedroom.webp", "A bedroom with freshly painted sage green walls"),
+    ]
+    sv_tabs, sv_panels = [], []
+    for k, (ic, t, d, pts, acts) in enumerate(services):
+        act = " is-active" if k == 0 else ""
+        sel = "true" if k == 0 else "false"
+        sv_tabs.append(
+            f'        <button type="button" class="sv-tab{act}" role="tab" aria-selected="{sel}" data-s="{k}">'
+            f'<span class="sv-tab__no">0{k + 1}</span>'
+            f'<span class="sv-tab__body"><strong>{t}</strong><small>{d}</small></span>'
+            f'<span class="sv-tab__ic">{i(ic, "1.6")}</span></button>')
         lis = "".join(f"<li>{x}</li>" for x in pts)
         btns = "".join(
             f'<a class="btn btn--sm{" btn--wa" if wa_btn else " btn--outline"}" href="{href}"{" target=\"_blank\" rel=\"noopener\"" if wa_btn else ""}>{lab}</a>'
             for lab, href, wa_btn in acts)
-        return f"""      <div class="service book">
-        <div class="book__page">
-          <div class="book__inner">
-            <div class="book__top"><span class="book__no">0{n}</span><h3>{t}</h3><button class="book__close" type="button" aria-label="Close {t}">{X_ICON}</button></div>
-            <ul class="book__list">{lis}</ul>
-            <div class="book__actions">{btns}</div>
-          </div>
-        </div>
-        <div class="book__cover">
-          <div class="book__front" role="button" tabindex="0" aria-expanded="false" aria-label="Open: {t}">
-            <div class="service__icon">{i(ic, '1.6')}</div>
-            <h3>{t}</h3>
-            <p>{d}</p>
-            <span class="book__hint">Open <span>{i('right', '2.2')}</span></span>
-          </div>
-          <div class="book__back" aria-hidden="true"><span>RANA</span><span>PAINTS</span></div>
-        </div>
-      </div>"""
-    sv = chr(10).join(book(k + 1, *row) for k, row in enumerate(services))
+        img, alt = sv_imgs[k]
+        sv_panels.append(
+            f'        <article class="sv-panel{act}" role="tabpanel" data-s="{k}">\n'
+            f'          <img src="{img}" alt="{alt}" loading="lazy">\n'
+            f'          <div class="sv-panel__body">\n'
+            f'            <span class="sv-panel__no">0{k + 1} / 0{len(services)}</span>\n'
+            f'            <h3>{t}</h3>\n'
+            f'            <ul class="sv-panel__pts">{lis}</ul>\n'
+            f'            <div class="sv-panel__acts">{btns}</div>\n'
+            f'          </div>\n'
+            f'        </article>')
+    sv = (f'    <div class="showcase reveal">\n      <div class="showcase__list" role="tablist" aria-label="Our services">\n'
+          + chr(10).join(sv_tabs)
+          + '\n      </div>\n      <div class="showcase__stage">\n'
+          + chr(10).join(sv_panels)
+          + '\n      </div>\n    </div>')
 
     machines = [
         ("images/brands/asian-paints.svg", "Asian Paints ColorWorld", "Computerised tinting for Asian Paints emulsions and enamels. Pick a shade from the fan deck and we mix it right at the shop.",
@@ -231,7 +244,7 @@ def build():
   <div class="container">
     <div class="about">
       <div class="about__media reveal">
-        <img src="images/stock/terracotta-wall.webp" alt="A warm terracotta painted wall with a green plant" loading="lazy">
+        <img src="images/stock/minimal-arch.webp" alt="A calm cream arch with a sofa and dried grass" loading="lazy">
         <div class="about__since"><span>Serving since</span><strong>2000</strong></div>
       </div>
       <div class="reveal">
@@ -267,17 +280,8 @@ def build():
       <h2>Everything your home needs, from brands you trust</h2>
       <p>Pick a brand to see its products: interior and exterior paints, waterproofing, putty, primers and cement.</p>
     </div>
-    <div class="bslider" data-slider>
-      <div class="brands-grid" data-track>
+    <div class="brands-grid">
 {bc}
-      </div>
-      <div class="bslider__bar">
-        <div class="bslider__prog" aria-hidden="true"><i></i></div>
-        <div class="bslider__btns">
-          <button type="button" class="bslider__btn" data-dir="-1" aria-label="Previous brands">{i('left', '2.2')}</button>
-          <button type="button" class="bslider__btn" data-dir="1" aria-label="Next brands">{i('right', '2.2')}</button>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -290,9 +294,7 @@ def build():
       <h2>More than a paint shop</h2>
       <p>From choosing the shade to painting the last wall, and from cement for the foundation to waterproofing the roof: we handle it all.</p>
     </div>
-    <div class="services">
 {sv}
-    </div>
   </div>
 </section>
 
@@ -300,7 +302,7 @@ def build():
 <section class="section" id="how">
   <div class="container how">
     <div class="how__media" data-rv="left">
-      <img src="images/stock/minimal-arch.webp" alt="Calm room with a soft beige arch" loading="lazy">
+      <img src="images/stock/arch-room.webp" alt="A calm room with soft window light" loading="lazy">
       <div class="how__note"><strong>Free advice</strong><span>Not sure which paint? Just ask us.</span></div>
     </div>
     <div>

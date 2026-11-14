@@ -219,50 +219,6 @@
     }, { threshold: 0.05 }).observe(fx.parentElement);
   }
 
-  /* ---------- Brands slider: arrows + mouse se kheencho ---------- */
-  $$("[data-slider]").forEach(function (sl) {
-    var tr = $("[data-track]", sl), bar = $(".bslider__prog i", sl);
-    var prev = $('[data-dir="-1"]', sl), next = $('[data-dir="1"]', sl);
-    function upd() {
-      var max = tr.scrollWidth - tr.clientWidth;
-      var vis = Math.min(1, tr.clientWidth / tr.scrollWidth);
-      bar.style.width = (vis * 100) + "%";
-      bar.style.transform = "translateX(" + (tr.scrollLeft / tr.clientWidth * 100) + "%)";
-      prev.disabled = tr.scrollLeft <= 2;
-      next.disabled = tr.scrollLeft >= max - 2;
-    }
-    function step(d) {
-      var c = $(".brand-card", tr);
-      var w = c ? c.getBoundingClientRect().width + 24 : tr.clientWidth * 0.8;
-      tr.scrollBy({ left: d * w, behavior: "smooth" });
-    }
-    prev.addEventListener("click", function () { step(-1); });
-    next.addEventListener("click", function () { step(1); });
-    tr.addEventListener("scroll", function () { requestAnimationFrame(upd); }, { passive: true });
-    window.addEventListener("resize", upd);
-    // mouse se drag (touch apne aap scroll hota hai)
-    var down = false, moved = false, sx = 0, sl0 = 0;
-    tr.addEventListener("pointerdown", function (e) {
-      if (e.pointerType !== "mouse" || e.button !== 0) return;
-      down = true; moved = false; sx = e.clientX; sl0 = tr.scrollLeft;
-    });
-    window.addEventListener("pointermove", function (e) {
-      if (!down) return;
-      var dx = e.clientX - sx;
-      if (!moved && Math.abs(dx) > 6) { moved = true; tr.classList.add("is-drag"); }
-      if (moved) tr.scrollLeft = sl0 - dx;
-    });
-    window.addEventListener("pointerup", function () {
-      if (!down) return;
-      down = false;
-      tr.classList.remove("is-drag");
-    });
-    tr.addEventListener("click", function (e) { if (moved) { e.preventDefault(); e.stopPropagation(); moved = false; } }, true);
-    tr.addEventListener("dragstart", function (e) { e.preventDefault(); });
-    upd();
-    setTimeout(upd, 600);
-  });
-
   /* ---------- How we work: timeline scroll ke saath bharti hai ---------- */
   var stepsEl = $(".steps");
   if (stepsEl) {
@@ -286,6 +242,26 @@
     window.addEventListener("resize", stepsTick);
     window.addEventListener("load", stepsTick);
     stepsUpdate();
+  }
+
+  /* ---------- Services showcase: cursor le jao to photo badle ---------- */
+  var sc = $(".showcase");
+  if (sc) {
+    var svT = $$(".sv-tab", sc), svP = $$(".sv-panel", sc);
+    function showS(k, focus) {
+      svT.forEach(function (b, n) { b.classList.toggle("is-active", n === k); b.setAttribute("aria-selected", n === k ? "true" : "false"); b.tabIndex = n === k ? 0 : -1; });
+      svP.forEach(function (p, n) { p.classList.toggle("is-active", n === k); });
+      if (focus) svT[k].focus();
+    }
+    svT.forEach(function (b, k) {
+      b.addEventListener("click", function () { showS(k); });
+      b.addEventListener("pointerenter", function (e) { if (e.pointerType === "mouse") showS(k); });
+      b.addEventListener("keydown", function (e) {
+        if (e.key === "ArrowDown" || e.key === "ArrowRight") { e.preventDefault(); showS((k + 1) % svT.length, true); }
+        if (e.key === "ArrowUp" || e.key === "ArrowLeft") { e.preventDefault(); showS((k + svT.length - 1) % svT.length, true); }
+      });
+    });
+    showS(0);
   }
 
   /* ---------- Colour mixing: tabs ---------- */
