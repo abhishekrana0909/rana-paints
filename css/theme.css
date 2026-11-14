@@ -529,7 +529,7 @@ main { overflow-x: clip; }
 
 /* hero: badi screen pe content zyada chauda, taaki left mein khaali jagah na bache */
 @media (min-width: 1280px) {
-  .hero .hero__inner { max-width: 1560px; padding-left: clamp(40px, 5vw, 96px); padding-right: clamp(40px, 5vw, 96px); }
+  .hero .hero__inner { max-width: none; padding-left: clamp(28px, 3.2vw, 64px); padding-right: clamp(28px, 3.2vw, 64px); }
 }
 
 /* =========================================================
