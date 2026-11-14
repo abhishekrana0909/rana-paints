@@ -111,7 +111,7 @@ h3 { font-size: 1.25rem; }
 /* ---------- HERO (home) ---------- */
 .hero { background: #f6e5ba; color: var(--ink); min-height: 0; display: block; overflow: clip; }
 /* photo poore hero ke background mein; left pe cream parda taaki text saaf padhe, right pe photo clear */
-.hero::after { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(90deg, #f6e5ba 0%, rgba(246,229,186,.94) 30%, rgba(246,229,186,.55) 52%, rgba(246,229,186,0) 78%), linear-gradient(0deg, #f6e5ba 0%, rgba(246,229,186,0) 22%); }
+.hero::after { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(90deg, rgba(246,229,186,.97) 0%, rgba(246,229,186,.9) 24%, rgba(246,229,186,.5) 44%, rgba(246,229,186,0) 70%), linear-gradient(0deg, #f6e5ba 0%, rgba(246,229,186,0) 22%); }
 .hero__slide img { object-position: 70% center; }
 .hero__inner { grid-template-columns: 1.05fr .95fr; gap: 64px; align-items: center; padding-top: 56px; padding-bottom: 96px; }
 .hero h1 { color: var(--ink); margin-bottom: 20px; text-shadow: none; }
@@ -529,3 +529,8 @@ main { overflow-x: clip; }
 
 /* Abhishek ki photo mein chehra upar hai, isliye chhote gol avatar mein upar se crop */
 .hero__faces img:last-child { object-position: center 22%; }
+
+/* hero: badi screen pe content zyada chauda, taaki left mein khaali jagah na bache */
+@media (min-width: 1280px) {
+  .hero .hero__inner { max-width: 1560px; padding-left: clamp(40px, 5vw, 96px); padding-right: clamp(40px, 5vw, 96px); }
+}
