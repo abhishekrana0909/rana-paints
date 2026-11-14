@@ -52,7 +52,7 @@ def i(name, sw="1.8"):
 
 
 # Logo: "Roller Badge" (owner ne option 1 chuna)
-BADGE = '<rect width="100" height="100" rx="24" fill="#6c151e"/><rect x="18" y="19" width="58" height="24" rx="8" fill="#fff"/><path d="M27 25v12M38 25v12M49 25v12M60 25v12" stroke="#f3c4c6" stroke-width="3" stroke-linecap="round"/><path d="M76 31h9v21H52v10" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><rect x="46" y="62" width="12" height="28" rx="5" fill="#fff"/><path d="M24 43v13a5 5 0 0 0 10 0V43z" fill="#fff"/>'
+BADGE = '<rect width="100" height="100" rx="24" fill="#c8232b"/><rect x="18" y="19" width="58" height="24" rx="8" fill="#fff"/><path d="M27 25v12M38 25v12M49 25v12M60 25v12" stroke="#f3c4c6" stroke-width="3" stroke-linecap="round"/><path d="M76 31h9v21H52v10" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><rect x="46" y="62" width="12" height="28" rx="5" fill="#fff"/><path d="M24 43v13a5 5 0 0 0 10 0V43z" fill="#fff"/>'
 
 LOGO_MARK = '<svg class="logo__mark" viewBox="0 0 100 100" aria-hidden="true">' + BADGE + '</svg>'
 

@@ -34,7 +34,7 @@ def head(title, desc, extra=""):
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{title}</title>
 <meta name="description" content="{desc}">
-<meta name="theme-color" content="#0f3d3a">
+<meta name="theme-color" content="#d2161e">
 <meta property="og:type" content="website">
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{desc}">
@@ -44,7 +44,7 @@ def head(title, desc, extra=""):
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@500&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css?v=10">
-<link rel="stylesheet" href="css/theme.css?v=21">
+<link rel="stylesheet" href="css/theme.css?v=22">
 {extra}</head>"""
 
 
