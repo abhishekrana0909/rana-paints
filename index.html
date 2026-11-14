@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@500&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css?v=10">
-<link rel="stylesheet" href="css/theme.css?v=22">
+<link rel="stylesheet" href="css/theme.css?v=24">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -191,7 +191,8 @@
       <h2>Everything your home needs, from brands you trust</h2>
       <p>Pick a brand to see its products: interior and exterior paints, waterproofing, putty, primers and cement.</p>
     </div>
-    <div class="brands-grid">
+    <div class="bslider" data-slider>
+      <div class="brands-grid" data-track>
       <a class="brand-card reveal" href="asian-paints.html" style="--brand:#e0312f;--c:#f8e4d9" aria-label="Asian Paints">
         <div class="brand-card__in">
           <div class="brand-card__stage">
@@ -276,6 +277,14 @@
           </div>
         </div>
       </a>
+      </div>
+      <div class="bslider__bar">
+        <div class="bslider__prog" aria-hidden="true"><i></i></div>
+        <div class="bslider__btns">
+          <button type="button" class="bslider__btn" data-dir="-1" aria-label="Previous brands"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+          <button type="button" class="bslider__btn" data-dir="1" aria-label="Next brands"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -432,24 +441,40 @@
       <h2>Your exact shade, mixed in minutes</h2>
       <p>We have computerised colour mixing machines for all three paint companies, so the shade you pick on the card is the shade you get on your wall.</p>
     </div>
-    <div class="machines">
-      <div class="machine reveal">
-        <img class="machine__logo" src="images/brands/asian-paints.svg" alt="" loading="lazy">
-        <h3>Asian Paints ColorWorld</h3>
-        <p>Computerised tinting for Asian Paints emulsions and enamels. Pick a shade from the fan deck and we mix it right at the shop.</p>
-        <div class="machine__dots"><span style="background:#e2553f"></span><span style="background:#f2b33d"></span><span style="background:#6fa8dc"></span><span style="background:#7a9e56"></span><span style="background:#8e5ea2"></span><span style="background:#f4e1c6"></span></div>
+    <div class="mtabs reveal">
+      <div class="mtabs__list" role="tablist" aria-label="Colour mixing machines">
+        <button type="button" class="mtab is-active" role="tab" aria-selected="true" data-m="0"><img src="images/brands/asian-paints.svg" alt=""><span>Asian Paints ColorWorld</span></button>
+        <button type="button" class="mtab" role="tab" aria-selected="false" data-m="1"><img src="images/brands/birla-opus.svg" alt=""><span>Birla Opus Corob</span></button>
+        <button type="button" class="mtab" role="tab" aria-selected="false" data-m="2"><img src="images/brands/berger-paints.png" alt=""><span>Berger ColorWorld</span></button>
       </div>
-      <div class="machine reveal">
-        <img class="machine__logo" src="images/brands/birla-opus.svg" alt="" loading="lazy">
-        <h3>Birla Opus Corob</h3>
-        <p>Corob machine for Birla Opus shades: consistent colour from the first bucket to the last.</p>
-        <div class="machine__dots"><span style="background:#5c7bbd"></span><span style="background:#e05a4f"></span><span style="background:#f0c24b"></span><span style="background:#6aa27a"></span><span style="background:#b08bc5"></span><span style="background:#efe5d2"></span></div>
-      </div>
-      <div class="machine reveal">
-        <img class="machine__logo" src="images/brands/berger-paints.png" alt="" loading="lazy">
-        <h3>Berger ColorWorld</h3>
-        <p>Berger tinting machine for WeatherCoat, Walmasta and more. Exact shade, every time.</p>
-        <div class="machine__dots"><span style="background:#7a3640"></span><span style="background:#6ca5a0"></span><span style="background:#bea793"></span><span style="background:#e29f88"></span><span style="background:#788598"></span><span style="background:#f5edea"></span></div>
+      <div class="mtabs__panels">
+        <article class="mpanel is-active" role="tabpanel" data-m="0">
+          <div class="mpanel__text">
+            <img class="mpanel__logo" src="images/brands/asian-paints.svg" alt="" loading="lazy">
+            <h3>Asian Paints ColorWorld</h3>
+            <p>Computerised tinting for Asian Paints emulsions and enamels. Pick a shade from the fan deck and we mix it right at the shop.</p>
+            <ul class="mpanel__tags"><li>Computerised</li><li>Exact shade</li><li>Same colour every time</li></ul>
+          </div>
+          <div class="mpanel__dots" style="--glow:#e2553f"><span style="background:#e2553f"></span><span style="background:#f2b33d"></span><span style="background:#6fa8dc"></span><span style="background:#7a9e56"></span><span style="background:#8e5ea2"></span><span style="background:#f4e1c6"></span></div>
+        </article>
+        <article class="mpanel" role="tabpanel" data-m="1">
+          <div class="mpanel__text">
+            <img class="mpanel__logo" src="images/brands/birla-opus.svg" alt="" loading="lazy">
+            <h3>Birla Opus Corob</h3>
+            <p>Corob machine for Birla Opus shades: consistent colour from the first bucket to the last.</p>
+            <ul class="mpanel__tags"><li>Computerised</li><li>Exact shade</li><li>Same colour every time</li></ul>
+          </div>
+          <div class="mpanel__dots" style="--glow:#5c7bbd"><span style="background:#5c7bbd"></span><span style="background:#e05a4f"></span><span style="background:#f0c24b"></span><span style="background:#6aa27a"></span><span style="background:#b08bc5"></span><span style="background:#efe5d2"></span></div>
+        </article>
+        <article class="mpanel" role="tabpanel" data-m="2">
+          <div class="mpanel__text">
+            <img class="mpanel__logo" src="images/brands/berger-paints.png" alt="" loading="lazy">
+            <h3>Berger ColorWorld</h3>
+            <p>Berger tinting machine for WeatherCoat, Walmasta and more. Exact shade, every time.</p>
+            <ul class="mpanel__tags"><li>Computerised</li><li>Exact shade</li><li>Same colour every time</li></ul>
+          </div>
+          <div class="mpanel__dots" style="--glow:#7a3640"><span style="background:#7a3640"></span><span style="background:#6ca5a0"></span><span style="background:#bea793"></span><span style="background:#e29f88"></span><span style="background:#788598"></span><span style="background:#f5edea"></span></div>
+        </article>
       </div>
     </div>
   </div>
@@ -678,7 +703,7 @@
 </footer>
 <a class="fab-wa" href="https://wa.me/919417123935?text=Namaste%20Rana%20Paints%21%20I%20have%20a%20question." target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/><path d="M16.6 14.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.8-.3z"/></svg></a>
 <button class="to-top" type="button" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
-<script src="js/main.js?v=8"></script>
+<script src="js/main.js?v=9"></script>
 <script src="js/cart.js?v=2"></script>
 </body>
 </html>

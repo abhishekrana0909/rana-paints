@@ -132,12 +132,29 @@ def build():
         ("images/brands/berger-paints.png", "Berger ColorWorld", "Berger tinting machine for WeatherCoat, Walmasta and more. Exact shade, every time.",
          ["#7a3640", "#6ca5a0", "#bea793", "#e29f88", "#788598", "#f5edea"]),
     ]
-    mc = "\n".join(f"""      <div class="machine reveal">
-        <img class="machine__logo" src="{logo}" alt="" loading="lazy">
-        <h3>{t}</h3>
-        <p>{d}</p>
-        <div class="machine__dots">{''.join(f'<span style="background:{c}"></span>' for c in cols)}</div>
-      </div>""" for logo, t, d, cols in machines)
+    mtab_html = "\n".join(
+        f'''        <button type="button" class="mtab{" is-active" if k == 0 else ""}" role="tab" aria-selected="{"true" if k == 0 else "false"}" data-m="{k}"><img src="{logo}" alt=""><span>{t}</span></button>'''
+        for k, (logo, t, d, cols) in enumerate(machines))
+    mpanel_html = "\n".join(
+        f'''        <article class="mpanel{" is-active" if k == 0 else ""}" role="tabpanel" data-m="{k}">
+          <div class="mpanel__text">
+            <img class="mpanel__logo" src="{logo}" alt="" loading="lazy">
+            <h3>{t}</h3>
+            <p>{d}</p>
+            <ul class="mpanel__tags"><li>Computerised</li><li>Exact shade</li><li>Same colour every time</li></ul>
+          </div>
+          <div class="mpanel__dots" style="--glow:{cols[0]}">{"".join(f'<span style="background:{c}"></span>' for c in cols)}</div>
+        </article>'''
+        for k, (logo, t, d, cols) in enumerate(machines))
+    mc = f'''    <div class="mtabs reveal">
+      <div class="mtabs__list" role="tablist" aria-label="Colour mixing machines">
+{mtab_html}
+      </div>
+      <div class="mtabs__panels">
+{mpanel_html}
+      </div>
+    </div>'''
+
 
     team = [
         ("daler-singh-rana", "Daler Singh Rana", "Owner", "Running Rana Paints since 2000. Talk to him for paints, cement and the best rates.",
@@ -250,8 +267,17 @@ def build():
       <h2>Everything your home needs, from brands you trust</h2>
       <p>Pick a brand to see its products: interior and exterior paints, waterproofing, putty, primers and cement.</p>
     </div>
-    <div class="brands-grid">
+    <div class="bslider" data-slider>
+      <div class="brands-grid" data-track>
 {bc}
+      </div>
+      <div class="bslider__bar">
+        <div class="bslider__prog" aria-hidden="true"><i></i></div>
+        <div class="bslider__btns">
+          <button type="button" class="bslider__btn" data-dir="-1" aria-label="Previous brands">{i('left', '2.2')}</button>
+          <button type="button" class="bslider__btn" data-dir="1" aria-label="Next brands">{i('right', '2.2')}</button>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -301,9 +327,7 @@ def build():
       <h2>Your exact shade, mixed in minutes</h2>
       <p>We have computerised colour mixing machines for all three paint companies, so the shade you pick on the card is the shade you get on your wall.</p>
     </div>
-    <div class="machines">
 {mc}
-    </div>
   </div>
 </section>
 
