@@ -36,15 +36,15 @@ def build():
     BC = "images/brandcards/"
     brand_cards = [
         ("asian-paints.html", "images/brands/asian-paints.svg", "Asian Paints", BC + "asian-a.webp", BC + "asian-b.webp",
-         "#e0312f", "#f4e2bd", "Interior &amp; exterior emulsions, waterproofing, putty, primers and enamels."),
+         "#e0312f", "#ece4cc", "Interior &amp; exterior emulsions, waterproofing, putty, primers and enamels."),
         ("birla-opus.html", "images/brands/birla-opus.svg", "Birla Opus", BC + "birla-a.webp", BC + "birla-b.webp",
-         "#5b3fa0", "#e9e6d2", "Style and Calista paints, Alldry waterproofing, putty and primers."),
+         "#5b3fa0", "#e6e8dc", "Style and Calista paints, Alldry waterproofing, putty and primers."),
         ("berger-paints.html", "images/brands/berger-paints.png", "Berger Paints", BC + "berger-a.webp", BC + "berger-b.webp",
-         "#0b4ea2", "#e6e8d6", "WeatherCoat Glow, Walmasta, wall putty and primers."),
+         "#0b4ea2", "#e3e8e6", "WeatherCoat Glow, Walmasta, wall putty and primers."),
         ("forever-paints.html", "images/brands/forever-paints.png", "Forever Paints", BC + "forever-a.webp", BC + "forever-b.webp",
-         "#c8102e", "#f3dfc4", "Budget-friendly emulsions, primer and rustic putty."),
+         "#c8102e", "#eee3cc", "Budget-friendly emulsions, primer and rustic putty."),
         ("acc-cement.html", "images/brands/acc.svg", "ACC Cement", BC + "acc-a.webp", BC + "acc-b.webp",
-         "#d71920", "#f2e3b5", "Gold Water Shield, Concrete Plus and Suraksha Power, with home delivery."),
+         "#d71920", "#efe4c4", "Gold Water Shield, Concrete Plus and Suraksha Power, with home delivery."),
     ]
 
     def brand_card(h, logo_html, desc, imgs_html, brand, bg, label):
@@ -73,7 +73,7 @@ def build():
                   '<img class="p-front" src="images/products/tools/normal-roller.svg" alt="Rollers, brushes and spray paints" loading="lazy">')
     bc += chr(10) + brand_card("tools.html", '<span class="brand-card__word">Tools &amp; More</span>',
                               "Rollers, brushes, putty scrapers, CUBE spray paints, turpentine, curtain fittings and wall stencils.",
-                              tools_imgs, "#d35e36", "#eee3c2", "Tools &amp; More")
+                              tools_imgs, "#415a77", "#e8e4d2", "Tools &amp; More")
 
     strip = "\n".join(f'        <a href="{h}" aria-label="{n}"><img src="{img}" alt="{n}" loading="lazy"></a>' for h, img, n, _ in BRANDS)
 
@@ -184,7 +184,7 @@ def build():
     </div>
     <div class="hero__visual" data-rv="right">
       <div class="hero__float" aria-hidden="true">
-        <span class="hero__float-dots"><i style="background:#d35e36"></i><i style="background:#e8a15b"></i><i style="background:#8aa486"></i><i style="background:#d9c3a5"></i></span>
+        <span class="hero__float-dots"><i style="background:#1b263b"></i><i style="background:#415a77"></i><i style="background:#778d7a"></i><i style="background:#d4c4a8"></i></span>
         <span><strong>Exact shade</strong><small>Computerised mixing</small></span>
       </div>
       <div class="hero__dots">
@@ -294,7 +294,7 @@ def build():
 
 <!-- ============ COLOUR MACHINES ============ -->
 <section class="section section--soft" id="machines">
-    <div class="machines__fx" aria-hidden="true"><i style="--x:6%;--s:14px;--c:#d35e36;--d:0s;--t:7.5s"></i><i style="--x:13%;--s:20px;--c:#e0a14f;--d:2.3s;--t:9.5s"></i><i style="--x:21%;--s:12px;--c:#8aa486;--d:4.1s;--t:8.2s"></i><i style="--x:29%;--s:24px;--c:#c9694a;--d:1.2s;--t:10.5s"></i><i style="--x:38%;--s:16px;--c:#d9c3a5;--d:5.6s;--t:7.8s"></i><i style="--x:46%;--s:18px;--c:#9b6b8e;--d:3.3s;--t:9.0s"></i><i style="--x:54%;--s:13px;--c:#6f93a8;--d:6.8s;--t:8.8s"></i><i style="--x:62%;--s:22px;--c:#d35e36;--d:0.7s;--t:10.0s"></i><i style="--x:70%;--s:15px;--c:#e0a14f;--d:4.9s;--t:7.2s"></i><i style="--x:78%;--s:19px;--c:#8aa486;--d:2.9s;--t:9.8s"></i><i style="--x:86%;--s:12px;--c:#c9694a;--d:6.1s;--t:8.4s"></i><i style="--x:93%;--s:21px;--c:#d9c3a5;--d:1.8s;--t:9.2s"></i></div>
+    <div class="machines__fx" aria-hidden="true"><i style="--x:6%;--s:14px;--c:#415a77;--d:0s;--t:7.5s"></i><i style="--x:13%;--s:20px;--c:#778d7a;--d:2.3s;--t:9.5s"></i><i style="--x:21%;--s:12px;--c:#d4c4a8;--d:4.1s;--t:8.2s"></i><i style="--x:29%;--s:24px;--c:#1b263b;--d:1.2s;--t:10.5s"></i><i style="--x:38%;--s:16px;--c:#5b7696;--d:5.6s;--t:7.8s"></i><i style="--x:46%;--s:18px;--c:#a9b4a8;--d:3.3s;--t:9.0s"></i><i style="--x:54%;--s:13px;--c:#c4b794;--d:6.8s;--t:8.8s"></i><i style="--x:62%;--s:22px;--c:#415a77;--d:0.7s;--t:10.0s"></i><i style="--x:70%;--s:15px;--c:#778d7a;--d:4.9s;--t:7.2s"></i><i style="--x:78%;--s:19px;--c:#d4c4a8;--d:2.9s;--t:9.8s"></i><i style="--x:86%;--s:12px;--c:#1b263b;--d:6.1s;--t:8.4s"></i><i style="--x:93%;--s:21px;--c:#5b7696;--d:1.8s;--t:9.2s"></i></div>
   <div class="container">
     <div class="section-head">
       <span class="eyebrow">Colour Mixing</span>
