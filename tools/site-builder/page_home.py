@@ -103,8 +103,8 @@ def build():
         ("images/stock/painting-wall.webp", "A painter rolling cream paint on a wall"),
         ("images/stock/hero-house.webp", "A modern house with a green garden"),
         ("images/stock/concrete-steps.webp", "Concrete steps in soft light"),
-        ("images/stock/swatches-warm.webp", "Paint shade cards in warm colours"),
-        ("images/stock/steel-rebar.webp", "Steel reinforcement bars"),
+        ("images/stock/shade-fandeck.webp", "A fan deck of colourful paint shade cards"),
+        ("images/stock/construction-house.webp", "A new house being built with a timber frame"),
         ("images/stock/hero-bedroom.webp", "A bedroom with freshly painted sage green walls"),
     ]
     sv_tabs, sv_panels = [], []
@@ -302,7 +302,7 @@ def build():
 <section class="section" id="how">
   <div class="container how">
     <div class="how__media" data-rv="left">
-      <img src="images/stock/arch-room.webp" alt="A calm room with soft window light" loading="lazy">
+      <img src="images/stock/painting-roller.webp" alt="A hand rolling fresh paint onto a wall" loading="lazy">
       <div class="how__note"><strong>Free advice</strong><span>Not sure which paint? Just ask us.</span></div>
     </div>
     <div>
